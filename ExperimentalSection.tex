@@ -1,0 +1,9 @@
+%!TEX root = ExperimentalSection.tex
+\chapter{Computational methods}
+In this work Avogadro 1.2.0 was used to design the various molecular geometries and its universal force-field tool was used to roughly optimize the structure. Further computations were performed by using the Q-chem 5.2 software.\cite{qchem} Most geometry optimizations were performed using the CAM-B3LYP\cite{CAMB3LYP} exchange-correlation functional in combination with the D3(BJ)\cite{DJBJ} dispersion correction and the 6-311G*\cite{6311G} basis set. The benchmark calculation in the beginning made use of additional exchange-correlation functionals (B97,\cite{B97} B97M-rV,\cite{B97MV} $\omega$B97M-V\cite{w97MV}) and basis sets (3-21G,\cite{321G} 3-21G*,\cite{321G} 6-31G,\cite{631G} 6-31G*,\cite{631G} def2-SVPD,\cite{def2} def2-TZVP\cite{def2}). \\
+Based on those optimized ground state geometries the non-adiabatic excitation energies of the 20 lowest lying singlet excited states were calculated using TDA-TDDFT\cite{TDA_TDDFT} using the previously mentioned basis sets and functionals. Since manually finding all possible conformers for the ring molecules was too labourous we employed the CREST\cite{crest} (Conformer-Rotamer Ensemble Sampling Tool) software for this task. The 10 energetically lowest structures were then geometrically optimized with the previously mentioned methods. We performed frequency calculations for each molecule to confirm that those are indeed the energetically lowest energies. To visualize the molecules as well as their molecular orbitals the IQmol 2.14.0 software package was used in combination with an isovalue of 0.2 if not otherwise stated.
+%
+% All computations in this work were performed using the Q-chem 6.1\cite{qchem} software. The molecular geometry was designed with Avogadro 1.2.0 and its universal force-field tool was used to roughly optimize the structure.
+%
+%\section{Benchmark Sets}
+%Test

@@ -1,0 +1,365 @@
+\documentclass[fontsize=11pt]{scrbook}
+\KOMAoptions{twoside=false}
+\usepackage{fontspec}
+\setlength\parindent{0pt}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[british]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Satzdinge
+\usepackage[onehalfspacing]{setspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Farbdinge
+\usepackage{xcolor}
+    \definecolor{myred}{RGB}{198,24,38} % Rot der Uni Heidelberg
+    \definecolor{mygreen}{RGB}{40,114,51} % Smaragdgrün
+    
+\usepackage{graphicx}
+    % diffrent style of subfigures
+% \usepackage{subfigure}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Displaystyledinge
+\newcommand{\block}{ \enskip \textcolor{myred}{\rule[-\dp\strutbox]{2pt}{\baselineskip}} \enskip}
+	% Chapter
+\renewcommand*{\chapterformat}{\thechapter \block}
+\addtokomafont{chapter}{\normalfont \LARGE \scshape \bfseries}
+	% Section
+\renewcommand*{\sectionformat}{\enskip \thesection \block}
+\addtokomafont{section}{\raggedright \normalfont \Large \scshape}
+	% Subsection
+\renewcommand*{\subsectionformat}{\enskip \enskip \thesubsection \block}
+\addtokomafont{subsection}{\raggedright \normalfont \large \scshape}
+	% Subsubsection
+\renewcommand*{\subsubsectionformat}{\thesubsubsection \block}
+\addtokomafont{subsubsection}{\enskip \enskip \enskip \raggedright \normalfont \normalsize \scshape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Schriftdinge
+%\usepackage{bm,stmaryrd}
+%\usepackage{fourier, bm}
+%\usepackage[adobe-utopia]{mathdesign}
+    % normales mathbb behalten-Dinge
+    %\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+    %\makeatletter
+    %\DeclareSymbolFontAlphabet{\math@bb}{AMSb}
+    %\AtBeginDocument{\protected\def\mathbb{\math@bb}}
+    %\makeatother
+    % normales mathcal behalten-Dinge
+    %\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nummerierungsdinge
+\usepackage[inline]{enumitem}
+    \let\olditemize\itemize
+    \renewcommand\itemize{\olditemize\addtolength{\itemsep}{-6pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathedinge
+\usepackage{amssymb, amsmath, mathtools, nicefrac}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chemiedinge
+\usepackage{chemscheme}
+
+% Tricksy Hobbitses don't want autoref, so tricksy trickes are needed ...
+%\usepackage{aliascnt}
+%\newtheorem{dummy}{***}[chapter]
+% \newcommand{\mynewtheorem}[2]{
+%   \newaliascnt{#1}{dummy}
+%   \newtheorem{#1}[#1]{#2}
+%   \aliascntresetthe{#1}
+%   \expandafter\def\csname #1autorefname\endcsname{#2}
+% Y
+% \theoremstyle{definition}
+%   \mynewtheorem{theo}{Theorem}
+%   \mynewtheorem{coro}{\iflanguage{ngerman}{Korollar}{}\iflanguage{british}{Corollary}{}}
+%   \mynewtheorem{lemma}{Lemma}
+%   \mynewtheorem{defi}{Definition}
+% \theoremstyle{remark}
+%   \mynewtheorem{expample}{\iflanguage{ngerman}{Beispiel}{}\iflanguage{british}{Example}{}}
+%   \mynewtheorem{remark}{\iflanguage{ngerman}{Bemerkung}{}\iflanguage{british}{Remark}{}}
+%   \mynewtheorem{nota}{Notation}
+%   \mynewtheorem{interpret}{Interpretation}
+
+% vertical arrow
+% \newcommand\vertarrowbox[3][6ex]{%
+%   \begin{array}[t]{@{}c@{}} #2 \\
+%   \left\uparrow\vcenter{\hrule height #1}\right.\kern-\nulldelimiterspace\\
+%   \makebox[0pt]{\scriptsize#3}
+%   \end{array}%
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% tabllendinge
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kurzbefehldinge
+\def\RR{\mathbb R}
+\def\CC{\mathbb C}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathmode in heading-Dinge 
+%\newcommand{\mathtitle}[2]{\texorpdfstring{$#1$}{#2}}
+\usepackage{physics}
+\usepackage{siunitx}
+
+\sisetup{
+  locale = UK ,
+  separate-uncertainty = true,
+  exponent-product = \cdot,
+  output-product = \cdot
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Restklassen- o.ä.dinge
+% \makeatletter
+% \newsavebox\myboxA
+% \newsavebox\myboxB
+% \newlength\mylenA
+
+% \newcommand*\xoverline[2][0.75]{%
+%     \sbox{\myboxA}{$\m@th#2$}%
+%     \setbox\myboxB\null% Phantom box
+%     \ht\myboxB=\ht\myboxA%
+%     \dp\myboxB=\dp\myboxA%
+%     \wd\myboxB=#1\wd\myboxA% Scale phantom
+%     \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+%     \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+%     \addtolength\mylenA{-\the\wd\myboxB}%
+%     \ifdim\wd\myboxB<\wd\myboxA%
+%       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+%     \else
+%         \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+%     \fi}
+% \makeatother
+% \renewcommand{\bar}{\xoverline}
+
+\usepackage[version=4]{mhchem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inhaltsverzeichnisdinge
+\usepackage{tocloft}
+	\renewcommand{\cftchapfont}{\scshape \bfseries}
+	\renewcommand{\cftsecfont}{\scshape}
+	\renewcommand{\cftsubsecfont}{\scshape}
+	\setcounter{tocdepth}{0}
+	\renewcommand{\cfttoctitlefont}{\normalfont \scshape \Large \bfseries}
+	\renewcommand{\cftloftitlefont}{\normalfont \scshape \large \bfseries}
+    \setlength\cftaftertoctitleskip{6pt} % distance toctitle and toc
+    \setlength\cftafterloftitleskip{6pt} % distance toftitle and tof
+    %\renewcommand{\cftdot}{} % No dots in toc if enabled
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstractdinge
+\newenvironment{abstract}
+	{ \itshape \footnotesize \begin{center}  \begin{minipage}{.8\textwidth} \begin{singlespace} \textsc{\iflanguage{ngerman}{Abstrakt.}{}\iflanguage{british}{Abstract.}{}}}
+	{\end{singlespace} \end{minipage} \end{center} \vspace{12pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Diagrammdinge
+% \usepackage[arrow, matrix, curve]{xy}
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tabellendinge
+\usepackage{booktabs, tabularx, longtable}
+\usepackage{csvsimple}
+\usepackage{lscape}
+\usepackage{rotating}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kommentardinge
+\usepackage{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fußnotendinge
+\renewcommand{\thefootnote}{$\mathfrak{[\thechapter.\alph{footnote}]}$}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zitatdinge
+\usepackage{csquotes, epigraph}
+    \let\originalepigraph\epigraph 
+    \renewcommand\epigraph[2]{\originalepigraph{\textit{#1}}{\textsc{#2}}}
+    \setlength{\epigraphwidth}{0.5\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliographiedinge
+\usepackage[backend=biber, style=chem-angew, natbib=true]{biblatex}
+    \let\cite=\supercite
+    
+	\defbibheading{secbib}[]{%
+		\section*{#1}%
+		\markboth{#1}{#1}}
+	\addbibresource{bibliography.bib}
+	\renewcommand*{\bibfont}{\footnotesize}
+    \setlength{\bibitemsep}{0pt plus 0.3ex}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Underbracedinge, d.h. schöne geschwungene Klammern
+%\usepackage{etoolbox}
+% \makeatletter
+% \patchcmd{\upbracefill}{\m@th}{\scriptstyle\m@th}{}{}
+% \patchcmd{\upbracefill}{$\braceld$}{$\scriptstyle\braceld$}{}{}
+% \patchcmd{\upbracefill}{\bracelu}{\bracelu\mkern-1mu}{}{}
+% \patchcmd{\upbracefill}{\hfill\braceru}{\hfill\mkern-1mu\braceru}{}{}
+% \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Codedinge
+\usepackage{listings}%, scrhack}
+\renewcommand*\ttdefault{cmvtt}
+\lstset{language=Matlab, numbers=left, backgroundcolor=\color{black!5}, linewidth=\linewidth, breaklines=true, breakatwhitespace=false, tabsize=2, basicstyle=\ttfamily, extendedchars=true, inputencoding=utf8, commentstyle=\color{black!10!blue}, keywordstyle=\color{myred}, literate=%
+		{Ö}{{\"O}}1
+		{Ä}{{\"A}}1
+		{Ü}{{\"U}}1
+		{ß}{{\ss}}1
+		{ü}{{\"u}}1
+		{ä}{{\"a}}1
+		{ö}{{\"o}}1
+		{~}{{	extasciitilde}}1
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TikZ- und Plot-Dinge
+% \usepackage{tikz}
+%     \usetikzlibrary{
+%         arrows.meta,
+%         math
+%         }
+% \usepackage{pgfplots}
+%     \pgfplotsset{compat=1.7}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Todo-Dinge
+% \usepackage[
+%             color=gray,
+%             backgroundcolor=myyellow,
+%             %disable
+%             ]{todonotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spielerei-Dinge
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Algorithmendinge
+% \usepackage[
+%             vlined,
+%             ruled,
+%             linesnumbered
+%             ]{algorithm2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hurenkinder und Schusterjungen verhindern
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ref-Dinge
+\usepackage[hidelinks,urlcolor=mygreen,citecolor=mygreen]{hyperref}
+    % \renewcommand{\algorithmautorefname}{Algorithm}
+\usepackage{microtype}
+\usepackage{textcomp}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{B.Sc. Thesis}
+\newcommand{\duedate}{October, 2023}
+\author{Ron Bellemann}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\include{titlepage}
+\cleardoublepage
+    \pagenumbering{roman}
+%\begin{abstract}
+%    \textcolor{red}{textquatsch} 
+%\end{abstract}
+
+% \epigraph{
+% The reviewers (I know their names) [...] % Ich möchte, dass sie versuchen zu verstehen, dass es Quatsch ist, was sie erzählen. Dr. Juan Marcos Cerviño 
+% % Das ist einfach nur simples CSV-to-Bullshit [...] - Sebastian Pauly
+% }{
+% Boris Plakhutin
+% }
+
+\pagestyle{empty}
+\tableofcontents
+
+\vspace{24pt}
+%\listoffigures
+\newpage
+\input{symbols}
+
+
+\clearpage
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{1}} % No section numbering in the introductory chapter
+
+
+\input{Einleitung.tex}
+\input{Theorie.tex}
+\input{ExperimentalSection.tex}
+\input{Ergebnis.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{tocdepth}{0}
+
+% Dinge eben ...
+\makeatletter
+\newcommand*{\topchapter}[2][0]{%
+  \global\csdef{top@label@\the\numexpr\value{chapter}+1\relax}{#1}%
+  \global\csdef{top@title@\the\numexpr\value{chapter}+1\relax}{#2}%
+  \immediate\write\@auxout{%
+    \unexpanded{\global\@namedef{toptitle@#1}{#2}}%
+  }
+  \chapter{#2}
+  \label{TOP#1}
+}
+\newcommand*{\reftop}[1]{\hyperref[TOP#1]{TOP~#1} (\csuse{toptitle@#1})}
+\renewcommand*{\thechapter}{\csuse{top@label@\arabic{chapter}}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\cleardoublepage
+% Bibliography
+%\nocite{*}
+\topchapter[A]{\iflanguage{ngerman}{Literaturverzeichnis}{}\iflanguage{british}{Bibliography}{}}
+\vspace{-12pt}
+\printbibliography[heading=secbib]
+
+% Acknowledgements
+\cleardoublepage
+\thispagestyle{empty}
+\include{acknowledgements}
+\include{appendix} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

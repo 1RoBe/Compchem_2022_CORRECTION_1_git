@@ -1,0 +1,419 @@
+% !TEX root = Theorie.tex
+\chapter{Theoretical Section}
+\section{Density Functional Theory} \label{abs:grundlagen}
+\begin{comment}
+Modern DFT rests on two theorems by Hohenberg and Kohn (1964). The
+first theorem states that the ground-state electron density
+uniquely determines the electronic wavefunction and hence
+all ground-state properties of an electronic system. The
+second theorem establishes that the energy of an electron
+distribution can be described as a functional of the electron
+density, and this functional is a minimum for the groundstate
+density. Thus, the problem of solving the many-body
+Schro¨dinger equation is bypassed, and now the objective
+becomes to minimize a density functional.
+\end{comment}
+
+Since most of the calculations in this report have been done using density functional theory (DFT), a brief overview is given in the following section.\\
+First let us define a Hamiltonian $\hat{H}$ 
+\begin{align}
+    \hat{H} \equiv \hat{T} + \hat{V} + \hat{V}_{\mathrm{ee}}
+\end{align}
+where (in atomic units)
+\begin{align}
+    \hat{T} = -\frac{1}{2}\sum^{N}_{j}\nabla_{j}^2, \hspace{1cm} \hat{V} = \sum^{N}_{j}v(r_j), \hspace{1cm} \hat{V}_{\mathrm{ee}} = \frac{1}{2} \sum^{N}_{i\neq j}\frac{1}{r_i - r_j},
+\end{align} 
+which describes $N$ nonrelativistic, interacting electrons in a nonmagnetic state. $\hat{T}$ denotes the kinetic energy operator and $\hat{V}$ the potential energy operator of the electron interaction and $v(r)$ describes an arbitrary external potential e.g. a Coulomb potential, which are summed over all electrons resulting in $\hat{V}$. \cite{DFT_1} One could now formulate the time-independent Schrödinger equation 
+\begin{align}
+    \hat{H}\Psi = E\Psi,
+\end{align}
+where $\Psi$ describes a wave function and then attempt to find approximate solutions to it. However, finding those solutions is complicated, even for small numbers of $N$. At larger $N$ the computational cost is prohibitively expensive, adding to the problem.\\
+%A solution to this problem was to use one body density
+Instead of using many-body wave-functions, one could use the one-body density, which is the idea behind density functional theory. Modern density functional theory rests on two theorems formulated in 1964 by Hohenberg and Kohn, known as HKI and HKII. HKI proves that the ground state density $\rho(r)$ determines the external potential energy $v(r)$ to within a trivial additive constant. Since in turn $v(r)$ fixes the Hamiltonian, it follows that the full many-particle ground state is a unique functional of $\rho(r)$.\cite{DFT_2} Applying these ideas to total energy, HK formulated the energy function. $E_{v}[\rho(r)]$ 
+\begin{align} \label{eq:energy_func}
+    E_{v}[\rho(r)] = \int v(r) \rho(r) \mathrm{d}^{3}r + F[\rho(r)] 
+\end{align}
+for a given potential $v(r)$. $F[\rho]$ describes a universal functional, 
+\begin{align} \label{eq:gen_func}
+    F[\rho] = T[\rho] + V_{\mathrm{ee}}[\rho] = \bra{\Psi[\rho]}T+V_{\mathrm{ee}}\ket{\Psi[\rho]}
+\end{align}
+which is valid for any number of particles and external potentials. $\Psi[\rho]$ refers to a N-electron wave-function which yields the density $\rho$ and minimizes the expectation value of the kinetic energy functional $T[\rho]$ and the functional referring to the potential energy of electron interaction $V_{\mathrm{ee}}[\rho]$. \\
+The second theorem, HKII, establishes via a variational principle that the ground state energy functional $E_{v_0}$ only yields the ground state energy $E_{0}$, if the true ground state density $\rho_{0}(\textbf{r})$ is inserted. For all other densities $\rho(r)$ the calculated energy $E_{v_0}[\rho]$
+\begin{align}
+    E_{0} = E_{v_0}[\rho_{0}] < E_{v_0}[\rho]
+\end{align}
+will be larger than the true ground state energy. \\
+However the main problem regarding eq.\,\ref{eq:gen_func} is that both the kinetic $T[\rho]$ and the electron-electron functional are unknown. Direct approximations for both of those functionals exist, the oldest one being the Thomas-Fermi approximation.\cite{DFT_4} Since better approximations have been found its use for practical calculations is rather limited.\\
+Kohn and Sham approached this problem from a different direction by introducing $N$ single-particle ``orbitals'' $\phi_{i}$, which are derived from a single determinant wavefunction describing $N$ non-interacting electrons.\cite{DFT_5} Through this, one can describe the electron density $\rho(r)$
+\begin{align}\label{eq:HK_orbitals}
+    \rho(r) = \sum^{N}_{i} |{\phi_{i}(r)^2}|
+\end{align}
+and the kinetic energy $T_{\mathrm{s}}$ of this system
+\begin{align}
+    T_{\mathrm{s}}[\rho] = - \frac{1}{2}\sum^{N}_{i} \bra{\phi_{i}}\nabla^2\ket{\phi_{i}}
+\end{align}
+exactly. $T_{s}$ describes the kinetic energy of a system of non-interacting electrons, which produce the true ground state density, but not the true kinetic energy. \\
+With those equations we can now partition the universal functional $F[\rho]$ the following way
+\begin{align} \label{eq:KS_functional}
+    F[\rho] = T_{\mathrm{s}}[\rho] + V_{\mathrm{c}}[\rho] + E_{\mathrm{xc}}[\rho],
+\end{align}
+where 
+\begin{align}
+    V_{\mathrm{c}}[\rho] = \frac{1}{2}\int\int\frac{\rho(r) \rho(r')}{|r-r'|} \mathrm{d}^{3}r \hspace{0.1 cm} \mathrm{d}^{3}r'
+\end{align}
+describes the classical Coulomb interaction of the charge distribution $\rho(r)$ and $E_{\mathrm{xc}}[\rho]$ is the so-called exchange-correlation energy which is defined by 
+\begin{align}
+    E_{xc}[\rho] = T[\rho] - T_{\mathrm{s}}[\rho] + V_{\mathrm{ee}}[\rho] - V_{\mathrm{c}}[\rho].
+\end{align}
+$E_{\mathrm{xc}}[\rho]$ can be interpreted as the sum of two errors, the first one arises from using a non-interacting kinetic energy and the second one from treating the electron-electron interaction classically. Using the orbitals which were defined earlier one can reformulate equations \ref{eq:KS_functional} and \ref{eq:energy_func}, thus deriving the following equation
+\begin{align} \label{eq:KS_SGL}
+    \left(-\frac{1}{2}\nabla^{2} + v(r) + \int\frac{\rho(r')}{|r-r'|} \mathrm{d}^{3}r' + v_{\mathrm{xc}}(r)\right)\phi_i(r) = \epsilon_i \phi_i(r),
+\end{align}
+which has the form of a single-particle Schrödinger equation. The exchange-correlation potential $v_{\mathrm{xc}}(r)$ is defined by 
+\begin{align} \label{eq:KS_Ex}
+    v_{\mathrm{xc}}(r) = \frac{\delta E_{\mathrm{xc}}[\rho]}{\delta \rho(r)}.
+\end{align}
+This set of nonlinear equations (eq.\,\ref{eq:HK_orbitals}, eq.\,\ref{eq:KS_SGL} and eq.\,\ref{eq:KS_Ex}) are called the Kohn-Sham equations and have to be solved self-consistently. This is accomplished by starting with an initial guess for $\rho(r)$, calculating the potentials in eq.\,\ref{eq:KS_SGL} and then solving the equation itself for $\phi_i(r)$. The obtained orbitals can now be used to calculate a new density via eq. \ref{eq:HK_orbitals} and the process is repeated until convergence is reached.
+
+% The solution to this nonlinear problem is usually found
+% by starting with an initial guess for n(r), calculating the corresponding vs(r) and then
+% solving the differential equation 13 for the φi. From these a new density is calculated
+% using eqn. (14) and the process is restarted until reasonable convergence is reached.
+
+
+
+% This set of nonlinear equations are called the Kohn-Sham equations and have to be solved self-consistently. They describes the behavior of non-interacting “electrons” in an effective local potential.
+% Writing the functional (Equation 15) explicitly in terms of the density built from non-
+% interacting orbitals (Equation 14) and applying the variational theorem (Equation 13)
+% we find that the orbitals, which minimise the energy, satisfy the following set of
+% equations;
+
+
+% Exc is simply the sum of the error made in using a non-interacting kinetic
+% energy and the error made in treating the electron-electron interaction classically.
+
+
+%and searching for better approximations is subject of current research 
+%
+% - problem now was to determine the kinetic energy T and the electron electron interaction => Kohn sham
+%
+%
+%
+%  - Kohn sham now used introduced a fictitious system of N non-
+% interacting electrons to be described by a single determinant wavefunction in N
+% “orbitals” φi.
+% - kinectic energy is known exactly by 
+
+
+
+% the ground state energy can be written as a functional
+% of the density, Ev0 [n], which gives the ground-state energy E0 if and only if the true
+% ground-state density n0(r) is inserted. For all other densities n(r), the inequality
+
+
+% where Ψ[n] is that N -electron wave-function which yields the density n and minimizes
+% the expectation value of ˆT + ˆVee
+
+\begin{comment}
+The first theorem
+may be summarised by saying that the energy is a functional of the density – E[ρ]
+
+First they showed that
+there is a one-to-one relationship between the external
+potential VextðrÞ and the (nondegenerate) GS wave function
+Ψ, and that there is a one-to-one relationship between Ψ and
+the ground state density nðrÞ of an N-electron system, 14
+nðrÞ ¼ N
+Z
+%dr2  drN Ψ ðr; r2; …; rN ÞΨðr; r2; …; rN Þ;
+
+(HK I) establishes a
+one-to-one mapping between the exact electron den-
+sity, F(r), and the exact external potential, Vext(r), and
+since Vext(r) determines the exact ground-state wave
+function Ψ(r), the exact ground-state wave function
+is a functional of the electron density, Ψ[F](r).
+
+Thus v (r) is (to within a constant) a unique functional
+of n(r); since, in turn, v(r) fixes H we see that the full
+many-particle ground state is a unique functional of
+rs(r).
+\end{comment}
+
+
+\begin{comment}
+We limit ourselves here to the simplest
+class of systems, N nonrelativistic, interacting electrons in a
+nonmagnetic state with Hamiltonian
+
+
+Before diving straight into the concept of density functional theory 
+first hamiltonian
+then HKI and HKII
+\end{comment}
+
+\begin{comment}
+Modern density functional theory rests on two theorems formulated 1964 by Hohenberg and Kohn, known as HKI and HKII. HKI proves, that the ground state density $\rho(r)$ determines the external potential energy $V_{\mathrm{ext}}(r)$ to within a trivial additive constant. That means, that for a given Hamiltonian e.g.
+\begin{align}
+    H \equiv T + U + V
+\end{align}
+where (in atomic units)
+\begin{align}
+    T \equiv -\frac{1}{2}\sum_{j}\nabla_{j}^2, \hspace{1cm} V \equiv \sum_{j}v(r_j), \hspace{1cm} U = \frac{1}{2} \sum_{i\neq j}\frac{1}{r_i - r_j}
+\end{align}
+all properties can of $H$ are determined by $\rho(r)$. T denotes the kinetic energy and U the potential energy of N electrons. $v(r)$ describes an arbitrary potential which could be a Coulomb potential. Due to this we can now formulate 
+
+The ground state density n(r)n(r) determines the external potential energy v(r)v(r) to within a trivial additive constant.
+    
+\end{comment}
+
+% Traditional electronic structure methods attempt to find approximate solutions to the
+% Schr¨odinger equation of N interacting electrons moving in an external, electrostatic poten-
+% tial (typically the Coulomb potential generated by the atomic nuclei). However, there are
+% serious limitations of this approach: (i) the problem is highly nontrivial, even for very small
+% numbers N and the resulting wave-functions are complicated objects, (ii) the computational
+% effort grows very rapidly with increasing N , so the description of larger systems becomes
+% prohibitive.
+
+% A different approach is taken in density functional theory where, instead of the many-
+% body wave-function, the one-body density is used as fundamental variable. Since the density
+% n(r) is a function of only three spatial coordinates (rather than the 3N coordinates of the
+% wave-function), density functional theory is computationally feasible even for large systems.
+
+% Density functional theory uses 
+
+\section{Time-dependent Density Functional Theory}
+Time-dependent density functional theory (TDDFT) is an extension of DFT which allows for the calculation of excited-state properties of medium to large molecular systems, e.g. excitation energies, oscillator strengths and excited-state geometries.\cite{TDDFT} To account for example for an applied external time-dependent perturbation $δv(r, t)$ one has to use a time-dependent electronic density $\rho(r, t)$
+\begin{align}
+    \rho(r, t) = \int |\Psi(r_1, r_2, ..., r_N, t)|^2 \mathrm{d}r_2...\mathrm{d}r_N \mathrm{ ,}
+\end{align}
+a function of only one space variable $r$ with sufficient degree of freedom to fully describe the response of a system to the time-dependent pertubation. That thesis describes the Runge-Gross theorem\cite{Runge-Gross}, which is a extension of the DFT Hohenberg-Kohn theorem to the time-dependent case. The HK theorem is not sufficient for the study of excitation, which is the response of the system to an external pertubation such as the interaction of a molecule with an electromagnetic wave. The reason for this is that the the total external potential is now the sum of the static external potential $v(r)$ due to the nuclei and the time-dependent external perturbation $\delta v(r, t)$ 
+\begin{align}
+    v(r, t) = v(r) + \delta v(r, t)
+\end{align}
+and thus also time dependent. Since the HK-theorem only holds for static potentials and densities, DFT cannot describe those systems correctly. To summarize, the Runge-Gross theorem formulates, similarly to the HK, that a one-to-one correspondence between the external time-dependent potential $v(r, t)$ and the the time-dependent density $\rho(r, t)$ exists. Its formulation leads to the important statement that every observable $O(t)$ is a unique functional of the time-dependent density (and of the initial state $\Psi_0$): 
+\begin{align}
+    O(t) = O[\rho, \Psi_0](t).
+\end{align}
+Using the Runge-Gross theorem one can formulate TDDFT, but instead of focussing on the energy like in DFT, TDDFT uses the action integral $A[\rho]$
+\begin{align}
+    A[\rho] = \int_{t_0}^{t_1}\bra{\Psi[\rho](r, t)}i\frac{\partial}{\partial t} - \hat{H}(r, t) \ket{\Psi[\rho](r, t)}\mathrm{d}t
+\end{align}
+Similarly to the energy functional of DFT, one may derive the exact time-dependent density $\rho(r, t)$ from the stationary points of action, $ \frac{\delta A[\rho]}{\delta \rho(r, t)} = 0$, by varying the action and searching for stationary points.\\
+Another similarity to DFT is the ability to use a Kohn-Sham approach to solve TDDFT, which is achieved by introducing a  Kohn-Sham fictious non-interacting system providing the same density $\rho(r, t)$ of the real interacting system. From this one can formulate a Kohn-Sham potential $v^{\mathrm{KS}}(r, t)[\rho]$ which itself is a functional of the density. This results in a time-dependent one-particle Schrödinger-like equation 
+\begin{align}
+    i\frac{\partial}{\partial t}\phi_i^{\mathrm{KS}}(r, t) = \left(-\frac{1}{2}\nabla_{i}^{2}+v^{\mathrm{KS}}(r, t)\right)\phi_i^{\mathrm{KS}}(r, t),
+\end{align}
+where $\phi_i^{KS}(r, t)$ denote the Kohn-Sham wavefunctions. The density can then be derived via
+\begin{align}
+    \rho(r, t) = \sum_{i}^{\mathrm{occ}} |\phi_i^{\mathrm{KS}}(r, t)|^{2}.
+\end{align}
+One can now formulate the time-dependent single-particle Kohn-Sham potential $v^{\mathrm{KS}}$
+\begin{align}
+    v^{\mathrm{KS}}[\rho](r, t) = v(r, t) + v_{\mathrm{H}}[\rho](r, t) + v_{\mathrm{xc}}[\rho](r, t)\mathrm{,}
+\end{align}
+where $v$ denotes the external potential, $v_{\mathrm{H}}$ a Hartree potential
+\begin{align}
+    v_{\mathrm{H}}[\rho](r, t) = \int \frac{\rho(r', t)}{|r-r'|}\mathrm{d}^3 r'
+\end{align}
+and $v_{\mathrm{xc}}$ an exchange-correlation potential
+\begin{align}
+    v_{\mathrm{xc}}[\rho](r, t) = \frac{\delta A_{\mathrm{xc}}[\rho]}{\delta \rho (r, t)}\mathrm{,}
+\end{align}
+which is, similar to DFT, unknown and has to be approximated.\cite{TDDFT} One can now follow the Kohn-Sham scheme in a similar fashion to DFT.\\
+Despite being a useful theory to calculate excitation energies, spectra and dynamics, there are certain areas in which TDDFT performs rather poorly. One of them is the description Rydberg states and extended $\pi$-systems resulting in errors as large as a few electron volts,\cite{DFT_pi_error_1, DFT_pi_error_2} which is caused by using exchange-correlation functionals that decay faster than $\frac{1}{r}$ where $r$ is the electron-nucleus distance. There are several ways to mitigate this issue, one for example is using asymptotically corrected functionals e.g. LB94.\cite{DFT_pi_corr_1} \\
+Additionally TDDFT yields substantial errors for charge-transfer (CT) excited states, resulting in excitation energies which are far lower than the true value and potential energy curves of CT states that do not exhibit the correct $\frac{1}{R}$ asymptote, where R is a distance coordinate between positive and negative charges of the CT state.\cite{DFT_CT_error_1, DFT_CT_error_2}
+
+
+% by underestimating the excitation energies and 
+
+
+% one serious drawback of DFT is represented by the non correct representation of conical intersections (CIs) \cite{TDDFT_CI} between potential energy surfaces of the ground and excited states, which play an important role in photochemistry.
+
+% Notes Downfalls of TDDFT:
+% - 96,97 
+
+
+
+% states a one-to-one correspondence
+% between the external time-dependent potential v(r, t) and the time-dependent den-
+% sity ρ(r, t)
+
+% In simplified terms the Runge-Gross theorem states he Runge–Gross theorem states a one-to-one correspondence
+% between the external time-dependent potential v(r, t) and the time-dependent den-
+% sity ρ(r, t)
+
+% The time-dependent density alones a sufficient degree of freedom to fully describe the response of a system to the
+% time-dependent perturbation. This is the thesis of the Runge–Gross theorem [3] Sec-
+% tion 2), an extension of the DFT Hohenberg–Kohn theorem to the time-dependent
+% case
+
+
+
+% Time-dependent density-functional theory (TDDFT) is an extension of
+% DFT to address excited-state properties, dynamics, and spectroscopy. 
+
+%  it has become one of the most prominentand most widely used approaches for the calculationof excited-state properties of medium to large molec-ular systems, for example, excitation energies, oscil-lator strengths, excited-state geometries, 
+
+
+\section{Azobenzene}
+Azobenzene (AB) is a diazene derivative for which both hydrogen atoms where substituted with phenyl groups. \cite{AB_1} There are two conformers, the  \textit{cis} isomer (cAB) and the thermodynamically more stable \textit{trans} isomer (tAB). The \textit{trans} $\rightarrow$ \textit{cis} isomerization can be induced by a variety of different means, e.g. irradiation with UV-visible light\cite{AB_2}, mechanical stress\cite{AB_3} or electrostatic stimulation\cite{AB_4}, whereas cAB, in addition to the photoinduced isomerization, can undergo also thermal isomerization.\cite{AB_2} The exact mechanism of this isomerization will be discussed later.
+%
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{Figures/Theory/UV_cisAB.png}
+  \caption{cAB}
+  \label{fig:UV_exp_cAB}
+\end{subfigure}%
+\medskip
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Theory/UV_transAB.png}
+  \caption{tAB}
+  \label{fig:UV_exp_tAB}
+\end{subfigure}
+\caption{The experimentally obtained molar absorption coefficients $\epsilon$ of \textit{cis}-azobenzene (cAB) \textbf{(a)} and \textit{trans}-azobenzene (tAB) \textbf{(b)} in methanol at different temperatures.\cite{AB_5}}
+\label{fig:UV_exp_both_AB}
+\end{figure} \\
+%
+%
+In the absorption spectrum of tAB (figure \ref{fig:UV_exp_both_AB} \textbf{(b)}) one can distinguish two different bands in the UV-VIS region. 
+The strong absorption band ($\lambda_{max} \sim \SI{320}{\nano\meter}$) can be assigned to the symmetry allowed $\pi\pi^{*}$ (S2 state) transition showing some vibrational structure \cite{AB_6}, while the weaker band ($\lambda_{max} \sim \SI{450}{\nano\meter}$) (S1 state) arises due to a symmetry forbidden n$\pi^{*}$ transition. 
+The corresponding n$\pi^{*}$ transition ($\lambda_{max} \sim \SI{270}{\nano\meter}$) (S1 state) of cAB (figure \ref{fig:UV_exp_both_AB} \textbf{(a)} absorbs more strongly, whereas the $\pi\pi^{*}$ band ($\lambda_{max} \sim \SI{440}{\nano\meter}$) (S2 state) is weaker than the transition observed in tAB. \\
+
+Isomerization occurs in both directions upon S1 $\leftarrow$ S0 excitation (QY$_{trans\rightarrow cis} \sim 0.56$, QY$_{cis\rightarrow trans} \sim 0.25$) and S2 $\leftarrow$ S0 excitation (QY$_{trans\rightarrow cis} \sim 0.27$, QY$_{cis\rightarrow trans} \sim 0.11$), where QY denotes the respective quantum yields.\cite{UV-cis-trans-azo-2} One can see quite clearly that S1 excitation QYs are nearly double those measured after S2 excitation, which is clearly a violation of Kasha–Vavilov's rule stating that the quantum yield of luminescence, or in this case isomerization, is generally independent regarding the excitation wavelength.\cite{AB_7} The violation of Kasha–Vavilov's rule together with the fact that the isomerization quantum yields (QY$_{cis\rightarrow trans}$ and QY$_{trans\rightarrow cis}$) do not equal unity implies the existence of several pathways for isomerization. \\
+\begin{scheme}[h]
+\centering
+  \includegraphics[width=1\linewidth]{Figures/Theory/tAB-isomerization.png}
+  \caption{${trans\rightarrow cis}$ isomerization-mechanism of inversion-assisted torsion.\cite{AB_8} The red arrows indicate the direction of rotation and translation.}
+  \label{fig:inversion-torsion-tAB}
+\end{scheme}%
+%
+To further understand the reason behind those rule violations, one has to investigate the isomerization mechanism of azobenzene. In the case of tAB it is generally accepted that both torsion and bending (``inversion assisted torsion'', see scheme \ref{fig:inversion-torsion-tAB}) lead to an extended conical intersection seam through which the n$\pi^*$ excited state can decay into the ground state. \cite{AB_8} Further research suggested that there is a pathway both common to n$\pi^*$ and $\pi\pi^*$ excitation.  \\
+Research by Nenov et al.\cite{AB_8} suggests that the reason for the wavelength dependency of the quantum yield lies whithin an ultrafast decay channel which is only accessable after excitation in the $\pi\pi^*$ state. Using sub-\SI{20}{fs} transient absorption spectroscopy supplemented with computations they were able to observe that the decay of the $\pi\pi^*$ state coincides with the buildup of n$\pi^*$ population which is reached via CNN in-plane bendings, according to their non-linear spectroscopy simulations. After relaxing into a n$\pi^*$ state via a conical intersection those CNN in-plane bending modes allow the system to reach a high-energy planar n$\pi^{*}$/ground state conical intersection which then allows for an ultrafast (450 fs) nonproductive decay of the n$\pi^*$ into the ground state. Contrary to $\pi\pi^*$ excitation the n$\pi^{*}$/ground state conical intersection may not be reached by the system upon excitation into the n$\pi^*$ state which explains the Kasha–Vavilov's rule violation.\cite{AB_8} A schematic view of the PES regarding the photodynamics of tAB is shown in figure \ref{fig:tAB_PES}.\\
+\\
+%
+%
+%
+Applications for azobenzene compounds range from non-linear optics\cite{AB_nonlinear, AB_nonlinear2}, to optical data storage \cite{AB_memory1} or even bio-medical usage like the release of a payload drug\cite{AB_payload1, AB_payload2} making them an interesting subject of research.
+%
+%
+%
+% a high-energy planar n$\pi^*$/ground state via a conical intersection which then further relaxes via an ultrafast (450 fs) 
+% Radiative to kinetic energy transfer into these modes drives the system to a high-energy planar nπ*/ground state conical intersection, inaccessible upon directexcitation of the nπ*state, that triggers an ultrafast (0.45 ps) nonproductive decay ofthe nπ*state and is thus responsible for the observed Kasha rule violation in UV excitedtrans-AB. On the other hand, cis-AB is built only after intramolecular vibrational energyredistribution and population of the NN torsional mode.
+% A schematic view of the PES regarding the photdynamics of tAB is shown in figure \ref{fig:tAB_PES}.
+%
+%
+%
+% which makes use of transient absorption spectroscopy sublemented with suggests that the reason for the wavelength dependence of the quantum yield 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{Figures/Theory/tAB_PES_scheme.png}
+\caption{Schematic PES of tAB in the space of the CNN in-plane bending and CNNC torsion modes after S1 (n$\pi^*$, red) and S2 ($\pi\pi^*$, blue) excitation from the ground state. The $\pi\pi^*$ excited state can decay via $\pi\pi^*$ $\rightarrow \mathrm{CI}$($\pi\pi^*$/n$\pi^*$) $\rightarrow$ n$\pi^*$ $\rightarrow$ $\mathrm{CI}$(n$\pi^*$/GS$^*$) in a sub-picosecond timescale. Another pathway leads to \textit{trans}-\textit{cis} isomerization via intramolecular vibrational energy redistribution into the torsional mode, which happens at a much slower timescale ($2$-$4$ ps) and mirrors the pathway that occurs after S1 excitation. Energy values in eV.\cite{AB_8}}
+\label{fig:tAB_PES}
+\end{figure}
+%\textit{trans} \rightarrow \mathrm{\textit{cis}} isomerization via intramolecular vibrational energy redistribution into the torsional mode, which happens at a much slower timescale ($2$-$4$ ps) and mirrors the pathway that occurs after S1 excitation. Energy values in eV.\cite{AB_8}
+%
+%
+%Nowadays it is generallyaccepted that the decay to the ground state (GS) upon nπ*excitation oftrans-AB involves an extended conical intersection(CI) seam reached through both torsion and bending(“inversion-assisted torsion”,Scheme 1b).
+% \textit{Trans}$\rightarrow$\textit{cis} as well as \textit{cis}$\rightarrow$\textit{trans} isomerization occurs upon S1 $\leftarrow$ S0 excitation with a quantum yield of QY$_{trans\rightarrow cis} \sim 0.13$, QY$_{cis\rightarrow trans} \sim 0.25$ and S2 $\leftarrow$ S0 excitation, QY$_{trans\rightarrow cis} \sim 0.5$, QY$_{cis\rightarrow trans} \sim 0.23$ excitation.\cite{UV-cis-trans-azo-2}
+\begin{comment}
+Looking at quantum yields (QY) for the respective isomerization reactions one finds that excitation in the S2 state leads to 
+
+
+
+
+ Excitation in the S2 state leads to
+isomerization quantum yields (QYE-Z B 0.13, QYZ-E B 0.23)
+that are nearly half of the yields measured after S1 excitation
+(QYE-Z B 0.25, QYZ-E B 0.5), which is a violation of Kasha’s
+rule21,22
+
+
+
+
+% \begin{figure}
+%     \begin{subfigure}
+%         \includegraphics{Figures/Theory/UV_cisAB.PNG}
+%     \end{subfigure}
+%     \caption{Caption}
+%     \label{fig:enter-label}
+% \end{figure}
+%
+Azobenzene (AB) is the structurally simplest representative of aryl azo molecules which are by far the most popular molecular photoswitches. Their application ranges from fields like 
+Their photochromism
+is based on the E 2 Z isomerization of the NQN bond
+
+NOTES
+- AB photochromism based on E->Z isomerisation of the N=N bond (length change 3.4 A)
+- E-isomer thermodynamically more stable 
+- Z-isomer can undergo photoinduced isomerisation and thermal isomerization
+- UV-VIS absorption spectrum of 
+    -   E-AB shows weak n -> pi* transition band at 450 nm (S1 state) and strong pi->pi*        transiton band at 315 nm (S2 state)
+    -   Z-AB at 440 nm and 260 nm (same states)
+- S2 excitation quantum yield (QY (E-Z) 0.13, QY (Z-E) 0.23) nearly half of the yields after S1 excitation (QY (E-Z) 0.25, QY (Z-E) 0.5) 
+    => violation of Kashas rule 
+        => implies the presence of different relaxation pathways
+The lower QYs after
+p - p* excitation is explained by the presence of an ultrafast
+internal conversion channel from the S2 state cite32,33 (potentially
+involving a crossing with a higher singlet state38–40 
+
+Isomerisation mechanisms
+- mainly two version
+    1) in-plane inversion (one N=N-C angle increases to 180\si{\deg} C-N=N=C dihedral angle remains at 0\si{\deg} 
+    2) rotation (torsion of the N=N bond resulting in change of the C-N=N-C dihedral angle to 120 \si{\deg} cite31
+    
+
+% Azobenzene (AB) is the structurally simplest representative of aryl azo compounds composed of two phenyl rings, which are interconnected by a N=N bond. Their 
+% and are widely employed as 
+
+
+Together with its more complex derivatives it is widely used 
+
+Azobenzene (AB) and its derivatives are by far the most popular
+molecular photoswitches with a wide range of application in the
+elds of photobiology, photochemistry and functional organic
+materials.1–7 Their attractive light-responsive properties are
+based on the ultra-fast photoisomerization between two long-
+lived E- and Z-congurations.1–13 In addition, their photo-
+chromic and isomerization properties and, in particular, their
+activation wavelength can be modulated on demand by suitable
+chemical modications, e.g. by introduction of substituents to
+the benzene rings. Owing to their adjustable photochemical
+properties, AB-based compounds provide a versatile basis for
+numerous applications in data storage devices,3 optoelectronic
+devices,4 and molecular switches.
+\end{comment}
+\newpage
+\section{Tolane}
+Tolane (diphenylacetylene) is a molecule composed of two phenyl groups, which are attached to a acetylene group. Data obtained by x-ray diffraction\cite{tol_xray}, infrared\cite{tol_infra} and Raman\cite{tol_raman} spectra suggests that tolane has $D_{2\mathrm{h}}$ symmetry in its ground-state. Tolane possesses a seemingly non-fluorescent ``dark'' S1 state with a decay time of \SI{200}{\pico\second}
+and a fluorescent S2 state with a decay time of \SI{8}{\pico\second}.\cite{tol_states} Excitation with a \SI{277}{\nano\meter} laser resulted in a quantum yield of 0.00336, which increased to 0.5 at a temperature of \SI{77}{K}.\cite{tol_1}
+%
+%
+% quantumyield of $\phi_{\mathrm{F}} = 0.50$ at low temperatures \cite{tol_1}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\linewidth]{Figures/Theory/DiphenylacetyleneSVG.svg.png}
+\caption{Tolane (diphenylacetylene).}
+\label{fig:tolane}
+\end{figure}\\
+%
+In the realm of anorganic chemistry, tolane is widely used as a ligand for metal complexes, e.g. a $pi$-accepting ligand to modulate the high electron density at d$^{10}$ metal center of Ni(0).\cite{tol_ligand} \\
+%
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{Figures/Theory/tolan_UV_2.png}
+\caption{Absorption spectrum of $\SI{2e-4}{}$ M tolane in 2-methyl pentane.\cite{tol_uv_spec}}
+\label{fig:tolane_UV}
+\end{figure}\\
+%
+Another interesting application are long chains of tolane molecules which branch off into dendrimers. Such structures can act as "photoantennas" and can trap photoexcited electron-hole pairs at its core, which initially formed at the outer edges of those molecules.\cite{tol_dendrimer}\\
+In its polymeric form, poly(diphenylacetylene) (PDPA) possess a variety of interesting properties. They are quite emissive even in solid state,\cite{tol_emission} which is very unusual since conventional $\pi$-conjugated polymers quench their fluorescence in their solid state due to the strong intermolecular $\pi$-$\pi$ interactions based on the planar geometry.\cite{tol_pi_polymer} The fluorescence emission of PDPAs is highly dependent on external stimuli such as liquid solvents, making them excellent sensor for e.g. the determination of viscosity of various solvents.\cite{tol_sensor}
+
+
+
+
+% Due to the fact that tolane is a conjugated molecule and its $\pi$-system extends itself throughout the whole molecule we used it as the backbone of the molecules which we investigated in this report.\cite{tol_backbone}
