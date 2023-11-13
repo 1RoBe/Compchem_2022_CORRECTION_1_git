@@ -2,7 +2,7 @@
 \section{Benchmark computation of Azobenzene and Tolane}
 %
 The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the 
-the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra 1-3. 
+the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}-\ref{fig:uv_fig_tolane}. 
 %
 %
 \begin{figure}[H]
@@ -12,23 +12,111 @@ the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of t
     \label{fig:uv_fig_cAB}
 \end{figure}
 %
+%
+%
+%
+%
+%
 \begin{table}[H]
 \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-3c-tolan-rot3. The subscript ``ph'' refers to orbitals centered at phenyl group.}
 \label{tab:excited_states_cAB}
 \vspace{0.1 cm}
 \centering
-\begin{tabular}{cccc}
+\begin{tabular}{ccccc}
 \toprule
-State & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
+State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
-S1    & 431             & 2.877                  & 0.0286676397          \\
-S2    & \textbf{256}    & \textbf{4.837}         & \textbf{0.1367460701} \\
-S3    & 249             & 4.973                  & 0.0210386691          \\
-S4    & 243             & 5.109                  & 0.0797947997          \\
-S5    & 241             & 5.152                  & 0.0000158155         \\
+S1    & 431             &	& 2.877                  & 0.0286676397          \\
+S2    & \textbf{256}    &	& \textbf{4.837}         & \textbf{0.1367460701} \\
+S3    & 249             &	& 4.973                  & 0.0210386691          \\
+S4    & 243             &	& 5.109                  & 0.0797947997          \\
+S5    & 241             &	& 5.152                  & 0.0000158155         \\
 \bottomrule
 \end{tabular}
 \end{table}
+%
+%
+%Figures\Fragments_ntos\cab
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s1-att.png}
+  %\caption{S1}
+%  \label{fig:nto_cab_}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s2-att.png}
+  %\caption{S2}
+%  \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s3-att.png}
+  %\caption{S3}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s4-att.png}
+  %\caption{S4}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s5-att.png}
+  %\caption{S5}
+%  \label{fig:}
+\end{subfigure}
+%
+\vskip\baselineskip
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s1-det.png}
+  \caption{S1}
+%  \label{fig:}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s2-det.png}
+  \caption{S2}
+%  \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s3-det.png}
+  \caption{S3}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s4-det.png}
+  \caption{S4}
+  %\label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s5-det.png}
+  \caption{S4}
+  %\label{fig:}
+\end{subfigure}
+%
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of cAB at the CAM-B3LYP/\\6-311G* level of theory with an isovalue of 0.02.}
+\label{fig:nto_cab}
+\end{figure}
+\vspace{1 cm}
+%
+%
 %
 \begin{figure}[H]
     \centering
@@ -55,6 +143,90 @@ S5    & 219             & 5.664                  & 0.0000219419         \\
 \end{tabular}
 \end{table}
 %
+%
+%
+%Figures\Fragments_ntos\tab
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s1-att.png}
+  %\caption{S1}
+%  \label{fig:nto_cab_}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s2-att.png}
+  %\caption{S2}
+%  \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s3-att.png}
+  %\caption{S3}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s4-att.png}
+  %\caption{S4}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s5-att.png}
+  %\caption{S5}
+%  \label{fig:}
+\end{subfigure}
+%
+\vskip\baselineskip
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s1-det.png}
+  \caption{S1}
+%  \label{fig:}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s2-det.png}
+  \caption{S2}
+%  \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s3-det.png}
+  \caption{S3}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s4-det.png}
+  \caption{S4}
+  %\label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s5-det.png}
+  \caption{S4}
+  %\label{fig:}
+\end{subfigure}
+%
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of tAB at the CAM-B3LYP/\\6-311G* level of theory with an isovalue of 0.02.}
+\label{fig:nto_tab}
+\end{figure}
+\vspace{1 cm}
+%
+%
+%
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/tolane_uv_ink.eps}
@@ -79,6 +251,90 @@ S5    & 199             & 6.2348                 & 0.0000046560         \\
 \bottomrule
 \end{tabular}
 \end{table}
+%
+%
+%
+%Figures\Fragments_ntos\tolan
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s1-att.png}
+  %\caption{S1}
+%  \label{fig:nto_cab_}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s2-att.png}
+  %\caption{S2}
+%  \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s3-att.png}
+  %\caption{S3}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s4-att.png}
+  %\caption{S4}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s5-att.png}
+  %\caption{S5}
+%  \label{fig:}
+\end{subfigure}
+%
+\vskip\baselineskip
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s1-det.png}
+  \caption{S1}
+%  \label{fig:}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s2-det.png}
+  \caption{S2}
+%  \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s3-det.png}
+  \caption{S3}
+%  \label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s4-det.png}
+  \caption{S4}
+  %\label{fig:}
+\end{subfigure}
+%
+\begin{subfigure}{.19\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tolan/tolane-s5-det.png}
+  \caption{S4}
+  %\label{fig:}
+\end{subfigure}
+%
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of tolane at the CAM-B3LYP/\\6-311G* level of theory with an isovalue of 0.02.}
+\label{fig:nto_tolane}
+\end{figure}
+\vspace{1 cm}
+%
+%
 %
 To compare the deviation in energy of both excited states the relative error of each excited state $\Delta E\left(\text{ES1}\right)$ and $\Delta E\left(\text{ES2}\right)$ was calculated (equation \ref{eq:relative_error_ES1} and \ref{eq:relative_error_ES2}). The total deviation in energy of both excited states $\Delta E\left(\text{ES1, ES2}\right)$ was then derived by averaging over the relative error of the individual excited states (equation \ref{eq:relative_error_ES1_ES2}).
 %
