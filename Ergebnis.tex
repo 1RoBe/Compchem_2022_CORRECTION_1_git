@@ -1,7 +1,250 @@
 \chapter{Results} \label{abs:ergebnis}
-\section{Benchmark computation of Azobenzene and Tolane}
+\section{Benchmark computations of Azobenzene and Tolane}
 %
-The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}, \ref{fig:uv_fig_tAB} and \ref{fig:uv_fig_tolane}. After calculating the natural transition orbitals (ntos) of those three molecules we assigned the energetically lowest electronic states to their specific transition which are shown in tables \ref{tab:excited_states_cAB}, \ref{tab:excited_states_tAB} and \ref{tab:excited_states_tolane}.
+The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the 20 energetically lowest excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP 
+and $\omega$B97M-V) and eight different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZPD). After calculating the natural transition orbitals (ntos) of those three molecules we assigned the energetically lowest electronic states to their specific transition. The first and second excited state resulting from each calculation were compared with the experimental values for the first and second peak of the respective UV-spectrum.\cite{AB_5, tol_uv_spec}  \\
+%
+%
+%
+%To accomplish this task we calculated the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}, \ref{fig:uv_fig_tAB} and \ref{fig:uv_fig_tolane}. After calculating the natural transition orbitals (ntos) of those three molecules we assigned the energetically lowest electronic states to their specific transition which are shown in tables \ref{tab:excited_states_cAB}, \ref{tab:excited_states_tAB} and \ref{tab:excited_states_tolane}.
+%
+%
+To compare the deviation in energy of both excited states the relative error of each excited state $\Delta E\left(\text{ES1}\right)$ and $\Delta E\left(\text{ES2}\right)$ was calculated (equation \ref{eq:relative_error_ES1} and \ref{eq:relative_error_ES2}). The total deviation in energy of both excited states $\Delta E\left(\text{ES1, ES2}\right)$ was then derived by averaging over the relative error of the individual excited states (equation \ref{eq:relative_error_ES1_ES2}).
+%
+\begin{equation}
+\label{eq:relative_error_ES1}
+    \Delta E\left(\text{ES1}\right) = \text{abs}\left(\frac{E_{\text{Comp}}(\text{ES1})-E_{\text{Exp}}(\text{ES1})}{E_{\text{Exp}}(\text{ES1})}\right)
+\end{equation}
+
+\begin{equation}
+\label{eq:relative_error_ES2}
+    \Delta E\left(\text{ES2}\right) = \text{abs}\left(\frac{E_{\text{Comp}}(\text{ES2})-E_{\text{Exp}}(\text{ES2})}{E_{\text{Exp}}(\text{ES2})}\right)
+\end{equation}
+
+$E_{\text{Comp}}(\text{ES1})$ and $E_{\text{Comp}}(\text{ES2})$ denote the computed energy values and $E_{\text{Exp}}(\text{ES1})$ and $E_{\text{Exp}}(\text{ES2})$ the experimentally derived energy values for the first and second excitation energies.
+\begin{equation}
+\label{eq:relative_error_ES1_ES2}
+    \Delta E\left(\text{ES1, ES2}\right) = \frac{1}{2} \left(\Delta E\left(\text{ES1}\right) + \Delta E\left(\text{ES2}\right)\right)
+\end{equation}
+
+
+% \begin{equation}
+% \begin{split}
+% \Delta E(\text{relative error}) = 
+% \frac{1}{2} \text{abs}\left( \frac{E_{\text{Comp}}(\text{ES1})-E_{\text{Exp}}(\text{ES1})}{E_{\text{Exp}}(\text{ES1})} \right) \\
+% + \frac{1}{2} \text{abs}\left( \frac{E_{\text{Comp}}(\text{ES2})-E_{\text{Exp}}(\text{ES2})}{E_{\text{Exp}}(\text{ES2})} \right)
+% \end{split}
+% \end{equation}
+
+% To select the ideal functional and basis set for this research project the first two excited states were computed and compared with their respective experimental values. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{Figures/cAB_Benchmark_Plot.eps}
+    \caption{\textit{cis}-AB: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
+    \label{fig:cAB_Benchmark}
+\end{figure}
+
+For \textit{cis}-AB, the CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result in relation to the minimal relative error and their respective computational cost. The calculated transition energies which where obtained via the CAM-B3LYP functional as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.
+
+%Focusing on \textit{cis}-AB, the first excited state represents a $\text{n}\pi^{*}$ transition whereas the second excited state corresponds to a $\pi\pi^{*}$ transition. The CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result in relation to the minimal relative error and their respective computational cost. \newline
+%The calculated transition energies which where obtained via the CAM-B3LYP functional as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.\\
+% The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
+% \begin{equation*}
+% \begin{split}
+%     E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
+%     E_{\text{Exp}}(\text{ES1}) &= \SI{2.82}{\eV}
+% \end{split}
+% \end{equation*}
+% for the first excited state and
+% \begin{equation*}
+% \begin{split}
+%     E_{\text{Comp}}(\text{ES1}) &= \SI{4.836}{\eV} \\
+%     E_{\text{Exp}}(\text{ES1}) &= \SI{4.77}{\eV}
+% \end{split}
+% \end{equation*}
+% for the second excited state.
+%
+% $\left(E_{\text{Comp}}(\text{ES1}) = \SI{2.877}{\eV}, E_{\text{Exp}}(\text{ES1}) = \SI{2.82}{\eV} \text{  and  } E_{\text{Comp}}(\text{ES2}) = \SI{2.877}{\eV}, E_{\text{Exp}}(\text{ES2}) = \SI{2.82}{\eV}\right)$
+%
+% Camb3lyp
+% calculated: 2.877	4.836
+% experimental: 2.820	4.770
+%
+\begin{table}[H]
+    \caption{Type of transition and vertical excitation energies of \textit{cis}-AB, calculated with CAM-B3LYP\//6-311G* with D3 correction $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
+    \label{tab:cAB-Exp-calc}
+    \vspace{0.1 cm}
+    \centering
+    \begin{tabular}{ccSS}
+        \toprule
+        \multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{c}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{c}{$E_{\text{exp}}$ (\si{\eV})\cite{UV-cis-trans-azo-2}} \\
+        \midrule
+        S1    & n$\pi^{*}$      &   2.877           & 2.82\\
+        S2    & $\pi\pi^{*}$    &   4.836           & 4.77\\
+        \bottomrule
+    \end{tabular}
+\end{table}%
+%
+It appears that the calculated excitation energies tend to be marginally higher than the experimentally obtained ones. The full UV-spectrum of \textit{cis}-azobenzene 
+%
+%
+%\multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{S}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{S}{$E_{\text{exp}}$ (\si{\eV})} \\ 
+\begin{comment}
+\begin{table}[H]
+\caption{cAB}
+\centering
+\begin{tabular}{llll}
+\toprule
+State & Excitation energy (eV) & Oscillator strength  & Exp. Value (eV) \\ 
+\midrule
+S1    & 2.877                  & 0.03                & \\
+S2    & \textbf{4.836}         & \textbf{0.14}       & \\
+S3    & 4.973                  & 0.02                & \\
+S4    & 5.109                  & 0.08                & \\
+S5    & 5.152                  & \SI{1.58e-5}{}      & \\
+S6    & \textbf{5.638}         & \textbf{0.16}       & \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+\end{comment}
+%
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{Figures/tAB_Benchmark_Plot.eps}
+    \caption{\textit{trans}-AB: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
+    \label{fig:tAB_Benchmark}
+\end{figure}
+%
+In the case of \textit{trans}-AB, the first excited state is a $\text{n}\pi^{*}$ transition and the second one represents $\pi\pi^{*}$ transition, mirroring the first two transitions in \textit{cis}-AB. Looking at figure \ref{fig:tAB_Benchmark} it appears, that CAM-B3LYP performed quite well in combination with the 6-311G* basis set and is only slightly outperformed by B97 and B97M-rV. \\
+Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}. \\ Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar shape. This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
+% \begin{equation*}
+% \begin{split}
+%     E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
+%     E_{\text{Exp}}(\text{ES1}) &= \SI{2.82}{\eV}
+% \end{split}
+% \end{equation*}
+% for the first excited state and
+% \begin{equation*}
+% \begin{split}
+%     E_{\text{Comp}}(\text{ES1}) &= \SI{4.836}{\eV} \\
+%     E_{\text{Exp}}(\text{ES1}) &= \SI{4.77}{\eV}
+% \end{split}
+% \end{equation*}
+% for the second excited state.
+%
+\begin{table}[H]
+\caption{Type of transition and vertical excitation energies of \textit{trans}-AB, calculated with CAM-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
+\label{tab:tAB-Exp-calc}
+\vspace{0.1 cm}
+\centering
+\begin{tabular}{ccSS}
+\toprule
+\multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{c}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{c}{$E_{\text{exp}}$ (\si{\eV})\cite{UV-cis-trans-azo-2}} \\
+\midrule
+S1    & n$\pi^{*}$      &   2.824           & 2.79\\
+S2    & $\pi\pi^{*}$    &   4.372           & 3.95\\
+\bottomrule
+\end{tabular}
+\end{table}
+%
+\begin{comment}
+\begin{table}[H]
+\caption{tAB}
+\centering
+\begin{tabular}{llll}
+\toprule
+State & Excitation energy (eV) & Oscillator strength  & Exp. Value (eV) \\ \midrule
+S1    & 2.824                & $5.4 \cdot 10^{-5}$             & 2.79            \\
+S2    & \textbf{4.372}       & \textbf{1}                      & 3.95            \\
+S3    & 4.847                & 0.03                            & -               \\
+S4    & 4.867                & $1.8 \cdot 10^{-5}$             & -               \\ \bottomrule
+\end{tabular}
+\end{table}
+\end{comment}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{Figures/tolan_Benchmark_Plot.eps}
+    \caption{Tolane: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
+    \label{fig:tolan_Benchmark}
+\end{figure}
+%
+%
+The first and second excited states correspond both to $\pi\pi^{*}$ transitions (see figure \ref{fig:NTOS-tolane}) and their respective transition energies are shown in table \ref{tab:tolane-Exp-calc}. The benchmark yielded an interesting result. It appears that the higher rung functionals, CAM-B3LYP and $\omega$B97M-V, perform worse than their lower rung counterparts especially in bigger basis sets (def2-SVPD, def2-TZVP). Similar to the case of tAB, one explanation could be the overestimation of conjugation effects which affect a flat molecule with an extensive $\pi$ MO greatly. This would explain why in the case of tolane both transition energies deviate greatly from the experimental value while in the case of tAB and cAB only the $\pi\pi^{*}$ transition was majorly affected. 
+%
+\begin{table}[H]
+\caption{Type of transition and vertical excitation energies of tolane, calculated with CAMP-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
+\label{tab:tolane-Exp-calc}
+\vspace{0.1 cm}
+\centering
+\begin{tabular}{ccSS}
+\toprule
+\multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{c}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{c}{$E_{\text{exp}}$ (\si{\eV})\cite{UV-tolane-ref}} \\
+\midrule
+S1    & $\pi\pi^{*}$    &   4.706           & 4.18 \\
+S2    & $\pi\pi^{*}$    &   5.212           & 4.32 \\
+\bottomrule
+\end{tabular}
+\end{table}
+%
+%
+Due to historical data in which CAM-B3LYP performed well for azobenzene molecules and the results of our benchmark, we chose CAM-B3LYP as the functional of choice for further analysis of the molecules of interest.\\
+An alternative functional one could use would be the B97M-rV, since it performed especially well for tolane with some deficits concerning tAB.
+\begin{comment}
+The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
+\begin{equation*}
+\begin{split}
+    E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
+    E_{\text{Exp}}(\text{ES1}) &= \SI{2.82}{\eV}
+\end{split}
+\end{equation*}
+for the first excited state and
+\begin{equation*}
+\begin{split}
+    E_{\text{Comp}}(\text{ES1}) &= \SI{4.836}{\eV} \\
+    E_{\text{Exp}}(\text{ES1}) &= \SI{4.77}{\eV}
+\end{split}
+\end{equation*}
+for the second excited state.
+\end{comment}
+%
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[h]{1.0\textwidth}
+%         \centering
+%         \includegraphics[scale=0.8]{Figures/tAB_Benchmark_Plot.eps}    
+%         \subcaption[Internal Name]{Benchmark tAB}
+%         \label{fig:tAB_Benchmark}
+%     \end{subfigure}
+%     \begin{subfigure}[h]{1.0\textwidth}
+%         \centering
+%         \includegraphics[scale=0.8]{Figures/tolan_Benchmark_Plot.eps}    
+%         \subcaption[Internal Name]{ADC(2)}
+%         \label{fig:tolan_Benchmark}
+%     \end{subfigure}
+%     \caption{Signed Error Distributions of energies in comparison to the TBE, computed with exp. QChem 5.2 and ROHF-DODS-ADC(n)/aug-cc-pVTZ.}
+%     \label{fig:Benchmark_all}
+% \end{figure}
+%
+\begin{comment}
+\begin{table}[H]
+\caption{tolane}
+\centering
+\begin{tabular}{llll}
+\toprule
+State & Excitation energy (eV) & Oscillator strength & Exp. Value (eV) \\ \midrule
+S1    & \textbf{4.706}          & \textbf{1.1}        &                 \\
+S2    & 5.212                   & $3.7\cdot 10^{-5}$           &                 \\
+S3    & 5.218                   & $1.6\cdot 10^{-6}$           &                 \\
+S4    & 5.318                   & $1.0\cdot 10^{-7}$           &                 \\ \bottomrule
+\end{tabular}
+\end{table}
+\end{comment}
+%
+%
+%
 %
 %
 \begin{figure}[H]
@@ -334,237 +577,6 @@ S5    & 199             & 6.2348                 & 0.0000046560         \\
 \vspace{1 cm}
 %
 %
-%
-To compare the deviation in energy of both excited states the relative error of each excited state $\Delta E\left(\text{ES1}\right)$ and $\Delta E\left(\text{ES2}\right)$ was calculated (equation \ref{eq:relative_error_ES1} and \ref{eq:relative_error_ES2}). The total deviation in energy of both excited states $\Delta E\left(\text{ES1, ES2}\right)$ was then derived by averaging over the relative error of the individual excited states (equation \ref{eq:relative_error_ES1_ES2}).
-%
-\begin{equation}
-\label{eq:relative_error_ES1}
-    \Delta E\left(\text{ES1}\right) = \text{abs}\left(\frac{E_{\text{Comp}}(\text{ES1})-E_{\text{Exp}}(\text{ES1})}{E_{\text{Exp}}(\text{ES1})}\right)
-\end{equation}
-
-\begin{equation}
-\label{eq:relative_error_ES2}
-    \Delta E\left(\text{ES2}\right) = \text{abs}\left(\frac{E_{\text{Comp}}(\text{ES2})-E_{\text{Exp}}(\text{ES2})}{E_{\text{Exp}}(\text{ES2})}\right)
-\end{equation}
-
-$E_{\text{Comp}}(\text{ES1})$ and $E_{\text{Comp}}(\text{ES2})$ denote the computed energy values and $E_{\text{Exp}}(\text{ES1})$ and $E_{\text{Exp}}(\text{ES2})$ the experimentally derived energy values for the first and second excitation energies.
-\begin{equation}
-\label{eq:relative_error_ES1_ES2}
-    \Delta E\left(\text{ES1, ES2}\right) = \frac{1}{2} \left(\Delta E\left(\text{ES1}\right) + \Delta E\left(\text{ES2}\right)\right)
-\end{equation}
-
-
-% \begin{equation}
-% \begin{split}
-% \Delta E(\text{relative error}) = 
-% \frac{1}{2} \text{abs}\left( \frac{E_{\text{Comp}}(\text{ES1})-E_{\text{Exp}}(\text{ES1})}{E_{\text{Exp}}(\text{ES1})} \right) \\
-% + \frac{1}{2} \text{abs}\left( \frac{E_{\text{Comp}}(\text{ES2})-E_{\text{Exp}}(\text{ES2})}{E_{\text{Exp}}(\text{ES2})} \right)
-% \end{split}
-% \end{equation}
-
-% To select the ideal functional and basis set for this research project the first two excited states were computed and compared with their respective experimental values. 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.75]{Figures/cAB_Benchmark_Plot.eps}
-    \caption{\textit{cis}-AB: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
-    \label{fig:cAB_Benchmark}
-\end{figure}
-
-Focusing on \textit{cis}-AB, the first excited state represents a $\text{n}\pi^{*}$ transition whereas the second excited state corresponds to a $\pi\pi^{*}$ transition. The CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result in relation to the minimal relative error and their respective computational cost. \newline
-The calculated transition energies which where obtained via the CAM-B3LYP functional as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.\\
-% The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
-% \begin{equation*}
-% \begin{split}
-%     E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
-%     E_{\text{Exp}}(\text{ES1}) &= \SI{2.82}{\eV}
-% \end{split}
-% \end{equation*}
-% for the first excited state and
-% \begin{equation*}
-% \begin{split}
-%     E_{\text{Comp}}(\text{ES1}) &= \SI{4.836}{\eV} \\
-%     E_{\text{Exp}}(\text{ES1}) &= \SI{4.77}{\eV}
-% \end{split}
-% \end{equation*}
-% for the second excited state.
-%
-% $\left(E_{\text{Comp}}(\text{ES1}) = \SI{2.877}{\eV}, E_{\text{Exp}}(\text{ES1}) = \SI{2.82}{\eV} \text{  and  } E_{\text{Comp}}(\text{ES2}) = \SI{2.877}{\eV}, E_{\text{Exp}}(\text{ES2}) = \SI{2.82}{\eV}\right)$
-%
-% Camb3lyp
-% calculated: 2.877	4.836
-% experimental: 2.820	4.770
-%
-\begin{table}[H]
-    \caption{Type of transition and vertical excitation energies of \textit{cis}-AB, calculated with CAM-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
-    \label{tab:cAB-Exp-calc}
-    \vspace{0.1 cm}
-    \centering
-    \begin{tabular}{ccSS}
-        \toprule
-        \multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{c}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{c}{$E_{\text{exp}}$ (\si{\eV})\cite{UV-cis-trans-azo-2}} \\
-        \midrule
-        S1    & n$\pi^{*}$      &   2.877           & 2.82\\
-        S2    & $\pi\pi^{*}$    &   4.836           & 4.77\\
-        \bottomrule
-    \end{tabular}
-\end{table}%
-%
-It appears that the calculated excitation energies tend to be marginally higher than the experimentally obtained ones.
-%
-%\multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{S}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{S}{$E_{\text{exp}}$ (\si{\eV})} \\ 
-\begin{comment}
-\begin{table}[H]
-\caption{cAB}
-\centering
-\begin{tabular}{llll}
-\toprule
-State & Excitation energy (eV) & Oscillator strength  & Exp. Value (eV) \\ 
-\midrule
-S1    & 2.877                  & 0.03                & \\
-S2    & \textbf{4.836}         & \textbf{0.14}       & \\
-S3    & 4.973                  & 0.02                & \\
-S4    & 5.109                  & 0.08                & \\
-S5    & 5.152                  & \SI{1.58e-5}{}      & \\
-S6    & \textbf{5.638}         & \textbf{0.16}       & \\ 
-\bottomrule
-\end{tabular}
-\end{table}
-\end{comment}
-%
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.75]{Figures/tAB_Benchmark_Plot.eps}
-    \caption{\textit{trans}-AB: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
-    \label{fig:tAB_Benchmark}
-\end{figure}
-%
-In the case of \textit{trans}-AB, the first excited state is a $\text{n}\pi^{*}$ transition and the second one represents $\pi\pi^{*}$ transition, mirroring the first two transitions in \textit{cis}-AB. Looking at figure \ref{fig:tAB_Benchmark} it appears, that CAM-B3LYP performed quite well in combination with the 6-311G* basis set and is only slightly outperformed by B97 and B97M-rV. \\
-Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}. \\ Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar shape. This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
-% \begin{equation*}
-% \begin{split}
-%     E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
-%     E_{\text{Exp}}(\text{ES1}) &= \SI{2.82}{\eV}
-% \end{split}
-% \end{equation*}
-% for the first excited state and
-% \begin{equation*}
-% \begin{split}
-%     E_{\text{Comp}}(\text{ES1}) &= \SI{4.836}{\eV} \\
-%     E_{\text{Exp}}(\text{ES1}) &= \SI{4.77}{\eV}
-% \end{split}
-% \end{equation*}
-% for the second excited state.
-%
-\begin{table}[H]
-\caption{Type of transition and vertical excitation energies of \textit{trans}-AB, calculated with CAM-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
-\label{tab:tAB-Exp-calc}
-\vspace{0.1 cm}
-\centering
-\begin{tabular}{ccSS}
-\toprule
-\multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{c}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{c}{$E_{\text{exp}}$ (\si{\eV})\cite{UV-cis-trans-azo-2}} \\
-\midrule
-S1    & n$\pi^{*}$      &   2.824           & 2.79\\
-S2    & $\pi\pi^{*}$    &   4.372           & 3.95\\
-\bottomrule
-\end{tabular}
-\end{table}
-%
-\begin{comment}
-\begin{table}[H]
-\caption{tAB}
-\centering
-\begin{tabular}{llll}
-\toprule
-State & Excitation energy (eV) & Oscillator strength  & Exp. Value (eV) \\ \midrule
-S1    & 2.824                & $5.4 \cdot 10^{-5}$             & 2.79            \\
-S2    & \textbf{4.372}       & \textbf{1}                      & 3.95            \\
-S3    & 4.847                & 0.03                            & -               \\
-S4    & 4.867                & $1.8 \cdot 10^{-5}$             & -               \\ \bottomrule
-\end{tabular}
-\end{table}
-\end{comment}
-%
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.75]{Figures/tolan_Benchmark_Plot.eps}
-    \caption{Tolane: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
-    \label{fig:tolan_Benchmark}
-\end{figure}
-%
-%
-The first and second excited states correspond both to $\pi\pi^{*}$ transitions (see figure \ref{fig:NTOS-tolane}) and their respective transition energies are shown in table \ref{tab:tolane-Exp-calc}. The benchmark yielded an interesting result. It appears that the higher rung functionals, CAM-B3LYP and $\omega$B97M-V, perform worse than their lower rung counterparts especially in bigger basis sets (def2-SVPD, def2-TZVP). Similar to the case of tAB, one explanation could be the overestimation of conjugation effects which affect a flat molecule with an extensive $\pi$ MO greatly. This would explain why in the case of tolane both transition energies deviate greatly from the experimental value while in the case of tAB and cAB only the $\pi\pi^{*}$ transition was majorly affected. 
-%
-\begin{table}[H]
-\caption{Type of transition and vertical excitation energies of tolane, calculated with CAMP-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
-\label{tab:tolane-Exp-calc}
-\vspace{0.1 cm}
-\centering
-\begin{tabular}{ccSS}
-\toprule
-\multicolumn{1}{c}{State} & \multicolumn{1}{c}{Transition} & \multicolumn{1}{c}{$E_{\text{calc}}$ (\si{\eV})}  & \multicolumn{1}{c}{$E_{\text{exp}}$ (\si{\eV})\cite{UV-tolane-ref}} \\
-\midrule
-S1    & $\pi\pi^{*}$    &   4.706           & 4.18 \\
-S2    & $\pi\pi^{*}$    &   5.212           & 4.32 \\
-\bottomrule
-\end{tabular}
-\end{table}
-%
-%
-Due to historical data in which CAM-B3LYP performed well for azobenzene molecules and the results of our benchmark, we chose CAM-B3LYP as the functional of choice for further analysis of the molecules of interest.\\
-An alternative functional one could use would be the B97M-rV, since it performed especially well for tolane with some deficits concerning tAB.
-\begin{comment}
-The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
-\begin{equation*}
-\begin{split}
-    E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
-    E_{\text{Exp}}(\text{ES1}) &= \SI{2.82}{\eV}
-\end{split}
-\end{equation*}
-for the first excited state and
-\begin{equation*}
-\begin{split}
-    E_{\text{Comp}}(\text{ES1}) &= \SI{4.836}{\eV} \\
-    E_{\text{Exp}}(\text{ES1}) &= \SI{4.77}{\eV}
-\end{split}
-\end{equation*}
-for the second excited state.
-\end{comment}
-%
-% \begin{figure}[H]
-%     \centering
-%     \begin{subfigure}[h]{1.0\textwidth}
-%         \centering
-%         \includegraphics[scale=0.8]{Figures/tAB_Benchmark_Plot.eps}    
-%         \subcaption[Internal Name]{Benchmark tAB}
-%         \label{fig:tAB_Benchmark}
-%     \end{subfigure}
-%     \begin{subfigure}[h]{1.0\textwidth}
-%         \centering
-%         \includegraphics[scale=0.8]{Figures/tolan_Benchmark_Plot.eps}    
-%         \subcaption[Internal Name]{ADC(2)}
-%         \label{fig:tolan_Benchmark}
-%     \end{subfigure}
-%     \caption{Signed Error Distributions of energies in comparison to the TBE, computed with exp. QChem 5.2 and ROHF-DODS-ADC(n)/aug-cc-pVTZ.}
-%     \label{fig:Benchmark_all}
-% \end{figure}
-%
-\begin{comment}
-\begin{table}[H]
-\caption{tolane}
-\centering
-\begin{tabular}{llll}
-\toprule
-State & Excitation energy (eV) & Oscillator strength & Exp. Value (eV) \\ \midrule
-S1    & \textbf{4.706}          & \textbf{1.1}        &                 \\
-S2    & 5.212                   & $3.7\cdot 10^{-5}$           &                 \\
-S3    & 5.218                   & $1.6\cdot 10^{-6}$           &                 \\
-S4    & 5.318                   & $1.0\cdot 10^{-7}$           &                 \\ \bottomrule
-\end{tabular}
-\end{table}
-\end{comment}
 %
 %
 %
