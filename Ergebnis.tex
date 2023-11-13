@@ -1,8 +1,7 @@
 \chapter{Results} \label{abs:ergebnis}
 \section{Benchmark computation of Azobenzene and Tolane}
 %
-The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the 
-the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}-\ref{fig:uv_fig_tolane}. 
+The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}, \ref{fig:uv_fig_tAB} and \ref{fig:uv_fig_tolane}. After calculating the natural transition orbitals (ntos) of those three molecules we assigned the energetically lowest electronic states to their specific transition which are shown in tables \ref{tab:excited_states_cAB}, \ref{tab:excited_states_tAB} and \ref{tab:excited_states_tolane}.
 %
 %
 \begin{figure}[H]
@@ -14,23 +13,23 @@ the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of t
 %
 %
 %
-%
+The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S1-S5 are $\pi\pi^*$ transitions.
 %
 %
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-3c-tolan-rot3. The subscript ``ph'' refers to orbitals centered at phenyl group.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of cAB. Calculated at the CAM-B3LYP/\\6-311G* level of theory with D3 correction.}
 \label{tab:excited_states_cAB}
 \vspace{0.1 cm}
 \centering
 \begin{tabular}{ccccc}
 \toprule
-State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
+State & Trans. & $\lambda$ (nm) & $E$ $\left(\si{\eV}\right)$ & $f$    \\
 \midrule
-S1    & 431             &	& 2.877                  & 0.0286676397          \\
-S2    & \textbf{256}    &	& \textbf{4.837}         & \textbf{0.1367460701} \\
-S3    & 249             &	& 4.973                  & 0.0210386691          \\
-S4    & 243             &	& 5.109                  & 0.0797947997          \\
-S5    & 241             &	& 5.152                  & 0.0000158155         \\
+S1    & n$\pi^*$		& 431			& 2.877				& 0.0286676397          \\
+S2    & $\pi\pi^*$ 		& \textbf{256}	& \textbf{4.837}	& \textbf{0.1367460701} \\
+S3    & $\pi\pi^*$ 		& 249			& 4.973             & 0.0210386691          \\
+S4    & $\pi\pi^*$		& 243			& 5.109             & 0.0797947997          \\
+S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -107,11 +106,11 @@ S5    & 241             &	& 5.152                  & 0.0000158155         \\
 \begin{subfigure}{.19\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/cAB/cAB-s5-det.png}
-  \caption{S4}
+  \caption{S5}
   %\label{fig:}
 \end{subfigure}
 %
-\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of cAB at the CAM-B3LYP/\\6-311G* level of theory with an isovalue of 0.02.}
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of cAB at the CAM-B3LYP/\\6-311G* with level of theory with an isovalue of 0.02.}
 \label{fig:nto_cab}
 \end{figure}
 \vspace{1 cm}
@@ -126,19 +125,19 @@ S5    & 241             &	& 5.152                  & 0.0000158155         \\
 \end{figure}
 %
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-3c-tolan-rot3. The subscript ``ph'' refers to orbitals centered at phenyl group.}
-\label{tab:excited_states_cAB}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tAB. Calculated at the CAM-B3LYP/\\6-311G* level of theory with D3 correction.}
+\label{tab:excited_states_tAB}
 \vspace{0.1 cm}
 \centering
-\begin{tabular}{cccc}
+\begin{tabular}{ccccc}
 \toprule
-State & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
+State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
-S1    & 439             & 2.824                  & 0.0000541015          \\
-S2    & \textbf{284}    & \textbf{4.372}         & \textbf{1.0411258424} \\
-S3    & 256             & 4.847                  & 0.0308033979          \\
-S4    & 255             & 4.857                  & 0.0000179591          \\
-S5    & 219             & 5.664                  & 0.0000219419         \\
+S1    & n$\pi^*$	& 439             & 2.824                  & 0.0000541015          \\
+S2    & $\pi\pi^*$ 	&\textbf{284}	  & \textbf{4.372}         & \textbf{1.0411258424} \\
+S3    & $\pi\pi^*$	& 256             & 4.847                  & 0.0308033979          \\
+S4    & $\pi\pi^*$	& 255             & 4.857                  & 0.0000179591          \\
+S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419         \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -235,13 +234,13 @@ S5    & 219             & 5.664                  & 0.0000219419         \\
 \end{figure}
 %
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-3c-tolan-rot3. The subscript ``ph'' refers to orbitals centered at phenyl group.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. Calculated at the CAM-B3LYP/\\6-311G* level of theory with D3 correction.}
 \label{tab:excited_states_tolane}
 \vspace{0.1 cm}
 \centering
-\begin{tabular}{cccc}
+\begin{tabular}{ccccc}
 \toprule
-State & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
+State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
 S1    & \textbf{263}    & \textbf{4.7061}        & \textbf{1.1157256742} \\
 S2    & 238             & 5.2116                 & 0.0000370134          \\
