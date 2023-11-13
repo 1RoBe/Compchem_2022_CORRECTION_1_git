@@ -1,7 +1,13 @@
 \chapter{Results} \label{abs:ergebnis}
-\section{Benchmark computation of Azobenzene and Tolane}
+\section{Benchmark computations of Azobenzene and Tolane}
 %
-The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}, \ref{fig:uv_fig_tAB} and \ref{fig:uv_fig_tolane}. After calculating the natural transition orbitals (ntos) of those three molecules we assigned the energetically lowest electronic states to their specific transition which are shown in tables \ref{tab:excited_states_cAB}, \ref{tab:excited_states_tAB} and \ref{tab:excited_states_tolane}.
+The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V)with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).\\
+The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
+%
+%
+%After calculating the natural transition orbitals (ntos) for each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction we assigned 
+%\\
+%To accomplish this task we calculated the first 20 excited states of each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The resulting states were fitted with a Lorentzian function resulting in UV-spectra \ref{fig:uv_fig_cAB}, \ref{fig:uv_fig_tAB} and \ref{fig:uv_fig_tolane}. After calculating the natural transition orbitals (ntos) of those three molecules we assigned the energetically lowest electronic states to their specific transition which are shown in tables \ref{tab:excited_states_cAB}, \ref{tab:excited_states_tAB} and \ref{tab:excited_states_tolane}.
 %
 %
 \begin{figure}[H]
@@ -13,7 +19,8 @@ The first objective of this project was to select a functional and basis set com
 %
 %
 %
-The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S1-S5 are $\pi\pi^*$ transitions.
+To assign transitions to the respective electronic states natural transition orbitals (ntos) were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction for cAB, tAB and tolane.\\
+The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S1-S5 are $\pi\pi^*$ transitions. 
 %
 %
 \begin{table}[H]
@@ -120,12 +127,18 @@ S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/tAB_uv_ink.eps}
-    \caption{UV spectrum of \textit{trans}-azobenzene. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition.}
+    \caption{UV spectrum of \textit{trans}-azobenzene. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. Calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction}
     \label{fig:uv_fig_tAB}
 \end{figure}
 %
+%
+%
+Similarly to cAB, the first electronic state can be assigned to the n$\pi^*$ transition. The small intensity can be explained by the symmetry-forbidden nature of the n$\pi^*$ transition. States S2-S5 can be assigned to $\pi\pi^*$ transitions (figure \ref{fig:nto_tab}).
+%
+%
+%
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tAB. Calculated at the CAM-B3LYP/\\6-311G* level of theory with D3 correction.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tAB. Calculated at the CAM-B3LYP/6-311G* level of theory with D3 correction.}
 \label{tab:excited_states_tAB}
 \vspace{0.1 cm}
 \centering
@@ -219,7 +232,7 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
   %\label{fig:}
 \end{subfigure}
 %
-\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of tAB at the CAM-B3LYP/\\6-311G* level of theory with an isovalue of 0.02.}
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of tAB at the CAM-B3LYP/6-311G* level of theory with an isovalue of 0.02.}
 \label{fig:nto_tab}
 \end{figure}
 \vspace{1 cm}
@@ -229,12 +242,19 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/tolane_uv_ink.eps}
-    \caption{UV spectrum of tolane. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition.}
+    \caption{UV spectrum of tolane. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.}
     \label{fig:uv_fig_tolane}
 \end{figure}
 %
+%
+%
+Figure \ref{fig:uv_fig_tolane} shows the UV-spectrum of tolane, while the energies of the electronic states of tolane are shown in table \ref{tab:excited_states_tolane} and their ntos are shown in figure \ref{fig:nto_tolane}.\\
+All five electronic states can be assigned to $\pi\pi^*$ transitions.
+%
+%
+%
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. Calculated at the CAM-B3LYP/\\6-311G* level of theory with D3 correction.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. Calculated at the CAM-B3LYP/6-311G* level of theory with D3 correction.}
 \label{tab:excited_states_tolane}
 \vspace{0.1 cm}
 \centering
@@ -242,11 +262,11 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 \toprule
 State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
-S1    & \textbf{263}    & \textbf{4.7061}        & \textbf{1.1157256742} \\
-S2    & 238             & 5.2116                 & 0.0000370134          \\
-S3    & 238             & 5.2184                 & 0.0000015931          \\
-S4    & 233             & 5.3175                 & 0.0000001004          \\
-S5    & 199             & 6.2348                 & 0.0000046560         \\
+S1    & $\pi\pi^*$	& \textbf{263}    & \textbf{4.7061}        & \textbf{1.1157256742} \\
+S2    & $\pi\pi^*$	& 238             & 5.2116                 & 0.0000370134          \\
+S3    & $\pi\pi^*$	& 238             & 5.2184                 & 0.0000015931          \\
+S4    & $\pi\pi^*$	& 233             & 5.3175                 & 0.0000001004          \\
+S5    & $\pi\pi^*$	& 199             & 6.2348                 & 0.0000046560         \\
 \bottomrule
 \end{tabular}
 \end{table}
