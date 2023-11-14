@@ -13,7 +13,7 @@ The resulting states were fitted with a Lorentzian function resulting in figure 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/cAB-uv-ink.eps}
-    \caption{UV spectrum of \textit{cis}-azobenzene. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition.}
+    \caption{UV spectrum of \textit{cis}-azobenzene, calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. }
     \label{fig:uv_fig_cAB}
 \end{figure}
 %
@@ -24,7 +24,7 @@ The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown 
 %
 %
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of cAB. Calculated at the CAM-B3LYP/\\6-311G* level of theory with D3 correction.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of cAB. Calculated at the CAM-B3LYP/6-311G* level of theory with D3(BJ) correction.}
 \label{tab:excited_states_cAB}
 \vspace{0.1 cm}
 \centering
@@ -117,7 +117,7 @@ S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
   %\label{fig:}
 \end{subfigure}
 %
-\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of cAB at the CAM-B3LYP/\\6-311G* with level of theory with an isovalue of 0.02.}
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of cAB at the CAM-B3LYP/6-311G* with level of theory with an isovalue of 0.02.}
 \label{fig:nto_cab}
 \end{figure}
 \vspace{1 cm}
@@ -127,7 +127,7 @@ S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/tAB_uv_ink.eps}
-    \caption{UV spectrum of \textit{trans}-azobenzene. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. Calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction}
+    \caption{UV spectrum of \textit{trans}-azobenzene, calculated at the CAM-B3LYP/6-311G* level of theory with D3(BJ) correction.. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition.}
     \label{fig:uv_fig_tAB}
 \end{figure}
 %
@@ -242,7 +242,7 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/tolane_uv_ink.eps}
-    \caption{UV spectrum of tolane. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.}
+    \caption{UV spectrum of tolane, calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. }
     \label{fig:uv_fig_tolane}
 \end{figure}
 %
@@ -254,7 +254,7 @@ All five electronic states can be assigned to $\pi\pi^*$ transitions.
 %
 %
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. Calculated at the CAM-B3LYP/6-311G* level of theory with D3 correction.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. Calculated at the CAM-B3LYP/6-311G* level of theory with D3(BJ) correction.}
 \label{tab:excited_states_tolane}
 \vspace{0.1 cm}
 \centering
@@ -348,13 +348,15 @@ S5    & $\pi\pi^*$	& 199             & 6.2348                 & 0.0000046560    
   %\label{fig:}
 \end{subfigure}
 %
-\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of tolane at the CAM-B3LYP/\\6-311G* level of theory with an isovalue of 0.02.}
+\caption{Detachment (red) and attachment (blue) densities for the energetically lowest five excited singlet states S1 to S5 of tolane at the CAM-B3LYP/6-311G* level of theory with an isovalue of 0.02.}
 \label{fig:nto_tolane}
 \end{figure}
-\vspace{1 cm}
+%\vspace{1 cm}
 %
 %
 %
+To obtain the functional and basis set combination that performs the best across cAB, tAB and tolane, we compared the calculated energy values of the first and second excited state of each molecule to the energetically lowest and second lowest absorption maximum of their respective experimentally obtained UV-spectra.\cite{UV-cis-trans-azo-1, UV-cis-trans-azo-2, UV-tolane-ref}\\
+%After obtaining the energy values of the 20 energetically lowest electronic states for each functional and basis set, we wanted %to determine the best combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane. To accomplish this %task we compared the energy value of the first and second excited state were compared
 To compare the deviation in energy of both excited states the relative error of each excited state $\Delta E\left(\text{ES1}\right)$ and $\Delta E\left(\text{ES2}\right)$ was calculated (equation \ref{eq:relative_error_ES1} and \ref{eq:relative_error_ES2}). The total deviation in energy of both excited states $\Delta E\left(\text{ES1, ES2}\right)$ was then derived by averaging over the relative error of the individual excited states (equation \ref{eq:relative_error_ES1_ES2}).
 %
 \begin{equation}
