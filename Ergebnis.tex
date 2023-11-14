@@ -617,11 +617,11 @@ At first this was done by manually creating raw geometries which were then furth
 Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} 
 The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers of tAB-1c-tolane and tAB-3c-tolane were then optimized at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since we wanted to model the \textit{trans}-\textit{cis} isomerisation, we needed to obtain the geometries of the corresponding \textit{cis}-isomers cAB-1c-tolane and cAB-3c-tolane.
-This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢ C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
-e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}
-The angle of torsion was varied in steps of 20\si{\degree} and a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
+This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢~C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
+e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}.
+The angle of torsion was varied in steps of 20\si{\degree} and at each step a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since the calculations didn't succeed after a dihedral angle of 100\si[]{\degree} was reached, 
-we had to manually decrease the dihedral angle to about 80\si[]{\degree} at which point we again performed a unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the \textit{isomers} seen in figure \autoref{fig:Conformers}
+we had to manually decrease the dihedral angle to about 80\si[]{\degree} at which point we again performed a unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the isomers seen in figure~\ref{fig:Conformers}.
 %
 %
 % This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢ C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized.
@@ -640,20 +640,20 @@ The final geometries with the lowest energy for each molecule are depicted in fi
 % The final geometries with the lowest energy for each molecule are depicted in figure \ref{fig:Conformers} and their respective energies are shown in table \ref{tab:GS-energy-conformers}.
 %
 \begin{table}[h]
-\caption{Ground state energies of the different AB-tolane molecules. "-tor" refers to those geometries which are the likely endpoints of a trans-cis isomerisation.}
+\caption{Ground state energies of the \textit{trans} and \textit{cis} AB-tolane molecules.}
 \label{tab:GS-energy-conformers}
 \centering
 \vspace{0.1 cm}
-\begin{tabular}{lc} 
+\begin{tabular}{cc} 
 \toprule
 Molecule           & \textit{E} (\si{\eV}) \\
 \midrule
 tAB-1c-tolane-rot9 & -32329.113  \\
-cAB-1c-tolane-rot7 & -32328.584 \\
+%cAB-1c-tolane-rot7 & -32328.584 \\
 cAB-1c-tolane-tor  & -32328.568 \\
 \midrule
 tAB-3c-tolane-rot3 & -36607.152 \\
-cAB-3c-tolane-rot9 & -36606.514 \\
+%cAB-3c-tolane-rot9 & -36606.514 \\
 cAB-3c-tolane-tor  & -36606.124 \\
 \bottomrule
 \end{tabular}
@@ -676,12 +676,12 @@ Since we were interested in conformers with the lowest ground state energy, we i
   \label{fig:tAB-1c-tolane-crest-rot9}
 \end{subfigure}%
 %\medskip
-\begin{subfigure}{.33\textwidth}
-  \centering
-  \includegraphics[width=.9\linewidth]{Figures/Conformer/cAB-1c-tolane-crest-rot7.png}
-  \caption{cAB-1c-tolane-rot7}
-  \label{fig:cAB-1c-tolane-crest-rot7}
-\end{subfigure}
+% \begin{subfigure}{.33\textwidth}
+%   \centering
+%   \includegraphics[width=.9\linewidth]{Figures/Conformer/cAB-1c-tolane-crest-rot7.png}
+%   \caption{cAB-1c-tolane-rot7}
+%   \label{fig:cAB-1c-tolane-crest-rot7}
+% \end{subfigure}
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Figures/Conformer/cAB-for-tAB-1c-tolane-crest-rot9.png}
@@ -695,12 +695,12 @@ Since we were interested in conformers with the lowest ground state energy, we i
   \caption{tAB-3c-tolane-rot3}
   \label{fig:tAB-3c-tolane-crest-rot3}
 \end{subfigure}%
-\begin{subfigure}{.33\textwidth}
-  \centering
-  \includegraphics[width=.9\linewidth]{Figures/Conformer/cAB-3c-tolane-crest-rot9.png}
-  \caption{cAB-3c-tolane-rot9}
-  \label{fig:cAB-3c-tolane-crest-rot9}
-\end{subfigure}
+% \begin{subfigure}{.33\textwidth}
+%   \centering
+%   \includegraphics[width=.9\linewidth]{Figures/Conformer/cAB-3c-tolane-crest-rot9.png}
+%   \caption{cAB-3c-tolane-rot9}
+%   \label{fig:cAB-3c-tolane-crest-rot9}
+% \end{subfigure}
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=.85\linewidth]{Figures/Conformer/cAB-for-tAB-3c-tolane-crest-rot3.png}
@@ -712,12 +712,12 @@ Since we were interested in conformers with the lowest ground state energy, we i
 \end{figure}
 %
 %
-%
-In addition to the 4 geometries obtained via CREST, we used the energetically lowest \textit{trans} conformer as a template to construct the \textit{cis} isomer which would be the likely endpoint for a \textit{trans-cis} isomerisation. 
-This was accomplished by reducing the CNNC dihedral angle in a certain direction which would result in a \textit{cis} conformer resembling one of the energetically lowest \textit{cis} conformers found via sampling with CREST. \\
-As shown in table \ref{tab:GS-energy-conformers} the energetically lowest conformers were those in \textit{trans} configuration. 
-This is likely due to lower Pauli repulsion caused by larger distances between atoms especially at the azobenzene fragment. 
-Another interesting observation was the staggered stacked conformation of tAB-3c-tolane-rot3 (figure \ref{fig:Conformers} \textbf{(d)}), which will be discussed further in section \ref{sec:thermodyn-analysis}.
+% 
+% In addition to the 4 geometries obtained via CREST, we used the energetically lowest \textit{trans} conformer as a template to construct the \textit{cis} isomer which would be the likely endpoint for a \textit{trans-cis} isomerisation. 
+% This was accomplished by reducing the CNNC dihedral angle in a certain direction which would result in a \textit{cis} conformer resembling one of the energetically lowest \textit{cis} conformers found via sampling with CREST. \\
+% As shown in table \ref{tab:GS-energy-conformers} the energetically lowest conformers were those in \textit{trans} configuration. 
+% This is likely due to lower Pauli repulsion caused by larger distances between atoms especially at the azobenzene fragment. 
+% Another interesting observation was the staggered stacked conformation of tAB-3c-tolane-rot3 (figure \ref{fig:Conformers} \textbf{(d)}), which will be discussed further in section \ref{sec:thermodyn-analysis}.
 %
 % maybe write something about the difference between this cis without staggered stacked and the trans with staggered stacked
 %
@@ -757,14 +757,14 @@ cAB-1c-tolan-crest-rot9  & -32328.567        & 0.017       & 0.072 & 10   \\ \bo
 %
 %
 \section{Excited state analysis of optimized geometries}
-To further characterize the molecules we calculated their excited states and visualized the canonical orbitals. \\
+To further characterize the molecules we calculated their lowest lying singlet excited states and visualized the molecular orbitals. \\
 % Table \ref{tab:excited_states_tAB_1c_tolan} shows the six energetically lowest excited states of tAB-1c-tolan-rot9, those states which contribute significantly to the resulting UV-Spectrum were marked in bold.
 % To gain further insight in the differences between the linked molecules compared t
 %
 \subsection{tAB-1c-tolan-rot9}
 %
 Table \ref{tab:excited_states_tAB_1c_tolan} shows the excitation wavelength, excitation energy and the oscillator strength of the first six transitions of tAB-1c-tolane-rot9. \\
-To further compare the difference in transitions between the non-linked monomers and the linked molecules, the spectrum of a theoretical molecule only consisting of tAB and tolane (red) and the linked molecule tAB-1c-tolane-rot9 (black) were plotted (figure \ref{fig:UV_spec_tAB-1c-tolan}).
+To investigate the individuality of the AB and the tolane units which compose the linked molecules, the spectrum of tAB and tolane (red) and the linked molecule tAB-1c-tolane-rot9 (black) were plotted (figure \ref{fig:UV_spec_tAB-1c-tolan}).
 %
 \begin{table}[H]
 \caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
