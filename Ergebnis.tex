@@ -1,9 +1,9 @@
 \chapter{Results} \label{abs:ergebnis}
 \section{Benchmark computations of Azobenzene and Tolane}
 %
-The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V)with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).\\
+The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. 
+To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V)with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).\\
 The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
-%
 %
 %After calculating the natural transition orbitals (ntos) for each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction we assigned 
 %\\
@@ -13,9 +13,13 @@ The resulting states were fitted with a Lorentzian function resulting in figure 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/cAB-uv-ink.eps}
-    \caption{UV spectrum of \textit{cis}-azobenzene, calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. }
+    \caption{UV spectrum of \textit{cis}-azobenzene, calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction. 
+    The bars signify the strength and wavelength of the individual transitions. 
+    The numbers above certain bands correspond to the respective transition. }
     \label{fig:uv_fig_cAB}
 \end{figure}
+
+%
 %
 %
 %
@@ -242,7 +246,9 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{Figures/Fragments_uv_ink/tolane_uv_ink.eps}
-    \caption{UV spectrum of tolane, calculated at the CAM-B3LYP/6-311G* level of theory with a D3(BJ) dispersion correction. The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. }
+    \caption{UV spectrum of tolane, calculated at the CAM-B3LYP/6-311G* level of theory with a D3(BJ) dispersion correction. 
+    The bars signify the strength and wavelength of the individual transitions. 
+    The numbers above certain bands correspond to the respective transition. }
     \label{fig:uv_fig_tolane}
 \end{figure}
 %
@@ -254,7 +260,8 @@ All five electronic states can be assigned to $\pi\pi^*$ transitions.
 %
 %
 \begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. Calculated at the CAM-B3LYP/6-311G* level of theory with a D3(BJ) correction.}
+\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the five energetically lowest excited states of tolane. 
+Calculated at the CAM-B3LYP/6-311G* level of theory with a D3(BJ) correction.}
 \label{tab:excited_states_tolane}
 \vspace{0.1 cm}
 \centering
@@ -392,9 +399,10 @@ $E_{\text{Comp}}(\text{ES1})$ and $E_{\text{Comp}}(\text{ES2})$ denote the compu
     \caption{\textit{cis}-AB: Relative errors of the excitation energies (eq. \ref{eq:relative_error_ES1_ES2}) calculated by the functionals mentioned in the label and plotted against the respective basis sets.}
     \label{fig:cAB_Benchmark}
 \end{figure}
-
-Focusing on \textit{cis}-AB, the first excited state represents a $\text{n}\pi^{*}$ transition whereas the second excited state corresponds to a $\pi\pi^{*}$ transition. The CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result in relation to the minimal relative error and their respective computational cost. \newline
-The calculated transition energies which where obtained via the CAM-B3LYP functional as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.\\
+%
+Focusing on \textit{cis}-AB, the first excited state represents a $\text{n}\pi^{*}$ transition whereas the second excited state corresponds to a $\pi\pi^{*}$ transition. 
+The CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result in relation to the minimal relative error and their respective computational cost. \newline
+The calculated transition energies which were obtained from the CAM-B3LYP/6-311G* + D3(BJ) calculation as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.\\
 % The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
 % \begin{equation*}
 % \begin{split}
@@ -462,8 +470,12 @@ S6    & \textbf{5.638}         & \textbf{0.16}       & \\
     \label{fig:tAB_Benchmark}
 \end{figure}
 %
-In the case of \textit{trans}-AB, the first excited state is a $\text{n}\pi^{*}$ transition and the second one represents $\pi\pi^{*}$ transition, mirroring the first two transitions in \textit{cis}-AB. Looking at figure \ref{fig:tAB_Benchmark} it appears, that CAM-B3LYP performed quite well in combination with the 6-311G* basis set and is only slightly outperformed by B97 and B97M-rV. \\
-Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}. \\ Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar shape. This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
+In the case of \textit{trans}-AB, the first excited state is a $\text{n}\pi^{*}$ transition and the second one represents $\pi\pi^{*}$ transition, mirroring the first two transitions in \textit{cis}-AB.
+CAM-B3LYP performed quite well in combination with the 6-311G* basis set and is only slightly outperformed by B97 and B97M-rV as seen in Figure \ref{fig:tAB_Benchmark}. \\
+Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. 
+The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}. \\ 
+Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar geometry. 
+This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
 % \begin{equation*}
 % \begin{split}
 %     E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
@@ -480,7 +492,7 @@ Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight ov
 % for the second excited state.
 %
 \begin{table}[H]
-\caption{Type of transition and vertical excitation energies of \textit{trans}-AB, calculated with CAM-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
+\caption{Type of transition and vertical excitation energies of \textit{trans}-AB, calculated at the CAM-B3LYP/6-311G* + D3(BJ) level of theory $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
 \label{tab:tAB-Exp-calc}
 \vspace{0.1 cm}
 \centering
@@ -517,10 +529,13 @@ S4    & 4.867                & $1.8 \cdot 10^{-5}$             & -              
 \end{figure}
 %
 %
-The first and second excited states correspond both to $\pi\pi^{*}$ transitions (see figure \ref{fig:NTOS-tolane}) and their respective transition energies are shown in table \ref{tab:tolane-Exp-calc}. The benchmark yielded an interesting result. It appears that the higher rung functionals, CAM-B3LYP and $\omega$B97M-V, perform worse than their lower rung counterparts especially in bigger basis sets (def2-SVPD, def2-TZVP). Similar to the case of tAB, one explanation could be the overestimation of conjugation effects which affect a flat molecule with an extensive $\pi$ MO greatly. This would explain why in the case of tolane both transition energies deviate greatly from the experimental value while in the case of tAB and cAB only the $\pi\pi^{*}$ transition was majorly affected. 
+The first and second excited states correspond both to $\pi\pi^{*}$ transitions (see figure \ref{fig:NTOS-tolane}) and their respective transition energies are shown in table \ref{tab:tolane-Exp-calc}. 
+The benchmark yielded an interesting result. It appears that the higher rung functionals, CAM-B3LYP and $\omega$B97M-V, perform worse than their lower rung counterparts especially in bigger basis sets (def2-SVPD, def2-TZVP). 
+Similar to the case of tAB, one explanation could be the overestimation of conjugation effects which affect a flat molecule with an extensive $\pi$ MO greatly. 
+This would explain why in the case of tolane both transition energies deviate greatly from the experimental value while in the case of tAB and cAB only the $\pi\pi^{*}$ transition was majorly affected. 
 %
 \begin{table}[H]
-\caption{Type of transition and vertical excitation energies of tolane, calculated with CAMP-B3LYP $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
+\caption{Type of transition and vertical excitation energies of tolane, calculated at the CAM-B3LYP/6-311G* + D3(BJ) level of theory $(E_{\text{calc}})$ $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
 \label{tab:tolane-Exp-calc}
 \vspace{0.1 cm}
 \centering
