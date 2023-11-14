@@ -609,9 +609,35 @@ S4    & 5.318                   & $1.0\cdot 10^{-7}$           &                
 %
 %
 \section{Conformer analysis}
-After selecting the functional and basis set best suited for azobenzene and tolane, we wanted to investigate larger molecules consisting of azobenzene and tolane which where linked with methylene molecules. The resulting four ring molecules were classified by the configuration of the AB (\textit{cis}-AB or \textit{trans}-AB) and the number of methylene linkers (C1, C3). \\
-To determine the conformer with the lowest ground state energy, we had to to sample through a large number of different conformers. At first this was done by manually creating raw geometries which were then further refined using DFT. Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers were then optimized with the CAM-B3LYP functional with a D3 BJ dispersion correction. The final geometries with the lowest energy for each molecule are depicted in figure \ref{fig:Conformers} and their respective energies are shown in table \ref{tab:GS-energy-conformers}.
 %
+After selecting the functional and basis set best suited for azobenzene and tolane, we wanted to investigate larger molecules consisting of azobenzene and tolane which where linked with methylene molecules. 
+The resulting four ring molecules were classified by the configuration of the AB (\textit{cis}-AB or \textit{trans}-AB) and the number of methylene linkers (C1, C3). \\
+To determine the conformer with the lowest ground state energy, we had to to sample through a large number of different conformers. 
+At first this was done by manually creating raw geometries which were then further refined using DFT. 
+Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} 
+The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers of tAB-1c-tolane and tAB-3c-tolane were then optimized at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
+Since we wanted to model the \textit{trans}-\textit{cis} isomerisation, we needed to obtain the geometries of the corresponding \textit{cis}-isomers cAB-1c-tolane and cAB-3c-tolane.
+This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢ C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
+e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}
+The angle of torsion was varied in steps of 20\si{\degree} and a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
+Since the calculations didn't succeed after a dihedral angle of 100\si[]{\degree} was reached, 
+we had to manually decrease the dihedral angle to about 80\si[]{\degree} at which point we again performed a unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the \textit{isomers} seen in figure \autoref{fig:Conformers}
+%
+%
+% This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢ C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized.
+% The angle of torsion was varied in steps of 20\si{\degree} and a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory
+%∢
+% The geometries of the corresponding cAB-1c-tolane and cAB-3c-tolane molecules were then obtained by 
+%
+The final geometries with the lowest energy for each molecule are depicted in figure \ref{fig:Conformers} and their respective energies are shown in table \ref{tab:GS-energy-conformers}.
+%
+% After selecting the functional and basis set best suited for azobenzene and tolane, we wanted to investigate larger molecules consisting of azobenzene and tolane which where linked with methylene molecules. 
+% The resulting four ring molecules were classified by the configuration of the AB (\textit{cis}-AB or \textit{trans}-AB) and the number of methylene linkers (C1, C3). \\
+% To determine the conformer with the lowest ground state energy, we had to to sample through a large number of different conformers. 
+% At first this was done by manually creating raw geometries which were then further refined using DFT. 
+% Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} 
+% The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers were then optimized with the CAM-B3LYP functional with a D3(BJ) dispersion correction. 
+% The final geometries with the lowest energy for each molecule are depicted in figure \ref{fig:Conformers} and their respective energies are shown in table \ref{tab:GS-energy-conformers}.
 %
 \begin{table}[h]
 \caption{Ground state energies of the different AB-tolane molecules. "-tor" refers to those geometries which are the likely endpoints of a trans-cis isomerisation.}
@@ -687,8 +713,11 @@ Since we were interested in conformers with the lowest ground state energy, we i
 %
 %
 %
-In addition to the 4 geometries obtained via CREST, we used the energetically lowest \textit{trans} conformer as a template to construct the \textit{cis} isomer which would be the likely endpoint for a \textit{trans-cis} isomerisation. This was accomplished by reducing the CNNC dihedral angle in a certain direction which would result in a \textit{cis} conformer resembling one of the energetically lowest \textit{cis} conformers found via sampling with CREST. \\
-As shown in table \ref{tab:GS-energy-conformers} the energetically lowest conformers were those in \textit{trans} configuration. This is likely due to lower Pauli repulsion caused by larger distances between atoms especially at the azobenzene fragment. Another interesting observation was the staggered stacked conformation of tAB-3c-tolane-rot3 (figure \ref{fig:Conformers} \textbf{(d)}), which will be discussed further in section \ref{sec:thermodyn-analysis}.
+In addition to the 4 geometries obtained via CREST, we used the energetically lowest \textit{trans} conformer as a template to construct the \textit{cis} isomer which would be the likely endpoint for a \textit{trans-cis} isomerisation. 
+This was accomplished by reducing the CNNC dihedral angle in a certain direction which would result in a \textit{cis} conformer resembling one of the energetically lowest \textit{cis} conformers found via sampling with CREST. \\
+As shown in table \ref{tab:GS-energy-conformers} the energetically lowest conformers were those in \textit{trans} configuration. 
+This is likely due to lower Pauli repulsion caused by larger distances between atoms especially at the azobenzene fragment. 
+Another interesting observation was the staggered stacked conformation of tAB-3c-tolane-rot3 (figure \ref{fig:Conformers} \textbf{(d)}), which will be discussed further in section \ref{sec:thermodyn-analysis}.
 %
 % maybe write something about the difference between this cis without staggered stacked and the trans with staggered stacked
 %
@@ -1347,7 +1376,7 @@ To gain further insight on the trans-cis isomerisation of the linked molecules, 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.21]{Figures/Torsion_pathway/Torsion_pictures_tAB_1c.png}
-    \caption{Suggested photoisomerization pathway between tAB-1c-tolane-rot9 and cAB-1c-tolane-tor.}
+    \caption{Suggested photoisomerisation pathway between tAB-1c-tolane-rot9 and cAB-1c-tolane-tor.}
     \label{fig:tors_tAB-cAB-1c-pathway}
 \end{figure}
 %
@@ -1370,7 +1399,7 @@ While the ground state energy (blue) reaches its energetically highest point at 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.18]{Figures/Torsion_pathway/Torsion_pictures_tAB_3c.png}
-    \caption{Suggested photoisomerization pathway between tAB-3c-tolane-rot9 and cAB-3c-tolane-tor.}
+    \caption{Suggested photoisomerisation pathway between tAB-3c-tolane-rot9 and cAB-3c-tolane-tor.}
     \label{fig:tors_tAB-cAB-3c-pathway}
 \end{figure}
 %
@@ -1617,7 +1646,7 @@ cially well for tolane with some deficits concerning tAB.
 \end{comment}
 %
 \\
-The CREST software was successfully used to sample through a wide range of conformers. Their GS geometries were then optimized with the CAM-B3LYP functional and for each \textit{trans}-azobenzene molecule a \textit{cis}-azobenzene molecule was generated, which served as the likely endpoint of a \textit{trans}-\textit{cis}-isomerization. 
+The CREST software was successfully used to sample through a wide range of conformers. Their GS geometries were then optimized with the CAM-B3LYP functional and for each \textit{trans}-azobenzene molecule a \textit{cis}-azobenzene molecule was generated, which served as the likely endpoint of a \textit{trans}-\textit{cis}-isomerisation. 
 %
 %
 % GS calc
@@ -1670,7 +1699,7 @@ Plotting the isomerisation pathway reveals no direct crossing between GS and S1 
 -slope of the GS and S1 indicate that the possible CI is likely around 90 deg, similar to AB
 \end{comment}
 %
-The energies of the tolane centered orbitals of the methylene- and propylene-linked molecules seem rather unaffected by the changing CNNC-angle compared to those centered on the AB. This seems quite plausible since the biggest structural change is found at the AB substructure during isomerization while the tolane backbone only deforms slightly. On the contrary both $\pi$(AB) and $\pi$*(AB) orbitals are strongly affected resulting in a HOMO-LUMO gaps of \SI{3.95}{\eV} (methylene-linked molecule) and \SI{4.19}{\eV} (propylene-linked molecule). It appears that the tolane centered $\pi^*$ of tAB-3c-tolane-rot9 is higher in energy than the AB-centered one, but this energetic order reverses for the \textit{cis}-isomer cAB-3c-tolane-tor, which could have implications for reactions targeting those molecular orbitals.\\
+The energies of the tolane centered orbitals of the methylene- and propylene-linked molecules seem rather unaffected by the changing CNNC-angle compared to those centered on the AB. This seems quite plausible since the biggest structural change is found at the AB substructure during isomerisation while the tolane backbone only deforms slightly. On the contrary both $\pi$(AB) and $\pi$*(AB) orbitals are strongly affected resulting in a HOMO-LUMO gaps of \SI{3.95}{\eV} (methylene-linked molecule) and \SI{4.19}{\eV} (propylene-linked molecule). It appears that the tolane centered $\pi^*$ of tAB-3c-tolane-rot9 is higher in energy than the AB-centered one, but this energetic order reverses for the \textit{cis}-isomer cAB-3c-tolane-tor, which could have implications for reactions targeting those molecular orbitals.\\
 % In the case of the propylene-linked molecule one can observe that for the \textit{cis}-isomer the tolane centered $\pi^*$ is higher in energy than the AB centered one, but the reverse case is true for the \textit{trans}-isomer.
 %MO torsion
 \begin{comment}
