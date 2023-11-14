@@ -550,8 +550,8 @@ S2    & $\pi\pi^{*}$    &   5.212           & 4.32 \\
 \end{table}
 %
 %
-Due to historical data in which CAM-B3LYP performed well for azobenzene molecules and the results of our benchmark, we chose CAM-B3LYP as the functional of choice for further analysis of the molecules of interest.\\
-An alternative functional one could use would be the B97M-rV, since it performed especially well for tolane with some deficits concerning tAB.
+Due to historical data in which CAM-B3LYP performed well for azobenzene molecules and the results of our benchmark, we chose CAM-B3LYP/6-311G* + D3(BJ) as the method of choice for further analysis of the molecules of interest.\\
+An alternative functional and basis set combination one could use would be the B97M-rV/6-311G* since it performed especially well for tolane with some deficits concerning tAB.
 \begin{comment}
 The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
 \begin{equation*}
@@ -609,7 +609,7 @@ S4    & 5.318                   & $1.0\cdot 10^{-7}$           &                
 %
 %
 \section{Conformer analysis}
-After selecting the functional and basis best suited for azobenzene and tolane, we wanted to investigate larger molecules consisting of azobenzene and tolane which where linked with methylene molecules. The resulting four ring molecules were classified by the configuration of the AB (\textit{cis}-AB or \textit{trans}-AB) and the number of methylene linkers (C1, C3). \\
+After selecting the functional and basis set best suited for azobenzene and tolane, we wanted to investigate larger molecules consisting of azobenzene and tolane which where linked with methylene molecules. The resulting four ring molecules were classified by the configuration of the AB (\textit{cis}-AB or \textit{trans}-AB) and the number of methylene linkers (C1, C3). \\
 To determine the conformer with the lowest ground state energy, we had to to sample through a large number of different conformers. At first this was done by manually creating raw geometries which were then further refined using DFT. Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers were then optimized with the CAM-B3LYP functional with a D3 BJ dispersion correction. The final geometries with the lowest energy for each molecule are depicted in figure \ref{fig:Conformers} and their respective energies are shown in table \ref{tab:GS-energy-conformers}.
 %
 %
