@@ -24,7 +24,7 @@ The resulting states were fitted with a Lorentzian function resulting in figure 
 %
 %
 To assign transitions to the respective electronic states natural transition orbitals (ntos) were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction for cAB, tAB and tolane.\\
-The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S1-S5 are $\pi\pi^*$ transitions. 
+The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S2-S5 are $\pi\pi^*$ transitions. 
 %
 %
 \begin{table}[H]
@@ -232,7 +232,7 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 \begin{subfigure}{.19\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figures/Fragments_ntos/tAB/tAB-s5-det.png}
-  \caption{S4}
+  \caption{S5}
   %\label{fig:}
 \end{subfigure}
 %
@@ -621,7 +621,7 @@ This was accomplished by decreasing the absolute value of the the dihedral angle
 e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}.
 The angle of torsion was varied in steps of 20\si{\degree} and at each step a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since the calculations didn't succeed after a dihedral angle of 100\si[]{\degree} was reached, 
-we had to manually decrease the dihedral angle to about 80\si[]{\degree} at which point we again performed a unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the isomers seen in figure~\ref{fig:Conformers}.
+we had to manually decrease the dihedral angle to about 80\si[]{\degree} at which point we performed an unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the isomers seen in figure~\ref{fig:Conformers}.
 %
 %
 % This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢ C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized.
@@ -764,24 +764,8 @@ To further characterize the molecules we calculated their lowest lying singlet e
 \subsection{tAB-1c-tolan-rot9}
 %
 Table \ref{tab:excited_states_tAB_1c_tolan} shows the excitation wavelength, excitation energy and the oscillator strength of the first six transitions of tAB-1c-tolane-rot9. \\
-To investigate the individuality of the AB and the tolane units which compose the linked molecules, the spectrum of tAB and tolane (red) and the linked molecule tAB-1c-tolane-rot9 (black) were plotted (figure \ref{fig:UV_spec_tAB-1c-tolan}).
+To investigate the individuality of the AB and the tolane substructures which compose the linked molecules, the spectra of tAB and tolane (red) and the linked molecule tAB-1c-tolane-rot9 (black) were plotted (figure \ref{fig:UV_spec_tAB-1c-tolan}).
 %
-\begin{table}[H]
-\caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
-\label{tab:excited_states_tAB_1c_tolan}
-\vspace{0.1 cm}
-\centering
-\begin{tabular}{ccccc}
-\toprule
-State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$                 \\ \midrule
-S1 & n(AB)$\pi^{*}$(AB)  & 440   & 2.819 & 0.02                \\
-\textbf{S2}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$   & \textbf{286} & \textbf{4.341} & \textbf{0.38} \\
-S3    & $\pi\mathrm{(AB_{ph})}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 267 & 4.647 & 0.02                \\
-S4    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 263 & 4.708 & 0.11                \\
-S5    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 260 & 4.776 & 0.02                \\
-\textbf{S6} & $\pi\mathrm{(tol)} \hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{257} & \textbf{4.829} & \textbf{0.98}       \\ \bottomrule
-\end{tabular}
-\end{table}
 %
 \begin{figure}[H]
     \centering
@@ -789,23 +773,49 @@ S5    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 260 & 4.776 
     \caption{UV spectra of tAB-1c-tolan-rot9 (black) and a combination of tAB and tolane (red). The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. 'a' indicates tAB transitions and 't' transitions of the tolane molecule.}
     \label{fig:UV_spec_tAB-1c-tolan}
 \end{figure}
-
-The first excited state (1) of tAB-1c-tolan-crest-rot9 can be assigned to the n$\pi^{*}$-transition as shown by the respective attachment and detachment listed in the appendix (figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}). 
-The canonical orbitals contributing to this transition are the HOMO-1, HOMO-2 and LUMO, all of them mainly localized at the AB unit.
-In comparison with the S1 transition of tAB there is almost no change in the excitation energies ($\SI{2.819}{\eV}$ vs $\SI{2.824}{\eV}$ for tAB), but a major increase in oscillator strength ($\SI{5.4E-5}{}$ vs $0.02$ for tAB) which remains low due to the symmetry forbidden nature of the transition. Overall one can say that the influence of the linked tolane is rather minor and the transition is very similar to the S1 transition seen in tAB. \\
+%
+\begin{table}[ht]
+  \caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
+  \label{tab:excited_states_tAB_1c_tolan}
+  \vspace{0.1 cm}
+  \centering
+  \begin{tabular}{ccccc}
+  \toprule
+  State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$                 \\ \midrule
+  S1 & n(AB)$\pi^{*}$(AB)  & 440   & 2.819 & 0.02                \\
+  \textbf{S2}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$   & \textbf{286} & \textbf{4.341} & \textbf{0.38} \\
+  S3    & $\pi\mathrm{(AB_{ph})}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 267 & 4.647 & 0.02                \\
+  S4    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 263 & 4.708 & 0.11                \\
+  S5    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 260 & 4.776 & 0.02                \\
+  \textbf{S6} & $\pi\mathrm{(tol)} \hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{257} & \textbf{4.829} & \textbf{0.98}       \\ \bottomrule
+  \end{tabular}
+  \end{table}
+%
+The first singlet excited state (S1) of tAB-1c-tolan-crest-rot9 can be assigned to the n$\pi^{*}$-transition as shown by the respective attachment and detachment densities shown in figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}. 
+% The canonical orbitals contributing to this transition are the HOMO-1, HOMO-2 and LUMO, all of them mainly localized at the AB unit.
+In comparison with the S1 transition of tAB there is almost no change in the excitation energies ($\SI{2.819}{\eV}$ vs $\SI{2.824}{\eV}$ for tAB), but a major increase in oscillator strength ($0.02$ vs $\SI{5.4E-5}{}$ for tAB) which remains low due to the symmetry forbidden nature of the transition. 
+Overall it appears the influence of the linked tolane is rather minor and the transition is very similar to the S1 transition seen in tAB. \\
 \\
-Similarly to tAB the second excited state (2) is a $\pi \pi^{*}$-transition which is slightly red shifted in comparison to tAB ($\SI{4.341}{\eV}$, $\SI{4.372}{\eV}$ for tAB) but possess only a minor difference in their oscillator strength. The main canonical orbital contributing to this transition is the HOMO-1 which shape represents $\pi$-orbital centered on AB. \\
+Similarly to tAB the second singlet excited state (S2) is a $\pi \pi^{*}$-transition which is slightly red shifted in comparison to tAB ($\SI{4.341}{\eV}$, $\SI{4.372}{\eV}$ for tAB) but possesses only a minor difference in their oscillator strength. \\
+%The main canonical orbital contributing to this transition is the HOMO-1 which shape represents $\pi$-orbital centered on AB. \\
 \\
-Transitions 3 to 5 are quite similar especially if viewed through the NTO picture (see figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}). All three of them originate from one of the $\pi$-orbitals of the AB centered phenyl groups with some contributions from $\pi$-orbitals of the tolane-fragments and terminate at the $\pi^{*}$-orbitals of AB. \\
+The singlet excited states S3 to S5 seem to be $\pi\pi^*$-transitions originating from one of the $\pi$-orbitals of the AB phenyl groups with minor contributions from $\pi$-orbitals of the tolane fragment, 
+while the $\pi^*$-orbitals are localized on the AB unit. \\
+% originate from one of the $\pi$-orbitals of the AB phenyl groups and some minor contributions from the $\pi$-orbital located at the tolane unit and 
+% All three of them originate from one of the $\pi$-orbitals of the AB centered phenyl groups with some contributions from $\pi$-orbitals of the tolane-fragments and terminate at the $\pi^{*}$-orbitals of AB and \\
 % maybe argue that in the NTO picture they look like charge transfer transitions.
 \\
-The next transition that contributes majorly to the UV-spectrum of tAB-1c-tolan-crest-rot9 is the sixth excited state (6) which is a $\pi \pi^{*}$-transition from the HOMO into the LUMO+1 which are both localized entirely on the tolane subunit of the molecule (figure \ref{fig:MO_tAB-1c-tolane-crest-rot9.}). Besides a minor blue shift (\SI{4.829}{\eV},  \SI{4,706}{\eV} for tolane) this transition mirrors the S2 transition of tolane almost identically. The shift is caused by an occupied MO lower in energy and a virtual MO higher in energy of tAB-1c-tolane-rot9 compared to tolane. This is quite suprising since one would assume that larger dihedral angle of tAB-1c-tolane-rot9 would lead to a higher energy of the occupied MO and not a lower one. 
+The sixth singlet excited state (S6) is a $\pi\pi^{*}$-transition entirely localized on the tolane unit. Besides a minor blue shift (\SI{4.829}{\eV},  \SI{4,706}{\eV} for tolane) this transition mirrors the S1 transition of tolane (figure \ref{fig:nto_tolane}) almost identically.\\
+% The next transition that contributes majorly to the UV-spectrum of tAB-1c-tolan-crest-rot9 is the sixth excited state (6) which is a $\pi \pi^{*}$-transition from the HOMO into the LUMO+1 which are both localized entirely on the tolane subunit of the molecule (figure \ref{fig:MO_tAB-1c-tolane-crest-rot9.}). 
+% Besides a minor blue shift (\SI{4.829}{\eV},  \SI{4,706}{\eV} for tolane) this transition mirrors the S2 transition of tolane almost identically. 
+% The shift is caused by an occupied MO lower in energy and a virtual MO higher in energy of tAB-1c-tolane-rot9 compared to tolane. 
+% This is quite suprising since one would assume that larger dihedral angle of tAB-1c-tolane-rot9 would lead to a higher energy of the occupied MO and not a lower one. 
 %
 % The reason for this deviation in MO energy could be the increase
 %
 %which could be due to the larger diheral angle of tolane-substructure in tAB-1c-tolane-rot9.\\
 \\
-Overall one can say that the excited states of tAB-1c-tolan-crest-rot9 are very similar to those found in their fragments (tAB and tolane) and the linkage didn't lead to new states which contribute in a major way to the resulting UV-spectrum.
+Overall it appears that the excited states of tAB-1c-tolan-crest-rot9 are very similar to those found in their fragments (tAB and tolane) and the linkage didn't lead to new states which contribute in a major way to the resulting UV-spectrum.
 %
 \begin{figure}[H]
   \centering
