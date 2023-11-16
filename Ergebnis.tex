@@ -47,7 +47,7 @@ S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
 %
 %
 %Figures\Fragments_ntos\cab
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}{.19\textwidth}
   \centering
@@ -162,7 +162,7 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 %
 %
 %Figures\Fragments_ntos\tab
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}{.19\textwidth}
   \centering
@@ -281,7 +281,7 @@ S5    & $\pi\pi^*$	& 199             & 6.2348                 & 0.0000046560    
 %
 %
 %Figures\Fragments_ntos\tolan
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}{.19\textwidth}
   \centering
@@ -639,7 +639,7 @@ The final geometries with the lowest energy for each molecule are depicted in fi
 % The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers were then optimized with the CAM-B3LYP functional with a D3(BJ) dispersion correction. 
 % The final geometries with the lowest energy for each molecule are depicted in figure \ref{fig:Conformers} and their respective energies are shown in table \ref{tab:GS-energy-conformers}.
 %
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Ground state energies of the \textit{trans} and \textit{cis} AB-tolane molecules.}
 \label{tab:GS-energy-conformers}
 \centering
@@ -1292,7 +1292,7 @@ The $\pi\pi^{*}$ S2 state can be compared to the first excited state of tolane, 
 It appears the linkage to cAB leads to a smaller intensity and stabilizes this specific state. \\
 \\
 The attachment and detachment densities of the third excited singlet state (S3) of cAB-1c-tolane, a $\pi\pi^{*}$ transition, are located on the AB subunit of the molecule.
-This exited state is quite similar to the S3 of cAB, but possesses a greater intensity (0.32, 0.02 for cAB) and is shifted to a longer wavelength (4.71 eV, 4.97 eV for cAB).\\
+This exited state is quite similar to the S3 of cAB, but possesses a greater intensity (0.32, 0.02 for cAB) and is shifted to a longer wavelength (\SI[]{4.71}{\electronvolt}, \SI[]{4.97}{\electronvolt} for cAB).\\
 \\
 % The third excited singlet state (S3) of cAB-1c-tolane, also a $\pi\pi^{*}$ transition, 
 % is composed of transitions between lower lying HOMOs mainly HOMO-2 and HOMO-4 and the LUMO which are for the most part localized on the AB fragment consisting of the the $\pi$ orbitals of the benzene rings with some admixture of the n Orbitals of N2. 
@@ -1575,24 +1575,6 @@ One possible cause could be the that the \textit{cis}-conformation leads to a le
 \subsection{cAB-3c-tolane-tor}
 %
 %
-\begin{table}[H]
-\caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-3c-tolane-tor. The subscript ``ph'' refers to orbitals centered at the phenyl group.}
-\label{tab:excited_states_cAB_3c_tolane}
-\vspace{0.1 cm}
-\centering
-\begin{tabular}{ccccc}
-\toprule
-State & Trans.&$\lambda$ (nm)  & $E$ (eV)               & $f$                 \\ 
-\midrule
-S1    & n$\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 409             & 3.032                  & 0.012               \\
-\textbf{S2}    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & \textbf{271}    & \textbf{4.583}         & \textbf{0.720}      \\
-S3    &$\pi\mathrm{(AB}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 257             & 4.822                  & 0.019               \\
-\textbf{S4}    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & \textbf{250}    & \textbf{4.968}         & \textbf{0.151}      \\
-S5    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 244             & 5.077                  & 0.049               \\
-S6    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & 244             & 5.083                  & 0.002               \\
-\bottomrule
-\end{tabular}
-\end{table}
 %
 %
 \begin{figure}[H]
@@ -1603,91 +1585,228 @@ S6    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & 244             
 \end{figure}
 %
 %
-The overall shape between the UV spectra of cAB-3c-tolane-tor (figure \ref{fig:UV_spec_cAB-for-tAB-3c-tolan}) and cAB-1c-tolane (figure \ref{fig:UV_spec_cAB-for-tAB-3c-tolan}) is very similar except some minor differences. \\
-One of those differences is the huge blue shift of the S1 (\SI{3.032}{\eV}) compared to cAB (\SI{2.877}{\eV}) and even cAB-1c-tolane-tor (\SI{2.901}{\eV}). The transition now occurs between the HOMO which contains the n orbitals and the LUMO+1 containing the $\pi^{*}$ orbitals of the cAB fragment. In contrast the same transition in cAB-1c-tolane-tor contained the HOMO-1 and LUMO, which indicates an appreciation in energy of those cAB centered MOs. This could be due to the reduced distance between the benzene rings on the cAB fragment of cAB-3c-tolane-tor in comparison to cAB-1c-tolane-tor. The resulting increased interactions between those benzene rings %%%% Write what kind of interactions, Pauli interaction? %%%
-could increase the energy of the MOs located on the cAB fragment.\\
+%
+\begin{table}[b]
+  \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-3c-tolane-tor. The subscript ``ph'' refers to orbitals centered at the phenyl group.}
+  \label{tab:excited_states_cAB_3c_tolane}
+  \vspace{0.1 cm}
+  \centering
+  \begin{tabular}{ccccc}
+  \toprule
+  State & Trans.&$\lambda$ (nm)  & $E$ (eV)               & $f$                 \\ 
+  \midrule
+  S1    & n$\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 409             & 3.032                  & 0.012               \\
+  \textbf{S2}    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & \textbf{271}    & \textbf{4.583}         & \textbf{0.720}      \\
+  S3    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 257             & 4.822                  & 0.019               \\
+  \textbf{S4}    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & \textbf{250}    & \textbf{4.968}         & \textbf{0.151}      \\
+  S5    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 244             & 5.077                  & 0.049               \\
+  S6    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & 244             & 5.083                  & 0.002               \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+%
+%
+%  
+The overall shape between the UV spectra of cAB-3c-tolane-tor (figure \ref{fig:UV_spec_cAB-for-tAB-3c-tolan}) and cAB-1c-tolane (figure \ref{fig:UV_spec_cAB-for-tAB-1c-tolan}) is very similar except some minor differences. \\
+One of those differences is the huge blue shift of S1 (\SI{3.03}{\eV}) compared to cAB (\SI{2.88}{\eV}) and even cAB-1c-tolane-tor (\SI{2.90}{\eV}). 
+The attachment and detachment densities of S1 are on the AB unit of the molecule.
+S1 can be assigned to the n$\pi\pi^*$ transition. \\
+% 
+% 
+% The transition now occurs between the HOMO which contains the n orbitals and the LUMO+1 containing the $\pi^{*}$ orbitals of the cAB fragment. 
+% In contrast the same transition in cAB-1c-tolane-tor contained the HOMO-1 and LUMO, which indicates an appreciation in energy of those cAB centered MOs.\\
+% This could be due to the reduced distance between the benzene rings on the cAB fragment of cAB-3c-tolane-tor in comparison to cAB-1c-tolane-tor. 
+% The resulting increased interactions between those benzene rings %%%% Write what kind of interactions, Pauli interaction? %%%
+% could increase the energy of the MOs located on the cAB fragment.\\
 % Compared to the tolane centered HOMO in cAB-1c-tolane, the tolane cnetered HOMO-1 in cAB-3c-tolane decreased in energy, hinting that the less twisted geometry of the tolane leads to a MO lower in energy.
 \\
-In contrast to the S1, the S2 of cAB-3c-tolan is almost identical in energy to the S2 in cAB-1c-tolane-tor, albeit with a lower oscillator strength. It too can be assigned to the $\pi\pi^{*}$ transition that is mostly occuring between the HOMO-1 and LUMO, both which are tolane centered. 
-Comparing these MOs to the tolane centered HOMO and LUMO+1 of cAB-1c-tolane one notices that the MOs of cAB-3c-tolane-tor are both lower in energy than those located on cAB-1c-tolane-tor. \\
-One reason could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment which could affect conjugation and lower the energy of the particular MOs. Another contributing factor could be the reduced dihedral angle between the benzene fragments themselves ($\measuredangle(\ce{ph-C#C-ph})$ = \SI{4.72}{\degree} vs \SI{12.83}{\degree} for cAB-1c-tolane-tor). The increased flexibility of cAB-3c-tolane-tor, granted due to the longer linkers, seem to favor a decrease in energy of the MOs centered around the tolane fragment rather than those centered around the cAB substructure. \\
+In contrast to S1, the S2 of cAB-3c-tolan is almost identical in energy to the S2 in cAB-1c-tolane-tor, albeit with a lower oscillator strength. 
+It can be assigned to a $\pi\pi^*$ transition and the respective attachment and detachment densities are both located on the tolane substructure of the molecule.\\
+% One reason for the decreased oscillator strength could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment 
+% which could affect conjugation and lower the energy of the particular MOs. 
+%
+% It too can be assigned to the $\pi\pi^{*}$ transition that is mostly occuring between the HOMO-1 and LUMO, both which are tolane centered. 
+% Comparing these MOs to the tolane centered HOMO and LUMO+1 of cAB-1c-tolane one notices that the MOs of cAB-3c-tolane-tor are both lower in energy than those located on cAB-1c-tolane-tor. \\
+% One reason could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment which could affect conjugation and lower the energy of the particular MOs. 
+% Another contributing factor could be the reduced dihedral angle between the benzene fragments themselves ($\measuredangle(\ce{ph-C#C-ph})$ = \SI{4.72}{\degree} vs \SI{12.83}{\degree} for cAB-1c-tolane-tor). 
+% The increased flexibility of cAB-3c-tolane-tor, granted due to the longer linkers, seem to favor a decrease in energy of the MOs centered around the tolane fragment rather than those centered around the cAB substructure. \\
 \\
-S3, S4 and S5 are all $\pi\pi^{*}$ transitions centered around the azobenzene substructure, quite similar to those observed in cAB-1c-tolane with no significant deviation in energy. The main MOs involved are the HOMO and the LUMO+1 with the exception of S5 which terminates at LUMO+2, LUMO+3 and LUMO+4 which are more evenly distributed among the aromatic system of the molecule. The last transition S6 involves tolane centered MOs mainly the HOMO-1 and terminates similarly to S5 at LUMO+2 and LUMO+3. 
-
-
-
+The excited singlet states S3, S4 and S5 are all $\pi\pi^{*}$ transitions centered around the azobenzene substructure, quite similar to those observed in cAB-1c-tolane with no significant deviation in energy. 
+The attachment density of S3 is mostly located at the n-orbitlas of the azo group while the attachment densities of S4 and S5 include one of the adjacent phenyl groups.\\
+\\
+The sixth excited singlet state (S6) can be assigned to a $\pi\pi^*$ transition with attachment and detachment densities mainly located at one of the phenyl groups of the tolane unit.
+% 
+% The main MOs involved are the HOMO and the LUMO+1 with the exception of S5 which terminates at LUMO+2, LUMO+3 and LUMO+4 which are more evenly distributed among the aromatic system of the molecule. 
+% The last transition S6 involves tolane centered MOs mainly the HOMO-1 and terminates similarly to S5 at LUMO+2 and LUMO+3.\\ 
+%
 % The reason for this is the appreciation in energy of the MOs containing the n and $\pi^{*}$ orbitals of cAB-3c-tolane in respect to cAB-1c-tolane. The HOMO-1 in cAB-1c-tolane centered around the n orbitals of the cAB fragment becomes the 
-
-
 % Looking at the difference in energy of the MOs one notices that the MO centered around the n-orbitals of the cAB fragment 
-
-
-
-
-% It appears due to the distorted nature of the cAB fragment inside of cAB-3c-tolane, that the energy of the AB-centered $\pi^{*}$-orbital increased and therefore the tolane-centered $\pi^{*}$-orbital became the new LUMO.
-
+%
+%
 \begin{figure}[H]
 \centering
-\begin{subfigure}{0.4\textwidth}
+\begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-113.png}
-  \caption{HOMO-4}
-  % \label{fig:sub1}
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s1-att.png}
+  %\caption{S1}
+  % \label{fig:}
 \end{subfigure}%
 % \medskip
-\vskip\baselineskip
-%
-\begin{subfigure}{.4\textwidth}
+\begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-114.png}
-  \caption{HOMO-3}
-  % \label{fig:sub1}
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s2-att.png}
+  %\caption{S2}
+  % \label{fig:}
 \end{subfigure}%
 %
-\begin{subfigure}{.4\textwidth}
+\begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-115.png}
-  \caption{HOMO-2}
-  % \label{fig:sub1}
-\end{subfigure}%
-%
-\vskip\baselineskip
-%
-\begin{subfigure}{.4\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-116.png}
-  \caption{HOMO-1}
-  % \label{fig:sub1}
-\end{subfigure}%
-%
-%\caption{A figure with two subfigures}
-%\label{fig:test}
-\begin{subfigure}{.4\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-117.png}
-  \caption{HOMO}
-  % \label{fig:sub1}
-\end{subfigure}%
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s3-att.png}
+  %\caption{S3}
+  % \label{fig:}
+\end{subfigure}
 %
 \vskip\baselineskip
 %
-\begin{subfigure}{.4\textwidth}
+\begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-118.png}
-  \caption{LUMO}
-  % \label{fig:sub1}
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s1-det.png}
+  \caption{S1}
+  % \label{fig:}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s2-det.png}
+  \caption{S2}
+  % \label{fig:}
 \end{subfigure}%
 %
-\begin{subfigure}{.4\textwidth}
+\begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-119.png}
-  \caption{LUMO+1}
-  % \label{fig:sub1}
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s3-det.png}
+  \caption{S3}
+  % \label{fig:}
+\end{subfigure}
+%
+%
+\vskip\baselineskip
+\vspace{1 cm}
+%
+%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s4-att.png}
+  %\caption{S1}
+  % \label{fig:}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s5-att.png}
+  %\caption{S2}
+  % \label{fig:}
 \end{subfigure}%
 %
-\caption{Canonical orbitals of cAB-3c-tolane, plotted with an iso-value = 0.1.}
-\label{fig:MO_cAB-3c-tolane}
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s6-att.png}
+  %\caption{S3}
+  % \label{fig:}
+\end{subfigure}
+%
+\vskip\baselineskip
+%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s4-det.png}
+  \caption{S4}
+  % \label{fig:}
+\end{subfigure}%
+% \medskip
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s5-det.png}
+  \caption{S5}
+  % \label{fig:}
+\end{subfigure}%
+%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{Figures/Appendix/cAB-3c-tolane/cAB-3c-tolane-s6-det.png}
+  \caption{S6}
+  % \label{fig:}
+\end{subfigure}
+%
+\caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the energetically lowest four excited singlet states S1 to S6 of cAB-3c-tolane-tor at the CAM-B3LYP/6-311G* level of theory.}
+\label{fig:att-det:cAB-3c-tolane-crest-rot9}
 \end{figure}
+%
+%
+% It appears due to the distorted nature of the cAB fragment inside of cAB-3c-tolane, that the energy of the AB-centered $\pi^{*}$-orbital increased and therefore the tolane-centered $\pi^{*}$-orbital became the new LUMO.
+%
+% \begin{figure}[H]
+% \centering
+% \begin{subfigure}{0.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-113.png}
+%   \caption{HOMO-4}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% % \medskip
+% \vskip\baselineskip
+% %
+% \begin{subfigure}{.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-114.png}
+%   \caption{HOMO-3}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% %
+% \begin{subfigure}{.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-115.png}
+%   \caption{HOMO-2}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% %
+% \vskip\baselineskip
+% %
+% \begin{subfigure}{.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-116.png}
+%   \caption{HOMO-1}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% %
+% %\caption{A figure with two subfigures}
+% %\label{fig:test}
+% \begin{subfigure}{.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-117.png}
+%   \caption{HOMO}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% %
+% \vskip\baselineskip
+% %
+% \begin{subfigure}{.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-118.png}
+%   \caption{LUMO}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% %
+% \begin{subfigure}{.4\textwidth}
+%   \centering
+%   \includegraphics[width=1\linewidth]{Figures/Conformer_MO_diagrams/cAB-3c-tolane/cAB-3c-tolane-119.png}
+%   \caption{LUMO+1}
+%   % \label{fig:sub1}
+% \end{subfigure}%
+% %
+% \caption{Canonical orbitals of cAB-3c-tolane, plotted with an iso-value = 0.1.}
+% \label{fig:MO_cAB-3c-tolane}
+% \end{figure}
 
 
 %\caption{A figure with two subfigures}
