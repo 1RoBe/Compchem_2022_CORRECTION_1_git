@@ -1990,22 +1990,22 @@ To further understand those different conformations and their behavior in soluti
 % \usepackage{booktabs}
 %
 \begin{table}[H]
-\caption{Enthalpy $H$ and entropy $S$ in relation to the solvents MeCN, DCM and toluene of tAB-3c-tolane and tAB-3c-tolane-flat. The calculations were performed with the C-PCM\cite{c-pcm-1} solvent model and included a D3 correction.}
+\caption{Enthalpy $H$, entropy $S$ and the free enthalpy $G$ in relation to the solvents MeCN, DCM and toluene of tAB-3c-tolane and tAB-3c-tolane-flat. The calculations were performed with the C-PCM\cite{c-pcm-1} solvent model and included a D3 correction.}
 \vspace{0.1 cm}
 \label{tab:thermo_D3}
 \centering
-\begin{tabular}{llSSS}
+\begin{tabular}{llSSSS}
 \toprule
-\multicolumn{1}{l}{Molecule (with D3)} & \multicolumn{1}{c}{Solvent} & \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$} \\ \midrule
-                            & MeCN     &  1440.765       & 754.287         \\
-tAB-3c-tolane               & DCM     &  1440.627       & 753.911         \\
-                            & Toluene  &  1440.279       & 750.668         \\ \midrule
-                            & MeCN     &  1436.606       & 725.054         \\
-tAB-3c-tolane-flat          & DCM     &  1436.518       & 725.058         \\
-                            & Toluene  &  1438.694       & 754.258         \\ \midrule
-                            & MeCN     &  4.159          & 29.234          \\
-Difference bet. Mol.        & DCM     &  4.109          & 28.853          \\
-                            & Toluene  &  1.586          & -3.590          \\ \bottomrule
+\multicolumn{1}{l}{Molecule (with D3)} & \multicolumn{1}{c}{Solvent} & \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$} &  \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$}\\ \midrule
+                            & MeCN     &  1440.765       & 754.287 				&	1215.987     	 \\
+tAB-3c-tolane               & DCM     &  1440.627       & 753.911 	& 1215,961 		 \\
+                            & Toluene  &  1440.279       & 750.668       			&  1216,580		\\ \midrule
+                            & MeCN     &  1436.606       & 725.054       			& 1220,540		\\
+tAB-3c-tolane-flat          & DCM     &  1436.518       & 725.058 & 1220,451		\\
+                            & Toluene  &  1438.694       & 754.258       			&  1213,925		\\ \midrule
+                            & MeCN     &  4.159          & 29.234          				& -4,553			\\
+Difference bet. Mol.        & DCM     &  4.109          & 28.853  	&	-4,489			\\
+                            & Toluene  &  1.586          & -3.590          				& 2,656				\\ \bottomrule
 \end{tabular}
 \end{table}
 %
@@ -2017,24 +2017,24 @@ Looking at tAB-3c-tolane one can see that solvents which possess a higher polari
 %
 %
 \begin{table}[H]
-\caption{Enthalpy $H$ and entropy $S$ in relation to the solvents MeCN, DCM and toluene of tAB-3c-tolane and tAB-3c-tolane-flat. The calculations were performed with the C-PCM\cite{c-pcm-1} solvent model without including a D3 correction.}
+\caption{Enthalpy $H$,  entropy $S$ and the free enthalpy $G$ in relation to the solvents MeCN, DCM and toluene of tAB-3c-tolane and tAB-3c-tolane-flat. The calculations were performed with the C-PCM\cite{c-pcm-1} solvent model without including a D3 correction.}
 \vspace{0.1 cm}
 \label{tab:thermo_noD3}
 \centering
-\begin{tabular}{llSSS}
+\begin{tabular}{llSSSS}
 \hline
-\multicolumn{1}{l}{Molecule (no D3)} & \multicolumn{1}{c}{Solvent} &  \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$}  \\ \midrule
-                               & Acn      & 1440.765       & 753.923        \\
-tAB-3c-tolane-noD3             & DCM      & 1440.618       & 753.831        \\
-                               & Toluol   & 1440.296       & 750.564        \\ 
+\multicolumn{1}{l}{Molecule (no D3)} & \multicolumn{1}{c}{Solvent} &  \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$} & \multicolumn{1}{c}{$G$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$}  \\ \midrule
+                               & Acn      & 1440.765       & 753.923        				   		&1216,095	\\
+tAB-3c-tolane-noD3             & DCM      & 1440.618       & 753.831 		&1215,976	\\
+                               & Toluol   & 1440.296       & 750.564     						&1216,628	\\ 
 \midrule
-                               & Acn      & 1436.610       & 725.058        \\ 
-tAB-3c-tolane-flat-noD3        & DCM      & 1436.522       & 725.066        \\
-                               & Toluol   & 1438.689       & 754.237        \\ 
+                               & Acn      & 1436.610       & 725.058 								&1220,543	\\ 
+tAB-3c-tolane-flat-noD3        & DCM      & 1436.522       & 725.066	&1220,452	\\
+                               & Toluol   & 1438.689       & 754.237        						&1213,927	\\ 
 \midrule
-                               & Acn       & 4.155          & 28.865         \\
-Difference bet. Mol            & DCM       & 4.096          & 28.765         \\
-                               & Toluol    & 1.607          & -3.674         \\
+                               & Acn       & 4.155          & 28.865         							&-4,447			\\
+Difference bet. Mol            & DCM       & 4.096          & 28.765         	&-4,476			\\
+                               & Toluol    & 1.607          & -3.674         							&2,701			\\
 \bottomrule
 \end{tabular}
 \end{table}
