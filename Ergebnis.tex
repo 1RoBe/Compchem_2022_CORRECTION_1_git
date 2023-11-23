@@ -757,6 +757,7 @@ cAB-1c-tolan-crest-rot9  & -32328.567        & 0.017       & 0.072 & 10   \\ \bo
 %
 %
 \section{Excited state analysis of optimized geometries}
+\label{abs:exc_state_analysis}
 To further characterize the molecules we calculated their lowest lying singlet excited states and visualized the molecular orbitals.
 % Table \ref{tab:excited_states_tAB_1c_tolan} shows the six energetically lowest excited states of tAB-1c-tolan-rot9, those states which contribute significantly to the resulting UV-Spectrum were marked in bold.
 % To gain further insight in the differences between the linked molecules compared t
@@ -1844,6 +1845,7 @@ The sixth excited singlet state (S6) can be assigned to a $\pi\pi^*$ transition 
 %     \label{fig:Benchmark_all}
 % \end{figure}
 \section{Isomerisation process}
+\label{abs:iso_process}
 To gain further insight on the trans-cis isomerisation of the linked molecules, we investigated the reactive coordinate of the isomerisation (the CNNC dihedral).
 % the effect of torsion on the electronic states. 
 The CNNC dihedral angle was varied in steps of \SI{20}{\degree} (figure \ref{fig:tors_tAB-cAB-1c-pathway} and \ref{fig:tors_tAB-cAB-3c-pathway}) and a respective constrained optimisation of the ground state was performed. 
@@ -1867,17 +1869,36 @@ The energetically lowest 20 singlet excited states were then calculated and plot
 %
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{Figures/Torsion_s0_s1_s2/Pictures_AB-1c-tors_corr.eps}
-    \caption{Transition energies in relation to the CNNC torsional angle of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor.}
+    \includegraphics[scale=0.75]{Figures/Torsion_s0_s1_s2/Pictures_AB-1c-tors_corr_2.eps}
+    \caption{Relative energies of the GS and the singlet excited states in in relation to the CNNC dihedral angle of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor.
+    S1-S6 describe the singlet excited states of tAB-1c-tolane-rot9.}
     \label{fig:tors_tAB-cAB-1c}
 \end{figure}
 %
-In figure \ref{fig:tors_tAB-cAB-1c}, the relative energies of the electronic states of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor are plotted against the CNNC angle. 
-Both transitions take place at the AB substructure of the linked molecules. \\
-While the ground state energy (blue) reaches its energetically highest point at \SI{100}{\degree} the n$\pi^{*}$ state reaches its lowest point of energy at the same angle. 
-The resulting energy gap of \SI{0.4}{\eV} is still quite large which is mainly due to the inability to obtain constrained geometries between \SI{80}{\degree} and \SI{100}{\degree}. 
-The slope of the ground state indicates that its maximum energy would be near a \SI{90}{\degree} CNNC angle, which coincides with the dihedral angle at which the conical intersection of AB is located.\cite{maximum-con-inter-AB} 
-Thus one can assume that the conical intersection of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor is still present in AB-1c-tolane, facilitating a possible switching event of the AB subsystem.
+In figure \ref{fig:tors_tAB-cAB-1c}, the relative energies of the electronic states of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor are plotted against the CNNC angle 
+and the GS energy of tAB-1c-tolane-rot9 with a CNNC dihedral angle of \SI[]{169}{\degree} is used as a reference point. 
+% The singlet excited states S1 (orange) and the S2 (red) can be assinged ot transitions which take place at the AB substructure of the linked molecules. 
+% S6 (green) is a transition which is located at the tolane unit and S3 (purple) can be assinged to a transition between the tolane and AB units.\\
+While the ground state energy (blue) reaches its energetically highest point at \SI{100}{\degree} the singlet excited state S1 (orange) reaches its lowest point of energy at the same angle.
+The resulting energy gap of \SI{0.4}{\eV} is still quite large which is mainly due to the inability to obtain constrained geometries between \SI{80}{\degree} and \SI{100}{\degree}.
+The slope of the ground state indicates that its maximum energy would be near a \SI{90}{\degree} CNNC angle, which coincides with the CNNC dihedral angle at which the conical intersection of AB is located.\cite{maximum-con-inter-AB} 
+Thus one can assume that the conical intersection of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor is still present in AB-1c-tolane, facilitating a possible switching event of the AB subsystem.\\
+The singlet excited state S2 can be assinged to a $\pi\pi^*$ transition located entirely on the AB unit, while S3 is a $\pi\pi^*$ transition from the tolane unit to the AB substructure, which is similar to a charge-transfer transition.
+S2 seems to slightly increase in energy, while S3 sligthly decreases in energy respective to an increasing CNNC dihedral angle until an angle of \SI{100}{\degree} is reached, at which both seem to decrease in energy quite similarly.
+The singlet excited state S6 can be assinged to the $\pi\pi^*$ transition at the tolane unit and its energy curve seems to mirror the groundstate albeit at a higher energy.
+S6 seems to be energetically more stable compared to S2 and S3 at a low CNNC dihedral angle, while possessing a higher energy value at an CNNC dihedral angle of \SI[]{169}{\degree}.
+%
+%
+% In figure \ref{fig:tors_tAB-cAB-1c}, the relative energies of the electronic states of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor are plotted against the CNNC angle,
+% while the GS energy of tAB-1c-tolane-rot9 with a CNNC dihedral angle of \SI[]{169}{\degree} is used as a reference point. 
+% The n(AB)~$\pi^{*}$(AB) (orange) and the $\pi$(AB)~$\pi^{*}$(AB) (red) transitions take place at the AB substructure of the linked molecules. 
+% Transition $\pi$(tol)~$\pi^{*}$(tol) (purple) is located at the tolane unit and the $\pi$(tol)~$\pi^{*}$(AB) transition describes a transition between the tolane and AB units.\\
+% While the ground state energy (blue) reaches its energetically highest point at \SI{100}{\degree} the n(AB)~$\pi^{*}$(AB) state reaches its lowest point of energy at the same angle. 
+% The resulting energy gap of \SI{0.4}{\eV} is still quite large which is mainly due to the inability to obtain constrained geometries between \SI{80}{\degree} and \SI{100}{\degree}. 
+% The slope of the ground state indicates that its maximum energy would be near a \SI{90}{\degree} CNNC angle, which coincides with the CNNC dihedral angle at which the conical intersection of AB is located.\cite{maximum-con-inter-AB} 
+% Thus one can assume that the conical intersection of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor is still present in AB-1c-tolane, facilitating a possible switching event of the AB subsystem.
+%
+%
 %
 % a good indication for a conical intersection between \SI{80}{\degree} and \SI{100}{\degree}. Another interesting observation is the quite flat 
 % In figure \ref{fig:tors_tAB-cAB-1c}, the energy of the groundstate, the n$\pi*$ and $\pi\pi*$ transitions of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor is plotted against the CNNC angle. 
@@ -1894,20 +1915,32 @@ Thus one can assume that the conical intersection of tAB-1c-tolane-rot9 and cAB-
 %
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{Figures/Torsion_s0_s1_s2/Pictures_AB-3c-tors_corr.eps}
-    \caption{Relative energies of the GS and the singlet excited states in in relation to the CNNC torsional angle of tAB-3c-tolane-rot3 and cAB-3c-tolane-tor.}
+    \includegraphics[scale=0.75]{Figures/Torsion_s0_s1_s2/Pictures_AB-3c-tors_corr_2.eps}
+    \caption{Relative energies of the GS and the singlet excited states in in relation to the CNNC dihedral angle of tAB-3c-tolane-rot3 and cAB-3c-tolane-tor.
+    S1-S6 describe the singlet excited states of tAB-3c-tolane-rot3.}
     \label{fig:tors-tAB-cAB-3c}
 \end{figure}
 %
-In the same vein the vertical excitation energies of tAB-3c-tolane-rot3 and cAB-3c-tolane-tor were plotted against the CNNC dihedral angle (figure \ref{fig:tors-tAB-cAB-3c}). 
-The excited states n$\pi^{*}$ AB and $\pi\pi^{*}$ AB could be assigned to transitions at the AB substructure whereas the transition n(tol) $\pi^{*}$(AB) starts at a tolane centered MO and terminates at an AB centered MO, quite similar to a charge-transfer transition. \\
+The vertical excitation energies of tAB-3c-tolane-rot3 and cAB-3c-tolane-tor were plotted against the CNNC dihedral angle (figure \ref{fig:tors-tAB-cAB-3c}), 
+while the GS energy of tAB-3c-tolane-rot3 with a CNNC dihedral angle of \SI[]{179}{\degree} is used as a reference point.\\
+The singlet excited states S1 (orange) and S2 (red) could be assigned to transitions at the AB substructure, whereas S2 starts at a tolane centered MO and terminates at an AB centered MO, quite similar to a charge-transfer transition. \\
 The smallest energy gap (\SI{0.6}{\eV}) between GS and the first excited state can be found at \SI{80}{\degree}, but similarly to the methylene-linked molecules the slope of the ground state (blue) suggests that a suspected conical intersection could likely be found at a CNNC angle of \SI{90}{\degree}. 
-The second and third excited seem to decrease in energy respective to a increasing CNNC dihedral angle and don't vary much from each other in terms of energy.
-
-
+%
+The difference in energy between S2 and S3 is pronounced (INSERT VALUE) at a small CNNC dihedral angle, but narrows as the angle increases. 
+% The second and third excited states seem to decrease in energy respective to an increasing CNNC dihedral angle and don't vary much from each other in terms of energy.
+S6, the $\pi\pi^*$ transition limited to the tolane unit, increases in energy up to a CNNC dihedral angle of \SI[]{80}{\degree} at which it decreases again, quite similar to the ground state. 
+%
+%
+%
+%
+%
+%
 \subsection{CNNC torsion and MO energies}
-Since frontier orbitals are a useful tool to investigate the chemical reactivity of certain molecules, we were interested how the CNNC-angle influences their respective energies. \\
-To reach this goal, the CNNC-angle of both the tAB-molecule and the cAB-molecule was varied in steps of \SI{20}{\degree} and the resulting geometry was optimized until the calculation no longer succeeded. The frontier orbitals were calculated at each constrained geometry and their energy was plotted in relation to their CNNC-angle.\\
+From the optimized structure calculations in \ref{abs:iso_process} the MO energies were extracted.
+%
+% Since frontier orbitals are a useful tool to investigate the chemical reactivity of certain molecules, we were interested how the CNNC-angle influences their respective energies. \\
+% To reach this goal, the CNNC-angle of both the tAB-molecule and the cAB-molecule was varied in steps of \SI{20}{\degree} and the resulting geometry was optimized until the calculation no longer succeeded. 
+% The frontier orbitals were calculated at each constrained geometry and their energy was plotted in relation to their CNNC-angle.\\
 %
 \begin{figure}[H]
     \centering
@@ -1917,9 +1950,13 @@ To reach this goal, the CNNC-angle of both the tAB-molecule and the cAB-molecule
 \end{figure}
 %
 Figure \ref{fig:MO_tors_1c_AB} shows the LUMO+1, the LUMO, the HOMO and the HOMO-1 of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor as well as their respective energies in relation to the CNNC torsional angle. \\ 
-Looking at the energy values of both frontier orbitals which are located on tolane, $\pi^*$ tol and $\pi$ tol, one observes, that the torsional deformation of the molecule has no effect on their energies. This is quite remarkable, because the dihedral angle of tolane while in tAB-1c-tolane-rot9 configuration is \SI{51}{\degree} whereas in cAB-1c-tolane-tor configuration this angle amounts only to \SI{15}{\degree}, implying that the dihedral angle has only a negligible influence on the energies of both tolane-localized frontier orbitals, at least in this torsion interval.\\
+The energy values of both frontier orbitals which are located on tolane, $\pi^*$(tol) and $\pi$(tol), one observes, that the torsional deformation of the molecule has no effect on their energies. 
+This is quite remarkable, because the dihedral angle of tolane while in tAB-1c-tolane-rot9 configuration is \SI{51}{\degree} whereas in cAB-1c-tolane-tor configuration this angle amounts only to \SI{15}{\degree}, 
+implying that the dihedral angle has only a negligible influence on the energies of both tolane-localized frontier orbitals.\\
 % Another explanation could be that the increase of disadvantageous pi stacking increases energy at the cAB configuration thus negating the decrease in energy.
-For the AB centered frontier orbitals, the opposite is true. The energy value for $\pi^*$ AB seems to decrease and reaches its minimum energy of \SI{2.24}{\eV} at a torsional angle of \SI{100}{\degree} while the energy of n AB increases to a maximum of \SI{6.19}{\eV} at the same angle. The gap between both MOs decreases from \SI{6.69}{\eV} for the cAB-1c-tolane-tor to \SI{3.95}{\eV} at at a torsional angle of \SI{100}{\degree}. 
+For the AB centered frontier orbitals, the opposite is true. 
+The energy value for $\pi^*$ AB seems to decrease and reaches its minimum energy of \SI{2.24}{\eV} at a torsional angle of \SI{100}{\degree} while the energy of n AB increases to a maximum of \SI{6.19}{\eV} at the same angle. 
+The gap between both MOs decreases from \SI{6.69}{\eV} for the cAB-1c-tolane-tor to \SI{3.95}{\eV} at at a torsional angle of \SI{100}{\degree}. 
 %
 %
 %
@@ -1933,11 +1970,15 @@ For the AB centered frontier orbitals, the opposite is true. The energy value fo
 \end{figure}
 %
 Figure \ref{fig:tAB-cAB-3c-tors_1} shows LUMO+1, LUMO and the five energetically highest occupied MOs of tAB-3c-tolane-rot3 and their change in energy at varying degrees of torsion. \\
-The trend in energy of both LUMOs seems quite similar to the on observed in figure \ref{fig:MO_tors_1c_AB}. $\pi^*\_$tol possesses a higher energy in the trans configuration than cis configuration which can be explained by the increase of the dihedral angle of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. $\pi^*\_$AB decreases in energy with a decreasing angle of torsion until it reaches its minimum at \SI{80}{\degree}. \\
-Interestingly enough the HOMO-1 of tAB-3c-tolane seems to include the pi orbitals at the azo bridge, but as soon as the torsional angle is decreased to \SI{160}{\degree} the HOMO-1 deforms to include n orbitals at the azo bridge. The curve of n\_AB increases until it reaches its maximum at \SI{80}{\degree}. \\
-$\pi$\_tol and $pi$\_(AB\_ph+tol\_ph)\_1 and 2 both show a similar trend and decrease in energy from higher torsional angles to lower ones. An interesting case is n\_AB\_2 which shape includes n orbitals at higher degrees of torsion but loses those at lower torsional angles until only the pi orbitals located on the phenyl rings adjacent to the azo bridge remain. \\
+The trend in energy of both LUMOs seems quite similar to the one observed in figure \ref{fig:MO_tors_1c_AB}. 
+$\pi^*$(tol) possesses a higher energy in the trans configuration than cis configuration which can be explained by the increase of the dihedral angle of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. 
+$\pi^*$(AB) decreases in energy with a decreasing angle of torsion until it reaches its minimum at \SI{80}{\degree}. \\
+Interestingly enough the HOMO-1 of tAB-3c-tolane seems to include the pi orbitals at the azo bridge, but as soon as the torsional angle is decreased to \SI{160}{\degree} the HOMO-1 deforms to include n orbitals at the azo bridge. 
+The curve of n\_AB increases until it reaches its maximum at \SI{80}{\degree}. \\
+$\pi$(tol) and $pi$(AB\_ph+tol\_ph)\_1 and 2 both show a similar trend and decrease in energy from higher torsional angles to lower ones. 
+An interesting case is n(AB\_2) which shape includes n orbitals at higher degrees of torsion but loses those at lower torsional angles until only the pi orbitals located on the phenyl rings adjacent to the azo bridge remain. \\
 \\
-To summarize one can see that the torsion mostly influences AB centered MOs, especially the ones higher in energy like n\_AB\_1 and $pi^*$\_AB. Since LUMO and LUMO+1 differ in their shape and location (AB or tolane) between \textit{cis} and \textit{trans} configuration, one could selectively target the azobenzene or the tolane fragment with certain chemical reactions depending on the specific isomer. 
+To summarize one can see that the torsion mostly influences AB centered MOs, especially the ones higher in energy like n(AB\_1) and $pi^*$(AB). Since LUMO and LUMO+1 differ in their shape and location (AB or tolane) between \textit{cis} and \textit{trans} configuration, one could selectively target the azobenzene or the tolane fragment with certain chemical reactions depending on the specific isomer. 
 % Another important aspect is the change in energy of the LUMO and LUMO+1 at the cis configuration which could be used to selectively target the tolane or azobenzene with certain electrophilic reactions. Similarly could the change in shape of the HOMO and HOMO-1 between the trans and cis configuration be used to selectively target specific fragments with nucleophilic reactions.
 %
 %
@@ -1996,7 +2037,7 @@ To further understand those different conformations and their behavior in soluti
 \centering
 \begin{tabular}{llSSSS}
 \toprule
-\multicolumn{1}{l}{Molecule (with D3)} & \multicolumn{1}{c}{Solvent} & \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$} &  \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$}\\ \midrule
+\multicolumn{1}{l}{Molecule (with D3)} & \multicolumn{1}{c}{Solvent} & \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$} &  \multicolumn{1}{c}{$G$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$}\\ \midrule
                             & MeCN     &  1440.765       & 754.287 				&	1215.987     	 \\
 tAB-3c-tolane               & DCM     &  1440.627       & 753.911 	& 1215,961 		 \\
                             & Toluene  &  1440.279       & 750.668       			&  1216,580		\\ \midrule
