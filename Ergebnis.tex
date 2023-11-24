@@ -2025,14 +2025,16 @@ This observation could potentially be used to target the AB unit of the molecule
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.65\linewidth]{Figures/Thermo_figures/tAB-3c-tolane-flat.png}
-  \caption{$E = \SI{-36606.944}{\eV}$}
+  \caption{}
+  % \caption{$E = \SI{-36606.944}{\eV}$}
   \label{fig:thermo_tAB-3c-tolane-flat}
 \end{subfigure}%
 \medskip
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Figures/Thermo_figures/tAB-3c-tolane.png}
-  \caption{$E = \SI{-36607.165}{\eV}$}
+  \caption{}
+  % \caption{$E = \SI{-36607.165}{\eV}$}
   \label{fig:thermo_tAB-3c-tolane}
 \end{subfigure}
 \caption{The geometries of tAB-3c-tolane-flat \textbf{(a)} and tAB-3c-tolane \textbf{(b)} and their respective calculated energies in the gas phase with D3 correction.}
@@ -2073,18 +2075,27 @@ To further understand those different conformations and their behavior in soluti
 \toprule
 \multicolumn{1}{l}{Molecule (with D3)} & \multicolumn{1}{c}{Solvent} & \multicolumn{1}{c}{$H$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$} & \multicolumn{1}{c}{$S$ $\left(\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}\right)$} &  \multicolumn{1}{c}{$G$ $\left(\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}\right)$}\\ \midrule
                             & MeCN     &  1440.765       & 754.287 				&	1215.987     	 \\
-tAB-3c-tolane               & DCM     &  1440.627       & 753.911 	& 1215,961 		 \\
-                            & Toluene  &  1440.279       & 750.668       			&  1216,580		\\ \midrule
-                            & MeCN     &  1436.606       & 725.054       			& 1220,540		\\
-tAB-3c-tolane-flat          & DCM     &  1436.518       & 725.058 & 1220,451		\\
-                            & Toluene  &  1438.694       & 754.258       			&  1213,925		\\ \midrule
-                            & MeCN     &  4.159          & 29.234          				& -4,553			\\
-Difference bet. Mol.        & DCM     &  4.109          & 28.853  	&	-4,489			\\
-                            & Toluene  &  1.586          & -3.590          				& 2,656				\\ \bottomrule
+tAB-3c-tolane               & DCM     &  1440.627       & 753.911 	& 1215.961 		 \\
+                            & Toluene  &  1440.279       & 750.668       			&  1216.580		\\ \midrule
+                            & MeCN     &  1436.606       & 725.054       			& 1220.540		\\
+tAB-3c-tolane-flat          & DCM     &  1436.518       & 725.058 & 1220.451		\\
+                            & Toluene  &  1438.694       & 754.258       			&  1213.925		\\ \midrule
+                            & MeCN     &  4.159          & 29.234          				& -4.553			\\
+Difference bet. Mol.        & DCM     &  4.109          & 28.853  	&	-4.489			\\
+                            & Toluene  &  1.586          & -3.590          				& 2.656				\\ \bottomrule
 \end{tabular}
 \end{table}
 %
-Looking at tAB-3c-tolane one can see that solvents which possess a higher polarity lead to a lower enthalpy as well as a lower entropy, albeit the differences are relatively minor. Quite the opposite trend can be observed for tAB-3c-tolane-flat in which the entropy reaches its maximum in toluene and differs about $\SI{29}{\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}}$ from acetronitrile as well as dichloromethane. \\ One explanation for the stark contrast in entropy of tAB-3c-tolane-flat dissolved in toluene and DCM or acetronitrile could be the low polarity of toluene compared with the remaining solvents. Toluene possesses a dielectric constant of 2.38 in contrast to acetonitrile (36.64) and DCM (9.08).\cite{Dieelectric-constants} Due to the nature of the C-PCM solvation model non-electrostatic effects (cavitation, dispersion and repulsion) are being disregarded which leads to the assumption that solutions with low dielectric constants interact with the molecule less than those with high dielectric constants. Thus solvents like DCM and acetonitrile seem to lower the total entropy of a dissolved molecule due to the nature of their stronger electrostatic interaction with it. \\The question why this effect appears only in tAB-3c-tolane-flat and not in tAB-3c-tolane-rot3 could be answered by looking at the higher surface area of the flat molecule in comparison to the stacked variant. This could lead to more interactions between the solution and the dissolved molecule and thus lead to a different entropy.
+In the case of tAB-3c-tolane the solvents possessing a higher polarity lead to a lower enthalpy as well as a lower entropy, albeit the differences are relatively minor. 
+Quite the opposite trend can be observed for tAB-3c-tolane-flat in which the entropy reaches its maximum in toluene and differs about $\SI{29}{\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}}$ from acetronitrile as well as dichloromethane. 
+The Gibbs free energy of tAB-3c-tolane is the lowest in DCM, but the difference between the other solvents is small (~0.6 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$). 
+For tAB-3c-tolane-flat, the smallest value for the Gibbs free energy occurs in toluene with a respective deviation of ~6.5 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$ between the other solvents.\\ 
+One explanation for the stark contrast in entropy of tAB-3c-tolane-flat dissolved in toluene and DCM or acetronitrile could be the low polarity of toluene compared with the remaining solvents. 
+Toluene possesses a dielectric constant of 2.38 in contrast to acetonitrile (36.64) and DCM (9.08).\cite{Dieelectric-constants} 
+Due to the nature of the C-PCM solvation model non-electrostatic effects (cavitation, dispersion and repulsion) are being disregarded which leads to the assumption that solutions with low dielectric constants interact with the molecule less than those with high dielectric constants. 
+Thus solvents like DCM and acetonitrile seem to lower the total entropy of a dissolved molecule due to the nature of their stronger electrostatic interaction with it. \\
+The question why this effect appears only in tAB-3c-tolane-flat and not in tAB-3c-tolane-rot3 could be answered by looking at the higher surface area of the flat molecule in comparison to the stacked variant. 
+This could lead to more interactions between the solution and the dissolved molecule and thus lead to a different entropy.
 % This is quite suprising, because one would assume that a molecule that includes four aromatic rings and only two nitrogen atoms would be quite apolar and thus better dissolved in solvents which mirror this apolarity. One explanation could be that the non-electrostatic interactions are much more pronounced in toluene than in the more polar solvents. Due to the electrostatic nature of the C-PCM model those non-electrostatic interactions aren't accounted for and could lead to higher molecular energies than expected. \\
 % While the changes in enthalpy are negligable in all 3 solvents, there is a difference in entropy especially between 
 %
@@ -2114,7 +2125,8 @@ Difference bet. Mol            & DCM       & 4.096          & 28.765         	&-
 \end{tabular}
 \end{table}
 %
-To grasp the influence of dispersion on the trends observed in the prior calculations of those two molecules, we performed the same calculations which lead to table \ref{tab:thermo_D3} without an additional dispersion correction. The results of those calculations are presented in table \ref{tab:thermo_noD3}.\\
+To grasp the influence of dispersion on the trends observed in the prior calculations of those two molecules, we performed the same calculations which lead to table \ref{tab:thermo_D3} without an additional dispersion correction. 
+The results of those calculations are presented in table \ref{tab:thermo_noD3}.\\
 It appears that the dispersion correction has no major influence on the observed trends. % One could conclude that dispersion does not explain the differences in entropy between the two molecules.
 %S (\SI{}{\kilo\joule\per\mole\per\kelvin})}
 
