@@ -1971,7 +1971,7 @@ The gap between both MOs decreases from \SI{6.69}{\eV} for the cAB-1c-tolane-tor
 %
 Figure \ref{fig:tAB-cAB-3c-tors_1} shows LUMO+1, LUMO and the five energetically highest occupied MOs of tAB-3c-tolane-rot3 and their change in energy at varying degrees of torsion. \\
 The trend in energy of both LUMOs seems quite similar to the one observed in figure \ref{fig:MO_tors_1c_AB}. 
-$\pi^*$(tol) possesses a higher energy in the \textit{configuration} than in \textit{configuration}.
+$\pi^*$(tol) possesses a higher energy in the \textit{trans}-configuration than in \textit{cis}-configuration.
 One possible explanation could be the reduced overlap of the orbitals located at the tolane unit, due to an increase of the \ce{Ph-C\bond{#}C-Ph} dihedral angle of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. 
 % 
 % by the increase of the dihedral angle of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. 
@@ -2037,7 +2037,7 @@ This observation could potentially be used to target the AB unit of the molecule
   % \caption{$E = \SI{-36607.165}{\eV}$}
   \label{fig:thermo_tAB-3c-tolane}
 \end{subfigure}
-\caption{The geometries of tAB-3c-tolane-flat \textbf{(a)} and tAB-3c-tolane \textbf{(b)} and their respective calculated energies in the gas phase with D3 correction.}
+\caption{The geometries of tAB-3c-tolane-flat \textbf{(a)} and tAB-3c-tolane \textbf{(b)}.}
 \label{fig:thermo_AB-3c-tolane}
 \end{figure}
 %
@@ -2088,8 +2088,12 @@ Difference bet. Mol.        & DCM     &  4.109          & 28.853  	&	-4.489			\\
 %
 In the case of tAB-3c-tolane the solvents possessing a higher polarity lead to a lower enthalpy as well as a lower entropy, albeit the differences are relatively minor. 
 Quite the opposite trend can be observed for tAB-3c-tolane-flat in which the entropy reaches its maximum in toluene and differs about $\SI{29}{\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}}$ from acetronitrile as well as dichloromethane. 
-The Gibbs free energy of tAB-3c-tolane is the lowest in DCM, but the difference between the other solvents is small (~0.6 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$). 
-For tAB-3c-tolane-flat, the smallest value for the Gibbs free energy occurs in toluene with a respective deviation of ~6.5 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$ between the other solvents.\\ 
+The Gibbs free energy of tAB-3c-tolane is the lowest in DCM, but the difference between the other solvents is small (0.6 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
+tAB-3c-tolane-flat possesses an even lower value for the Gibbs free energy in toluene compared to tAB-3c-tolane in DCM,  the difference between the other solvents is greater (6.4 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
+% 
+% A lower Gibbs free energy can be observed for tAB-3c-tolane-flat in toluene compared to tAB-3c-tolane, while the difference between the other solvents is greater (6.4 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
+% For tAB-3c-tolane-flat, the smallest value for the Gibbs free energy results from the pcm calculation with toluene,  % with a respective deviation of ~6.5 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$ between the other solvents.
+% which is lower 
 One explanation for the stark contrast in entropy of tAB-3c-tolane-flat dissolved in toluene and DCM or acetronitrile could be the low polarity of toluene compared with the remaining solvents. 
 Toluene possesses a dielectric constant of 2.38 in contrast to acetonitrile (36.64) and DCM (9.08).\cite{Dieelectric-constants} 
 Due to the nature of the C-PCM solvation model non-electrostatic effects (cavitation, dispersion and repulsion) are being disregarded which leads to the assumption that solutions with low dielectric constants interact with the molecule less than those with high dielectric constants. 
@@ -2231,10 +2235,15 @@ The CREST software was successfully used to sample through a wide range of confo
 - we could successfully use CREST to sample through a wide range of conformers and could select those with the lowest energies
 - those were used to construct the thermodynamical isomerisation of trans cis AB
 \end{comment}
-
+%
 % Excited state
-Analyzing their respective excited state revealed that the first excited state describes the same n$\pi$* transition centered around the AB substructure of the molecules. Differences appear in the following excited states: For the molecules possessing \textit{trans}-geometry the $\pi\pi$* centered around AB are lower in energy than the following tolane centered $\pi\pi$* transition. An exception is the S2 of tAB-3c-tolane-rot9 describing a charge-transfer transition between the HOMO centered at the tolane backbone and the tAB centered LUMO which likely arises due to the staggered stacked conformation of tAB-3c-tolane-rot9. \\
-The opposite case can be observed from the \textit{cis}-molecules, cAB-1c-tolane-tor and cAB-3c-tolane-tor. Their excited states describing the $\pi\pi$* transitition centered around tolane seem to be lower in energy than the AB $\pi\pi$* transitions. The reason for this is probably the deformed $\pi$* orbitals which increase the energy of the transition. 
+Analyzing their respective excited state revealed that the first excited state describes the same n$\pi$* transition centered around the AB substructure of the molecules. 
+Differences appear in the following excited states: 
+For the molecules possessing \textit{trans}-geometry the $\pi\pi$* centered around AB are lower in energy than the following tolane centered $\pi\pi$* transition. 
+An exception is the S2 of tAB-3c-tolane-rot9 describing a charge-transfer transition between the HOMO centered at the tolane backbone and the tAB centered LUMO which likely arises due to the staggered stacked conformation of tAB-3c-tolane-rot9. \\
+The opposite case can be observed from the \textit{cis}-molecules, cAB-1c-tolane-tor and cAB-3c-tolane-tor. 
+Their excited states describing the $\pi\pi$* transitition centered around tolane seem to be lower in energy than the AB $\pi\pi$* transitions. 
+The reason for this is probably the deformed $\pi$* orbitals which increase the energy of the transition. 
 %
 %
 \begin{comment}
@@ -2268,7 +2277,9 @@ The opposite case can be observed from the \textit{cis}-molecules, cAB-1c-tolane
 - cAB 1c + 3c: pi  
 \end{comment}
 %
-Plotting the isomerisation pathway reveals no direct crossing between GS and S1 which is likely due to the SCF not converging around a CNNC-angle between \SI{80}{\degree} and \SI{100}{\degree}. The slope of the GS and S1 indicate that a possible CI is likely at \SI{90}{\degree}, similar to azobenzene.
+Plotting the isomerisation pathway reveals a likely retained switching ability of the AB system.
+%no direct crossing between GS and S1 which is likely due to the SCF not converging around a CNNC-angle between \SI{80}{\degree} and \SI{100}{\degree}. 
+%The slope of the GS and S1 indicate that a possible CI is likely at \SI{90}{\degree}, similar to azobenzene.
 %
 %isomerisation
 \begin{comment}
@@ -2276,7 +2287,11 @@ Plotting the isomerisation pathway reveals no direct crossing between GS and S1 
 -slope of the GS and S1 indicate that the possible CI is likely around 90 deg, similar to AB
 \end{comment}
 %
-The energies of the tolane centered orbitals of the methylene- and propylene-linked molecules seem rather unaffected by the changing CNNC-angle compared to those centered on the AB. This seems quite plausible since the biggest structural change is found at the AB substructure during isomerisation while the tolane backbone only deforms slightly. On the contrary both $\pi$(AB) and $\pi$*(AB) orbitals are strongly affected resulting in a HOMO-LUMO gaps of \SI{3.95}{\eV} (methylene-linked molecule) and \SI{4.19}{\eV} (propylene-linked molecule). It appears that the tolane centered $\pi^*$ of tAB-3c-tolane-rot9 is higher in energy than the AB-centered one, but this energetic order reverses for the \textit{cis}-isomer cAB-3c-tolane-tor, which could have implications for reactions targeting those molecular orbitals.\\
+The energies of the tolane centered orbitals of the methylene- and propylene-linked molecules seem rather unaffected by the changing CNNC-angle compared to those centered on the AB. 
+This seems quite plausible since the biggest structural change is found at the AB substructure during isomerisation while the tolane backbone only deforms slightly. 
+% On the contrary both $\pi$(AB) and $\pi$*(AB) orbitals are strongly affected resulting in a HOMO-LUMO gaps of \SI{3.95}{\eV} (methylene-linked molecule) and \SI{4.19}{\eV} (propylene-linked molecule). 
+It appears that the tolane centered $\pi^*$ of tAB-3c-tolane-rot9 is higher in energy than the AB-centered one, but this energetic order reverses for the \textit{cis}-isomer cAB-3c-tolane-tor, which could have implications for reactions. \\
+%targeting those molecular orbitals.\\
 % In the case of the propylene-linked molecule one can observe that for the \textit{cis}-isomer the tolane centered $\pi^*$ is higher in energy than the AB centered one, but the reverse case is true for the \textit{trans}-isomer.
 %MO torsion
 \begin{comment}
@@ -2286,8 +2301,11 @@ The energies of the tolane centered orbitals of the methylene- and propylene-lin
 => could have implications for reactions targeting the as an electrophile or nucleophile
 \end{comment}
 %
-The thermodynamic calculations, including the C-PCM solvent model, showed that the different solutions had only a negligible influence on the entropy and enthalpy values of tAB-3c-tolane-rot3. On the other hand one could observe a lower entropy value regarding the acetonitrile solvent for the tAB-3c-tolane-flat molecule. It appears that polar solvents seems to lower the molecular entropy for the flat molecule, but not for tAB-3c-tolane-rot3, which could be due to tAB-3c-tolane-rot3 possessing less surface area than tAB-3c-tolane-flat and thus having a smaller area which can interact with the solvent. \\
-
+The thermodynamic calculations, including the C-PCM solvent model, showed that 
+%the different solutions had only a negligible influence on the entropy and enthalpy values of tAB-3c-tolane-rot3. 
+%On the other hand one could observe a lower entropy value regarding the acetonitrile solvent for the tAB-3c-tolane-flat molecule. 
+%It appears that
+polar solvents seems to lower the molecular entropy for the flat molecule, but not for tAB-3c-tolane-rot3, which could be due to tAB-3c-tolane-rot3 possessing less surface area than tAB-3c-tolane-flat and thus having a smaller area which can interact with the solvent. \\
 %
 %thermodynamics
 %
