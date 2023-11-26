@@ -2,8 +2,8 @@
 \section{Benchmark computations of Azobenzene and Tolane}
 %
 The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. 
-To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V)with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).\\
-The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
+To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V)with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).
+% The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
 %
 %After calculating the natural transition orbitals (ntos) for each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction we assigned 
 %\\
@@ -18,13 +18,14 @@ The resulting states were fitted with a Lorentzian function resulting in figure 
     The numbers above certain bands correspond to the respective transition. }
     \label{fig:uv_fig_cAB}
 \end{figure}
-
 %
 %
 %
 %
-To assign transitions to the respective electronic states natural transition orbitals (ntos) were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction for cAB, tAB and tolane.\\
-The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S2-S5 are $\pi\pi^*$ transitions. 
+%
+The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
+To assign transitions to the respective singlet execited states, natural transition orbitals (ntos) were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction for cAB, tAB and tolane.\\
+The energetically lowest singlet excited state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S2-S5 are $\pi\pi^*$ transitions. 
 %
 %
 \begin{table}[H]
@@ -36,15 +37,15 @@ The energetically lowest electronic state (S1) of \textit{cis}-azobenzene shown 
 \toprule
 State & Trans. & $\lambda$ (nm) & $E$ $\left(\si{\eV}\right)$ & $f$    \\
 \midrule
-S1    & n$\pi^*$		& 431			& 2.877				& 0.0286676397          \\
-S2    & $\pi\pi^*$ 		& \textbf{256}	& \textbf{4.837}	& \textbf{0.1367460701} \\
-S3    & $\pi\pi^*$ 		& 249			& 4.973             & 0.0210386691          \\
-S4    & $\pi\pi^*$		& 243			& 5.109             & 0.0797947997          \\
-S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
+S1    & n$\pi^*$		& 431			& 2.877				              & 0.03\\
+S2    & $\pi\pi^*$ 		& \textbf{256}	& \textbf{4.837}	  & \textbf{0.1367460701} \\
+S3    & $\pi\pi^*$ 		& 249			& 4.973                   & 0.02          \\
+S4    & $\pi\pi^*$		& 243			& 5.109                   & 0.08          \\
+S5    & $\pi\pi^*$		& 241			& 5.152                   & \SI{1.58e-5}{}       \\
 \bottomrule
 \end{tabular}
 \end{table}
-%
+% \SI{}{}
 %
 %Figures\Fragments_ntos\cab
 \begin{figure}[ht]
@@ -137,7 +138,7 @@ S5    & $\pi\pi^*$		& 241			& 5.152             & 0.0000158155         \\
 %
 %
 %
-Similarly to cAB, the first electronic state can be assigned to the n$\pi^*$ transition. The small intensity can be explained by the symmetry-forbidden nature of the n$\pi^*$ transition. States S2-S5 can be assigned to $\pi\pi^*$ transitions (figure \ref{fig:nto_tab}).
+Similar to cAB, the first electronic state can be assigned to the n$\pi^*$ transition. The small intensity can be explained by the symmetry-forbidden nature of the n$\pi^*$ transition. States S2-S5 can be assigned to $\pi\pi^*$ transitions (figure \ref{fig:nto_tab}).
 %
 %
 %
@@ -150,7 +151,7 @@ Similarly to cAB, the first electronic state can be assigned to the n$\pi^*$ tra
 \toprule
 State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
-S1    & n$\pi^*$	& 439             & 2.824                  & 0.0000541015          \\
+S1    & n$\pi^*$	& 439             & 2.824                  & \SI{5.41e-5}{}        \\
 S2    & $\pi\pi^*$ 	&\textbf{284}	  & \textbf{4.372}         & \textbf{1.0411258424} \\
 S3    & $\pi\pi^*$	& 256             & 4.847                  & 0.0308033979          \\
 S4    & $\pi\pi^*$	& 255             & 4.857                  & 0.0000179591          \\
