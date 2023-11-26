@@ -29,7 +29,10 @@ which describes $N$ nonrelativistic, interacting electrons in a nonmagnetic stat
 \end{align}
 where $\Psi$ describes a wave function and then attempt to find approximate solutions to it. However, finding those solutions is complicated, even for small numbers of $N$. At larger $N$ the computational cost is prohibitively expensive, adding to the problem.\\
 %A solution to this problem was to use one body density
-Instead of using many-body wave-functions, one could use the one-body density, which is the idea behind density functional theory. Modern density functional theory rests on two theorems formulated in 1964 by Hohenberg and Kohn, known as HKI and HKII. HKI proves that the ground state density $\rho(r)$ determines the external potential energy $v(r)$ to within a trivial additive constant. Since in turn $v(r)$ fixes the Hamiltonian, it follows that the full many-particle ground state is a unique functional of $\rho(r)$.\cite{DFT_2} Applying these ideas to total energy, HK formulated the energy function. $E_{v}[\rho(r)]$ 
+Instead of using many-body wave-functions, one could use the one-body density, which is the idea behind density functional theory. 
+Modern density functional theory rests on two theorems formulated in 1964 by Hohenberg and Kohn, known as HKI and HKII. 
+HKI proves that the ground state density $\rho(r)$ determines the external potential energy $v(r)$ to within a trivial additive constant. Since in turn $v(r)$ fixes the Hamiltonian, it follows that the full many-particle ground state is a unique functional of $\rho(r)$.\cite{DFT_2} 
+Applying these ideas to total energy, HK formulated the energy functional $E_{v}[\rho(r)]$ 
 \begin{align} \label{eq:energy_func}
     E_{v}[\rho(r)] = \int v(r) \rho(r) \mathrm{d}^{3}r + F[\rho(r)] 
 \end{align}
@@ -43,7 +46,7 @@ The second theorem, HKII, establishes via a variational principle that the groun
     E_{0} = E_{v_0}[\rho_{0}] < E_{v_0}[\rho]
 \end{align}
 will be larger than the true ground state energy. \\
-However the main problem regarding eq.\,\ref{eq:gen_func} is that both the kinetic $T[\rho]$ and the electron-electron functional are unknown. Direct approximations for both of those functionals exist, the oldest one being the Thomas-Fermi approximation.\cite{DFT_4} Since better approximations have been found its use for practical calculations is rather limited.\\
+However the main problem regarding eq.\,\ref{eq:gen_func} is that both the kinetic $T[\rho]$ and the electron-electron functional are unknown. Direct approximations for both of those functionals exist, the oldest one being the Thomas-Fermi approximation.\cite{DFT_4} Since better approximations have been found its use for practical calculations is rather limited.
 Kohn and Sham approached this problem from a different direction by introducing $N$ single-particle ``orbitals'' $\phi_{i}$, which are derived from a single determinant wavefunction describing $N$ non-interacting electrons.\cite{DFT_5} Through this, one can describe the electron density $\rho(r)$
 \begin{align}\label{eq:HK_orbitals}
     \rho(r) = \sum^{N}_{i} |{\phi_{i}(r)^2}|
@@ -191,7 +194,7 @@ a function of only one space variable $r$ with sufficient degree of freedom to f
 \begin{align}
     v(r, t) = v(r) + \delta v(r, t)
 \end{align}
-and thus also time dependent. Since the HK-theorem only holds for static potentials and densities, DFT cannot describe those systems correctly. To summarize, the Runge-Gross theorem formulates, similarly to the HK, that a one-to-one correspondence between the external time-dependent potential $v(r, t)$ and the the time-dependent density $\rho(r, t)$ exists. Its formulation leads to the important statement that every observable $O(t)$ is a unique functional of the time-dependent density (and of the initial state $\Psi_0$): 
+and thus also time-dependent. Since the HK-theorem only holds for static potentials and densities, DFT cannot describe those systems correctly. To summarize, the Runge-Gross theorem formulates, similarly to the HK, that a one-to-one correspondence between the external time-dependent potential $v(r, t)$ and the the time-dependent density $\rho(r, t)$ exists. Its formulation leads to the important statement that every observable $O(t)$ is a unique functional of the time-dependent density (and of the initial state $\Psi_0$): 
 \begin{align}
     O(t) = O[\rho, \Psi_0](t).
 \end{align}
@@ -199,7 +202,7 @@ Using the Runge-Gross theorem one can formulate TDDFT, but instead of focussing 
 \begin{align}
     A[\rho] = \int_{t_0}^{t_1}\bra{\Psi[\rho](r, t)}i\frac{\partial}{\partial t} - \hat{H}(r, t) \ket{\Psi[\rho](r, t)}\mathrm{d}t
 \end{align}
-Similarly to the energy functional of DFT, one may derive the exact time-dependent density $\rho(r, t)$ from the stationary points of action, $ \frac{\delta A[\rho]}{\delta \rho(r, t)} = 0$, by varying the action and searching for stationary points.\\
+Similar to the energy functional of DFT, one may derive the exact time-dependent density $\rho(r, t)$ from the stationary points of action, $ \frac{\delta A[\rho]}{\delta \rho(r, t)} = 0$, by varying the action and searching for stationary points.\\
 Another similarity to DFT is the ability to use a Kohn-Sham approach to solve TDDFT, which is achieved by introducing a  Kohn-Sham fictious non-interacting system providing the same density $\rho(r, t)$ of the real interacting system. From this one can formulate a Kohn-Sham potential $v^{\mathrm{KS}}(r, t)[\rho]$ which itself is a functional of the density. This results in a time-dependent one-particle Schrödinger-like equation 
 \begin{align}
     i\frac{\partial}{\partial t}\phi_i^{\mathrm{KS}}(r, t) = \left(-\frac{1}{2}\nabla_{i}^{2}+v^{\mathrm{KS}}(r, t)\right)\phi_i^{\mathrm{KS}}(r, t),
@@ -412,7 +415,15 @@ In the realm of anorganic chemistry, tolane is widely used as a ligand for metal
 %
 Another interesting application arises from long chains of tolane molecules which branch off into dendrimers. 
 Such structures can act as "photoantennas" and can trap photoexcited electron-hole pairs at its core, which initially formed at the outer edges of those molecules.\cite{tol_dendrimer}\\
-In its polymeric form, poly(diphenylacetylene) (PDPA) possess a variety of interesting properties. They are quite emissive even in solid state,\cite{tol_emission} which is very unusual since conventional $\pi$-conjugated polymers quench their fluorescence in their solid state due to the strong intermolecular $\pi$-$\pi$ interactions based on the planar geometry.\cite{tol_pi_polymer} The fluorescence emission of PDPAs is highly dependent on external stimuli such as liquid solvents, making them excellent sensor for e.g. the determination of viscosity of various solvents.\cite{tol_sensor}
+In its polymeric form, poly(phenyleneethynylenes) (PEs) can be used as "molecular wires" in which excited states created by absorption of a photon at the polymer backbone.\cite{swager1998molecular}
+Those excited states then migrate rapidly to terminal groups, e.g. anthracene groups where they are trapped.
+Combined with a terminal group that quences the excitation upon binding to a molecule, PEs can amplify the difference in intensity between the quenched and non-quenched state.\cite{swager1998molecular}
+PEs can be synthesized through a Pd-catalyzed Heck-Cassar-Sonogashira-Hagihara reaction or alkyne metathesis.\cite{Bunz2001}
+
+
+% In its polymeric form, poly(diphenylacetylene) (PDPA) possess a variety of interesting properties. 
+% They are quite emissive even in solid state,\cite{tol_emission} which is very unusual since conventional $\pi$-conjugated polymers quench their fluorescence in their solid state due to the strong intermolecular $\pi$-$\pi$ interactions based on the planar geometry.\cite{tol_pi_polymer} 
+% The fluorescence emission of PDPAs is highly dependent on external stimuli such as liquid solvents, making them excellent sensor for e.g. the determination of viscosity of various solvents.\cite{tol_sensor}
 
 
 
