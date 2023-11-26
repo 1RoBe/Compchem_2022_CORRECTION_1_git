@@ -38,7 +38,7 @@ The energetically lowest singlet excited state (S1) of \textit{cis}-azobenzene s
 State & Trans. & $\lambda$ (nm) & $E$ $\left(\si{\eV}\right)$ & $f$    \\
 \midrule
 S1    & n$\pi^*$		& 431			& 2.877				              & 0.03\\
-S2    & $\pi\pi^*$ 		& \textbf{256}	& \textbf{4.837}	  & \textbf{0.1367460701} \\
+S2    & $\pi\pi^*$ 		& \textbf{256}	& \textbf{4.837}	  & \textbf{0.14} \\
 S3    & $\pi\pi^*$ 		& 249			& 4.973                   & 0.02          \\
 S4    & $\pi\pi^*$		& 243			& 5.109                   & 0.08          \\
 S5    & $\pi\pi^*$		& 241			& 5.152                   & \SI{1.58e-5}{}       \\
@@ -138,7 +138,7 @@ S5    & $\pi\pi^*$		& 241			& 5.152                   & \SI{1.58e-5}{}       \\
 %
 %
 %
-Similar to cAB, the first electronic state can be assigned to the n$\pi^*$ transition. The small intensity can be explained by the symmetry-forbidden nature of the n$\pi^*$ transition. States S2-S5 can be assigned to $\pi\pi^*$ transitions (figure \ref{fig:nto_tab}).
+Similar to cAB, the first singlet excited state (S1) can be assigned to the n$\pi^*$ transition. The small intensity can be explained by the symmetry-forbidden nature of the n$\pi^*$ transition. States S2-S5 can be assigned to $\pi\pi^*$ transitions (figure \ref{fig:nto_tab}).
 %
 %
 %
@@ -152,10 +152,10 @@ Similar to cAB, the first electronic state can be assigned to the n$\pi^*$ trans
 State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
 S1    & n$\pi^*$	& 439             & 2.824                  & \SI{5.41e-5}{}        \\
-S2    & $\pi\pi^*$ 	&\textbf{284}	  & \textbf{4.372}         & \textbf{1.0411258424} \\
-S3    & $\pi\pi^*$	& 256             & 4.847                  & 0.0308033979          \\
-S4    & $\pi\pi^*$	& 255             & 4.857                  & 0.0000179591          \\
-S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419         \\
+S2    & $\pi\pi^*$ 	&\textbf{284}	  & \textbf{4.372}         & \textbf{1.04} \\
+S3    & $\pi\pi^*$	& 256             & 4.847                  & 0.03         \\
+S4    & $\pi\pi^*$	& 255             & 4.857                  & \SI{1.80e-5}{}          \\
+S5    & $\pi\pi^*$	& 219             & 5.664                  & \SI{2.19e-5}{}         \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -255,8 +255,8 @@ S5    & $\pi\pi^*$	& 219             & 5.664                  & 0.0000219419    
 %
 %
 %
-Figure \ref{fig:uv_fig_tolane} shows the UV-spectrum of tolane, while the energies of the electronic states of tolane are shown in table \ref{tab:excited_states_tolane} and their ntos are shown in figure \ref{fig:nto_tolane}.\\
-All five electronic states can be assigned to $\pi\pi^*$ transitions.
+Figure \ref{fig:uv_fig_tolane} shows the UV-spectrum of tolane, while the energies of the singlet excited states of tolane are shown in table \ref{tab:excited_states_tolane} and their ntos are shown in figure \ref{fig:nto_tolane}.\\
+All five singlet excited states can be assigned to $\pi\pi^*$ transitions.
 %
 %
 %
@@ -270,11 +270,11 @@ Calculated at the CAM-B3LYP/6-311G* level of theory with a D3(BJ) correction.}
 \toprule
 State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$    \\
 \midrule
-S1    & $\pi\pi^*$	& \textbf{263}    & \textbf{4.7061}        & \textbf{1.1157256742} \\
-S2    & $\pi\pi^*$	& 238             & 5.2116                 & 0.0000370134          \\
-S3    & $\pi\pi^*$	& 238             & 5.2184                 & 0.0000015931          \\
-S4    & $\pi\pi^*$	& 233             & 5.3175                 & 0.0000001004          \\
-S5    & $\pi\pi^*$	& 199             & 6.2348                 & 0.0000046560         \\
+S1    & $\pi\pi^*$	& \textbf{263}    & \textbf{4.7061}        & \textbf{1.12} \\
+S2    & $\pi\pi^*$	& 238             & 5.2116                 & \SI{3.70e-5}{}         \\
+S3    & $\pi\pi^*$	& 238             & 5.2184                 & \SI{1.59e-6}{}          \\
+S4    & $\pi\pi^*$	& 233             & 5.3175                 & \SI{1.00e-7}{}         \\
+S5    & $\pi\pi^*$	& 199             & 6.2348                 & \SI{4.66}{}         \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -401,9 +401,9 @@ $E_{\text{Comp}}(\text{ES1})$ and $E_{\text{Comp}}(\text{ES2})$ denote the compu
     \label{fig:cAB_Benchmark}
 \end{figure}
 %
-Focusing on \textit{cis}-AB, the first excited state represents a $\text{n}\pi^{*}$ transition whereas the second excited state corresponds to a $\pi\pi^{*}$ transition. 
-The CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result in relation to the minimal relative error and their respective computational cost. \newline
-The calculated transition energies which were obtained from the CAM-B3LYP/6-311G* + D3(BJ) calculation as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.\\
+% Focusing on \textit{cis}-AB, the first excited state represents a $\text{n}\pi^{*}$ transition whereas the second excited state corresponds to a $\pi\pi^{*}$ transition. 
+The CAM-B3LYP functional in combination with the 6-311G$^{*}$ basis set yielded a satisfying result for cAB in relation to the minimal relative error and their respective computational cost.
+The calculated transition energies which were obtained from the CAM-B3LYP/6-311G* + D3(BJ) calculation as well as the experimentally derived values are shown in table \ref{tab:cAB-Exp-calc}.
 % The calculated energies for the excited states transitions derived by it tended to be a bit higher than the experimental values:
 % \begin{equation*}
 % \begin{split}
@@ -471,12 +471,12 @@ S6    & \textbf{5.638}         & \textbf{0.16}       & \\
     \label{fig:tAB_Benchmark}
 \end{figure}
 %
-In the case of \textit{trans}-AB, the first excited state is a $\text{n}\pi^{*}$ transition and the second one represents $\pi\pi^{*}$ transition, mirroring the first two transitions in \textit{cis}-AB.
-CAM-B3LYP performed quite well in combination with the 6-311G* basis set and is only slightly outperformed by B97 and B97M-rV as seen in Figure \ref{fig:tAB_Benchmark}. \\
-Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. 
-The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}. \\ 
-Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar geometry. 
-This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
+% In the case of \textit{trans}-AB, the first excited state is a $\text{n}\pi^{*}$ transition and the second one represents $\pi\pi^{*}$ transition, mirroring the first two transitions in \textit{cis}-AB.
+In the case of \textit{trans}-AB, CAM-B3LYP performed quite well in combination with the 6-311G* basis set and is only slightly outperformed by B97 and B97M-rV as seen in Figure \ref{fig:tAB_Benchmark}.
+% Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. 
+% The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}.
+% Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar geometry. 
+% This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
 % \begin{equation*}
 % \begin{split}
 %     E_{\text{Comp}}(\text{ES1}) &= \SI{2.877}{\eV} \\
@@ -507,6 +507,11 @@ S2    & $\pi\pi^{*}$    &   4.372           & 3.95\\
 \end{tabular}
 \end{table}
 %
+Similarly to \textit{cis}-AB, using the CAM-B3LYP functional lead to a slight overestimation of the first vertical excitation energy. 
+The biggest difference appeared in relation to the second vertical excitation energy in which the experimental value is over \SI{0.4}{\eV} lower than the calculated energy as shown in table \ref{tab:tAB-Exp-calc}.
+Since this deviation is greater in tAB than in cAB, one could assume that CAM-B3LYP overestimates conjugation effects which affect tAB in a greater way than cAB, due to its planar geometry. 
+This could lead to a lower MO energy of $\pi$ and a higher MO energy of $\pi^{*}$, thus leading to a increased transition energy.
+%
 \begin{comment}
 \begin{table}[H]
 \caption{tAB}
@@ -530,8 +535,8 @@ S4    & 4.867                & $1.8 \cdot 10^{-5}$             & -              
 \end{figure}
 %
 %
-The first and second excited states correspond both to $\pi\pi^{*}$ transitions (see figure \ref{fig:NTOS-tolane}) and their respective transition energies are shown in table \ref{tab:tolane-Exp-calc}. 
-The benchmark yielded an interesting result. It appears that the higher rung functionals, CAM-B3LYP and $\omega$B97M-V, perform worse than their lower rung counterparts especially in bigger basis sets (def2-SVPD, def2-TZVP). 
+% The first and second excited states correspond both to $\pi\pi^{*}$ transitions (see figure \ref{fig:NTOS-tolane}) and their respective transition energies are shown in table \ref{tab:tolane-Exp-calc}. 
+The benchmark for tolane yielded an interesting result. It appears that the higher rung functionals, CAM-B3LYP and $\omega$B97M-V, perform worse than their lower rung counterparts especially in bigger basis sets (def2-SVPD, def2-TZVP). 
 Similar to the case of tAB, one explanation could be the overestimation of conjugation effects which affect a flat molecule with an extensive $\pi$ MO greatly. 
 This would explain why in the case of tolane both transition energies deviate greatly from the experimental value while in the case of tAB and cAB only the $\pi\pi^{*}$ transition was majorly affected. 
 %
@@ -618,11 +623,12 @@ At first this was done by manually creating raw geometries which were then furth
 Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} 
 The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers of tAB-1c-tolane and tAB-3c-tolane were then optimized at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since we wanted to model the \textit{trans}-\textit{cis} isomerisation, we needed to obtain the geometries of the corresponding \textit{cis}-isomers cAB-1c-tolane and cAB-3c-tolane.
-This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢~C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
+This was accomplished by decreasing the absolute value of the CNNC dihedral angle of torsion of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
 e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}.
-The angle of torsion was varied in steps of 20\si{\degree} and at each step a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
+The CNNC dihedral angle was varied in steps of 20\si{\degree} and at each step a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since the calculations didn't succeed after a dihedral angle of 100\si[]{\degree} was reached, 
-we had to manually decrease the dihedral angle to about 80\si[]{\degree} at which point we performed an unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the isomers seen in figure~\ref{fig:Conformers}.
+we had to manually decrease the dihedral angle to about 80\si[]{\degree}. 
+At this point we performed an unconstrained geometry optimisation at the CAM-B3LYP/6-311G* + D3(BJ) level of theory which yielded the \textit{cis}-isomers seen in figure~\ref{fig:Conformers}.
 %
 %
 % This was accomplished by decreasing the absolute value of the the dihedral angle of torsion (∢ C-N=N-C) of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized.
