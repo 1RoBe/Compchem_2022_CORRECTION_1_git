@@ -623,8 +623,9 @@ At first this was done by manually creating raw geometries which were then furth
 Due to the sheer size of possible conformers we had to automate this procedure by using the sampling program CREST which is based on GFNn-xTB methods.\cite{crest} 
 The resulting geometries of the 10 energetically lowest rotamers of the corresponding conformers of tAB-1c-tolane and tAB-3c-tolane were then optimized at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since we wanted to model the \textit{trans}-\textit{cis} isomerisation, we needed to obtain the geometries of the corresponding \textit{cis}-isomers cAB-1c-tolane and cAB-3c-tolane.
-This was accomplished by decreasing the absolute value of the CNNC dihedral angle of torsion of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
-e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}.
+To accomplish this, we decreased the CNNC dihedral angle of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3 such that the lowest amount of torsion is required to reach \SI{0}{\degree}.
+% This was accomplished by decreasing the absolute value of the CNNC dihedral angle of torsion of tAB-1c-tolane-rot9 and tAB-3c-tolane-rot3, such that the required amount of torsion to reach 0\si{\degree} is minimized,
+% e.g. the minimal amount of steps are needed to hypothetically reach 0\si[]{\degree}.
 The CNNC dihedral angle was varied in steps of 20\si{\degree} and at each step a geometry optimisation was performed at the CAM-B3LYP/6-311G* + D3(BJ) level of theory.
 Since the calculations didn't succeed after a dihedral angle of 100\si[]{\degree} was reached, 
 we had to manually decrease the dihedral angle to about 80\si[]{\degree}. 
@@ -765,7 +766,7 @@ cAB-1c-tolan-crest-rot9  & -32328.567        & 0.017       & 0.072 & 10   \\ \bo
 %
 \section{Excited state analysis of optimized geometries}
 \label{abs:exc_state_analysis}
-To further characterize the molecules we calculated their lowest lying singlet excited states and visualized the molecular orbitals.
+To further characterize the molecules we calculated their lowest lying singlet excited states and visualized their ntos as well as their molecular orbitals.
 % Table \ref{tab:excited_states_tAB_1c_tolan} shows the six energetically lowest excited states of tAB-1c-tolan-rot9, those states which contribute significantly to the resulting UV-Spectrum were marked in bold.
 % To gain further insight in the differences between the linked molecules compared t
 %
@@ -781,6 +782,10 @@ To investigate the individuality of the AB and the tolane substructures which co
     \caption{UV spectra of tAB-1c-tolan-rot9 (black) and a combination of tAB and tolane (red). The bars signify the strength and wavelength of the individual transitions. The numbers above certain bands correspond to the respective transition. 'a' indicates tAB transitions and 't' transitions of the tolane molecule.}
     \label{fig:UV_spec_tAB-1c-tolan}
 \end{figure}
+%
+The first singlet excited state (S1) of tAB-1c-tolan-crest-rot9 can be assigned to the n$\pi^{*}$-transition as shown by the respective attachment and detachment densities shown in figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}. 
+% The canonical orbitals contributing to this transition are the HOMO-1, HOMO-2 and LUMO, all of them mainly localized at the AB unit.
+In comparison with the S1 transition of tAB there is almost no change in the excitation energies ($\SI{2.819}{\eV}$ vs $\SI{2.824}{\eV}$ for tAB), but a major increase in oscillator strength ($0.02$ vs $\SI{5.4E-5}{}$ for tAB) which remains low due to the symmetry forbidden nature of the transition. 
 %
 \begin{table}[ht]
   \caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
@@ -799,9 +804,9 @@ To investigate the individuality of the AB and the tolane substructures which co
   \end{tabular}
   \end{table}
 %
-The first singlet excited state (S1) of tAB-1c-tolan-crest-rot9 can be assigned to the n$\pi^{*}$-transition as shown by the respective attachment and detachment densities shown in figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}. 
+% The first singlet excited state (S1) of tAB-1c-tolan-crest-rot9 can be assigned to the n$\pi^{*}$-transition as shown by the respective attachment and detachment densities shown in figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}. 
 % The canonical orbitals contributing to this transition are the HOMO-1, HOMO-2 and LUMO, all of them mainly localized at the AB unit.
-In comparison with the S1 transition of tAB there is almost no change in the excitation energies ($\SI{2.819}{\eV}$ vs $\SI{2.824}{\eV}$ for tAB), but a major increase in oscillator strength ($0.02$ vs $\SI{5.4E-5}{}$ for tAB) which remains low due to the symmetry forbidden nature of the transition. 
+% In comparison with the S1 transition of tAB there is almost no change in the excitation energies ($\SI{2.819}{\eV}$ vs $\SI{2.824}{\eV}$ for tAB), but a major increase in oscillator strength ($0.02$ vs $\SI{5.4E-5}{}$ for tAB) which remains low due to the symmetry forbidden nature of the transition. 
 Overall it appears the influence of the linked tolane is rather minor and the transition is very similar to the S1 transition seen in tAB. \\
 \\
 Similarly to tAB the second singlet excited state (S2) is a $\pi \pi^{*}$-transition which is slightly red shifted in comparison to tAB ($\SI{4.341}{\eV}$, $\SI{4.372}{\eV}$ for tAB) but possesses only a minor difference in their oscillator strength. \\
