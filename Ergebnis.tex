@@ -2,7 +2,7 @@
 \section{Benchmark computations of Azobenzene and Tolane}
 %
 The first objective of this project was to select a functional and basis set combination which worked well across \textit{cis}-AB, \textit{trans}-AB and tolane which are the components of the molecules we are interested in. 
-To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V)with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).
+To accomplish this task we calculated the first 20 excited states of each molecule with four different functionals (B97, B97M-rV, CAM-B3LYP and $\omega$B97M-V) with a D3 correction and 8 different basis sets (3-21G, 3-21G*, 6-31G, 6-31G*, 6-311G, 6-311G*, def2-SVPD and def2-TZVP).
 % The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
 %
 %After calculating the natural transition orbitals (ntos) for each molecule at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction we assigned 
@@ -23,7 +23,7 @@ To accomplish this task we calculated the first 20 excited states of each molecu
 %
 %
 %
-The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane} which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
+The resulting states were fitted with a Lorentzian function resulting in figure \ref{fig:uv_fig_cAB}, figure \ref{fig:uv_fig_tAB} and figure \ref{fig:uv_fig_tolane}, which were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction.
 To assign transitions to the respective singlet execited states, natural transition orbitals (ntos) were calculated at the CAM-B3LYP/6-311G* level of theory with the D3(BJ) dispersion correction for cAB, tAB and tolane.\\
 The energetically lowest singlet excited state (S1) of \textit{cis}-azobenzene shown in figure \ref{fig:uv_fig_cAB} can be assigned to the n$\pi^*$ transition, while S2-S5 are $\pi\pi^*$ transitions. 
 %
@@ -541,7 +541,7 @@ Similar to the case of tAB, one explanation could be the overestimation of conju
 This would explain why in the case of tolane both transition energies deviate greatly from the experimental value while in the case of tAB and cAB only the $\pi\pi^{*}$ transition was majorly affected. 
 %
 \begin{table}[H]
-\caption{Type of transition and vertical excitation energies of tolane, calculated at the CAM-B3LYP/6-311G* + D3(BJ) level of theory $(E_{\text{calc}})$ $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
+\caption{Type of transition and vertical excitation energies of tolane, calculated at the CAM-B3LYP/6-311G* + D3(BJ) level of theory $(E_{\text{calc}})$ and experimentally obtained ($E_{\text{exp}}$).}
 \label{tab:tolane-Exp-calc}
 \vspace{0.1 cm}
 \centering
@@ -766,7 +766,7 @@ cAB-1c-tolan-crest-rot9  & -32328.567        & 0.017       & 0.072 & 10   \\ \bo
 %
 \section{Excited state analysis of optimized geometries}
 \label{abs:exc_state_analysis}
-To further characterize the molecules we calculated their lowest lying singlet excited states and visualized their ntos as well as their molecular orbitals.
+To further characterize the molecules we calculated their lowest lying singlet excited states and visualized their ntos as well as their molecular orbitals, which are shown in the appendix.
 % Table \ref{tab:excited_states_tAB_1c_tolan} shows the six energetically lowest excited states of tAB-1c-tolan-rot9, those states which contribute significantly to the resulting UV-Spectrum were marked in bold.
 % To gain further insight in the differences between the linked molecules compared t
 %
@@ -787,22 +787,22 @@ The first singlet excited state (S1) of tAB-1c-tolan-crest-rot9 can be assigned 
 % The canonical orbitals contributing to this transition are the HOMO-1, HOMO-2 and LUMO, all of them mainly localized at the AB unit.
 In comparison with the S1 transition of tAB there is almost no change in the excitation energies ($\SI{2.819}{\eV}$ vs $\SI{2.824}{\eV}$ for tAB), but a major increase in oscillator strength ($0.02$ vs $\SI{5.4E-5}{}$ for tAB) which remains low due to the symmetry forbidden nature of the transition. 
 %
-\begin{table}[ht]
-  \caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
-  \label{tab:excited_states_tAB_1c_tolan}
-  \vspace{0.1 cm}
-  \centering
-  \begin{tabular}{ccccc}
-  \toprule
-  State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$                 \\ \midrule
-  S1 & n(AB)$\pi^{*}$(AB)  & 440   & 2.819 & 0.02                \\
-  \textbf{S2}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$   & \textbf{286} & \textbf{4.341} & \textbf{0.38} \\
-  S3    & $\pi\mathrm{(AB_{ph})}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 267 & 4.647 & 0.02                \\
-  S4    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 263 & 4.708 & 0.11                \\
-  S5    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 260 & 4.776 & 0.02                \\
-  \textbf{S6} & $\pi\mathrm{(tol)} \hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{257} & \textbf{4.829} & \textbf{0.98}       \\ \bottomrule
-  \end{tabular}
-  \end{table}
+% \begin{table}[ht]
+%   \caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
+%   \label{tab:excited_states_tAB_1c_tolan}
+%   \vspace{0.1 cm}
+%   \centering
+%   \begin{tabular}{ccccc}
+%   \toprule
+%   State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$                 \\ \midrule
+%   S1 & n(AB)$\pi^{*}$(AB)  & 440   & 2.819 & 0.02                \\
+%   \textbf{S2}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$   & \textbf{286} & \textbf{4.341} & \textbf{0.38} \\
+%   S3    & $\pi\mathrm{(AB_{ph})}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 267 & 4.647 & 0.02                \\
+%   S4    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 263 & 4.708 & 0.11                \\
+%   S5    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 260 & 4.776 & 0.02                \\
+%   \textbf{S6} & $\pi\mathrm{(tol)} \hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{257} & \textbf{4.829} & \textbf{0.98}       \\ \bottomrule
+%   \end{tabular}
+%   \end{table}
 %
 % The first singlet excited state (S1) of tAB-1c-tolan-crest-rot9 can be assigned to the n$\pi^{*}$-transition as shown by the respective attachment and detachment densities shown in figure \ref{fig:att-det:tAB-1c-tolane-crest-rot9}. 
 % The canonical orbitals contributing to this transition are the HOMO-1, HOMO-2 and LUMO, all of them mainly localized at the AB unit.
@@ -826,9 +826,25 @@ The sixth singlet excited state (S6) is a $\pi\pi^{*}$-transition entirely locat
 %
 % The reason for this deviation in MO energy could be the increase
 %
+\begin{table}[ht]
+  \caption{Type of transition, excitation Wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of tAB-1c-tolan-rot9. $\mathrm{AB_{ph}}$ refers to orbitals centered at the phenyl groups of AB.}
+  \label{tab:excited_states_tAB_1c_tolan}
+  \vspace{0.1 cm}
+  \centering
+  \begin{tabular}{ccccc}
+  \toprule
+  State & Trans. & $\lambda$ (nm)     & $E$ $\left(\si{\eV}\right)$          & $f$                 \\ \midrule
+  S1 & n(AB)$\pi^{*}$(AB)  & 440   & 2.819 & 0.02                \\
+  \textbf{S2}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$   & \textbf{286} & \textbf{4.341} & \textbf{0.38} \\
+  S3    & $\pi\mathrm{(AB_{ph})}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 267 & 4.647 & 0.02                \\
+  S4    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 263 & 4.708 & 0.11                \\
+  S5    & $\pi\mathrm{(AB_{ph})} \hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 260 & 4.776 & 0.02                \\
+  \textbf{S6} & $\pi\mathrm{(tol)} \hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{257} & \textbf{4.829} & \textbf{0.98}       \\ \bottomrule
+  \end{tabular}
+  \end{table}
 %which could be due to the larger diheral angle of tolane-substructure in tAB-1c-tolane-rot9.\\
 \\
-Overall it appears that the excited states of tAB-1c-tolan-crest-rot9 are very similar to those found in their fragments (tAB and tolane) and the linkage didn't lead to new states which contribute in a major way to the resulting UV-spectrum.
+To summarize, it appears that the excited states of tAB-1c-tolan-crest-rot9 are very similar to those found in their fragments (tAB and tolane) and the linkage didn't lead to new states which contribute in a major way to the resulting UV-spectrum.
 %
 \begin{figure}[H]
   \centering
@@ -877,8 +893,13 @@ Overall it appears that the excited states of tAB-1c-tolan-crest-rot9 are very s
   \end{subfigure}
   %
   %
-  \vskip\baselineskip
-  \vspace{1 cm}
+  \caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the energetically three lowest excited singlet states S1 to S3 of tAB-1c-tolane-crest-rot9 at the CAM-B3LYP/6-311G* level of theory}
+  % \label{fig:att-det:tAB-1c-tolane-crest-rot9}
+  \end{figure}
+  % \vskip\baselineskip
+  % \vspace{1 cm}
+  \begin{figure}[H]
+  \centering
   %
   %
   \begin{subfigure}{.25\textwidth}
@@ -902,6 +923,7 @@ Overall it appears that the excited states of tAB-1c-tolan-crest-rot9 are very s
     % \label{fig:}
   \end{subfigure}
   %
+  % \label{fig:att-det:tAB-1c-tolane-crest-rot9}
   \vskip\baselineskip
   %
   \begin{subfigure}{.25\textwidth}
@@ -925,7 +947,7 @@ Overall it appears that the excited states of tAB-1c-tolan-crest-rot9 are very s
     % \label{fig:}
   \end{subfigure}
   %
-  \caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the energetically lowest four excited singlet states S1 to S4 of tAB-1c-tolane-crest-rot9 at the CAM-B3LYP/6-311G* level of theory}
+  \caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the  excited singlet states S4 to S6 of tAB-1c-tolane-crest-rot9 at the CAM-B3LYP/6-311G* level of theory}
   \label{fig:att-det:tAB-1c-tolane-crest-rot9}
   \end{figure}
 %
@@ -988,19 +1010,19 @@ Overall it appears that the excited states of tAB-1c-tolan-crest-rot9 are very s
 % \caption{Canonical orbitals of tAB-1c-tolane-crest-rot9, isovalue = 0.1.}
 % \label{fig:MO_tAB-1c-tolane-crest-rot9.}
 % \end{figure}
-
+%
 \subsection{tAB-3c-tolane-rot3}
 %
 %
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/tAB-3c-tolan-crest-rot3-corrected-abs-mod.eps}
-    \caption{UV spectra of tAB-3c-tolan-crest-rot3 (black) and a combination of tAB and tolane (red). 
-    The bars signify the strength energy of the individual transitions. 
-    The numbers above certain bands correspond to the respective transition.
-     ``a'' indicates tAB transitions and ``t'' transitions of the tolane molecule.}
-    \label{fig:UV_spec_tAB-3c-tolan}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/tAB-3c-tolan-crest-rot3-corrected-abs-mod.eps}
+%     \caption{UV spectra of tAB-3c-tolan-crest-rot3 (black) and a combination of tAB and tolane (red). 
+%     The bars signify the strength energy of the individual transitions. 
+%     The numbers above certain bands correspond to the respective transition.
+%      ``a'' indicates tAB transitions and ``t'' transitions of the tolane molecule.}
+%     \label{fig:UV_spec_tAB-3c-tolan}
+% \end{figure}
 %
 %
 %
@@ -1042,8 +1064,17 @@ Compared to S2 of tAB, S3 is slightly red-shifted (\SI[]{4.21}{\electronvolt}, \
 One possible cause could be the the reduced planarity which could lead to a reduced overlap of the orbitals and therefor a reduced transition probability.\\
 \\
 The sixth singlet excited state (S6), a $\pi\pi^*$ transition, is similar to the first transition of tolane, albeit with a higher intensity (1.48, 1.12 for tolane).
-The attachment and detachment densities are both on the tolane substructure of the molecule. 
+The attachment and detachment densities are both on the tolane substructure of the molecule.\\
 %
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/tAB-3c-tolan-crest-rot3-corrected-abs-mod.eps}
+  \caption{UV spectra of tAB-3c-tolan-crest-rot3 (black) and a combination of tAB and tolane (red). 
+  The bars signify the strength energy of the individual transitions. 
+  The numbers above certain bands correspond to the respective transition.
+   ``a'' indicates tAB transitions and ``t'' transitions of the tolane molecule.}
+  \label{fig:UV_spec_tAB-3c-tolan}
+\end{figure}
 %
 % The next transition that contributes in a major way to the resulting UV spectrum is S3. 
 % Looking at the participating MOs (HOMO-1, HOMO-2 and LUMO) one can see that it resembles the S2 transition in tAB-1c-tolane which is also a $\pi\pi^{*}$ transition localized on the tAB molecule.
@@ -1259,32 +1290,32 @@ The attachment and detachment densities are both on the tolane substructure of t
 %
 %
 %
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/cAB-1c-tolan-abs_mod-tor.eps}
-    \caption{UV spectra of cAB-1c-tolan-tor (black) and a combination of cAB and tolane (red). The bars signify the strength and wavelength of the individual transitions.}
-    \label{fig:UV_spec_cAB-for-tAB-1c-tolan}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/cAB-1c-tolan-abs_mod-tor.eps}
+%     \caption{UV spectra of cAB-1c-tolan-tor (black) and a combination of cAB and tolane (red). The bars signify the strength and wavelength of the individual transitions.}
+%     \label{fig:UV_spec_cAB-for-tAB-1c-tolan}
+% \end{figure}
 %
 %
-\begin{table}[b]
-  \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-1c-tolan-tor. The subscript ``ph'' refers to orbitals centered at the phenyl groups.}
-  \label{tab:excited_states_cAB_1c_tolane}
-  \vspace{0.1 cm}
-  \centering
-  \begin{tabular}{ccccc}
-  \toprule
-  State & Trans. & $\lambda$ (nm)  & $E$ (eV)               & $f$                 \\ 
-  \midrule
-  S1    & n$\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 427             & 2.901                  & 0.01                \\
-  \textbf{S2}    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{271}    & \textbf{4.577}         & \textbf{0.37}              \\
-  \textbf{S3}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& \textbf{263}             & \textbf{4.708}                  & \textbf{0.32}                \\
-  S4    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 249             & 4.980                  & 0.10                \\
-  S5    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& 243             & 5.093                  & \SI{4.50e-3}{}      \\
-  S6    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& 242    & 5.121         & \SI{4.02e-3}{}      \\
-  \bottomrule
-  \end{tabular}
-  \end{table}
+% \begin{table}[b]
+%   \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-1c-tolan-tor. The subscript ``ph'' refers to orbitals centered at the phenyl groups.}
+%   \label{tab:excited_states_cAB_1c_tolane}
+%   \vspace{0.1 cm}
+%   \centering
+%   \begin{tabular}{ccccc}
+%   \toprule
+%   State & Trans. & $\lambda$ (nm)  & $E$ (eV)               & $f$                 \\ 
+%   \midrule
+%   S1    & n$\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 427             & 2.901                  & 0.01                \\
+%   \textbf{S2}    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{271}    & \textbf{4.577}         & \textbf{0.37}              \\
+%   \textbf{S3}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& \textbf{263}             & \textbf{4.708}                  & \textbf{0.32}                \\
+%   S4    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 249             & 4.980                  & 0.10                \\
+%   S5    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& 243             & 5.093                  & \SI{4.50e-3}{}      \\
+%   S6    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& 242    & 5.121         & \SI{4.02e-3}{}      \\
+%   \bottomrule
+%   \end{tabular}
+%   \end{table}
 %
 %
 \begin{comment}
@@ -1305,6 +1336,15 @@ The $\pi\pi^{*}$ S2 state can be compared to the first excited state of tolane, 
 It appears the linkage to cAB leads to a smaller intensity and stabilizes this specific state. \\
 \\
 The attachment and detachment densities of the third excited singlet state (S3) of cAB-1c-tolane, a $\pi\pi^{*}$ transition, are located on the AB subunit of the molecule.
+This exited state is quite similar to the S3 of cAB, but possesses a greater intensity (0.32, 0.02 for cAB) and is shifted to a longer wavelength (\SI[]{4.71}{\electronvolt}, \SI[]{4.97}{\electronvolt} for cAB).
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/cAB-1c-tolan-abs_mod-tor.eps}
+    \caption{UV spectra of cAB-1c-tolan-tor (black) and a combination of cAB and tolane (red). The bars signify the strength and wavelength of the individual transitions.}
+    \label{fig:UV_spec_cAB-for-tAB-1c-tolan}
+\end{figure}
+%
+The attachment and detachment densities of the third excited singlet state (S3) of cAB-1c-tolane, a $\pi\pi^{*}$ transition, are located on the AB subunit of the molecule.
 This exited state is quite similar to the S3 of cAB, but possesses a greater intensity (0.32, 0.02 for cAB) and is shifted to a longer wavelength (\SI[]{4.71}{\electronvolt}, \SI[]{4.97}{\electronvolt} for cAB).\\
 \\
 % The third excited singlet state (S3) of cAB-1c-tolane, also a $\pi\pi^{*}$ transition, 
@@ -1312,10 +1352,33 @@ This exited state is quite similar to the S3 of cAB, but possesses a greater int
 % Especially after comparing the specific NTOs one can see that it closely resembles S3 (3a) of cAB albeit with an increase in intensity and a shift to a longer wavelength. \\
 The fourth excited singlet state (S4) can be assigned to a $\pi\pi^*$ transition, which is located on the azo group and the adjacent phenyl group. 
 The attachment and detachment densities of the excited singlet states S5 and S6 are both found on the tolane substructure of the molecule.\\
+\\
+% Compared to tAB-1c-tolane-rot9, one observes that the transitions of cAB-1c-tolane-tor centered around the AB substructure are higher in energy.
+% One possible cause could be the that the \textit{cis}-conformation leads to a less delocalized $\pi$ system.
+% which is likely due to the cis-conformation leading to a less delocalized $\pi$ system. 
 Compared to tAB-1c-tolane-rot9, one observes that the transitions of cAB-1c-tolane-tor centered around the AB substructure are higher in energy.
 One possible cause could be the that the \textit{cis}-conformation leads to a less delocalized $\pi$ system.
-% which is likely due to the cis-conformation leading to a less delocalized $\pi$ system. 
 % 
+\begin{table}[H]
+  \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-1c-tolan-tor. The subscript ``ph'' refers to orbitals centered at the phenyl groups.}
+  \label{tab:excited_states_cAB_1c_tolane}
+  \vspace{0.1 cm}
+  \centering
+  \begin{tabular}{ccccc}
+  \toprule
+  State & Trans. & $\lambda$ (nm)  & $E$ (eV)               & $f$                 \\ 
+  \midrule
+  S1    & n$\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 427             & 2.901                  & 0.01                \\
+  \textbf{S2}    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& \textbf{271}    & \textbf{4.577}         & \textbf{0.37}              \\
+  \textbf{S3}    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& \textbf{263}             & \textbf{4.708}                  & \textbf{0.32}                \\
+  S4    & $\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$& 249             & 4.980                  & 0.10                \\
+  S5    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& 243             & 5.093                  & \SI{4.50e-3}{}      \\
+  S6    & $\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$& 242    & 5.121         & \SI{4.02e-3}{}      \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+% Compared to tAB-1c-tolane-rot9, one observes that the transitions of cAB-1c-tolane-tor centered around the AB substructure are higher in energy.
+% One possible cause could be the that the \textit{cis}-conformation leads to a less delocalized $\pi$ system.
 % 
 % The $\pi\pi^{*}$ transition leading to S4 includes HOMOs -6 till -1 which are contributed evenly around the aromatic system of the molecule and terminates mainly at the LUMO. 
 % The NTO picture describes this AB centered transition more clearly. S5 and S6 are mainly tolane centered $\pi\pi^{*}$ transitions. \\
@@ -1437,8 +1500,13 @@ One possible cause could be the that the \textit{cis}-conformation leads to a le
   \end{subfigure}
   %
   %
-  \vskip\baselineskip
-  \vspace{1 cm}
+  \caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the energetically lowest three excited singlet states S1 to S3 of cAB-1c-tolane at the CAM-B3LYP/6-311G* level of theory.}
+  % \label{fig:att-det:cAB-1c-tolane-crest-rot9}
+  \end{figure}
+  % \vskip\baselineskip
+  % \vspace{1 cm}
+  \begin{figure}[H]
+  \centering
   %
   %
   \begin{subfigure}{.25\textwidth}
@@ -1485,7 +1553,7 @@ One possible cause could be the that the \textit{cis}-conformation leads to a le
     % \label{fig:}
   \end{subfigure}
   %
-  \caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the energetically lowest four excited singlet states S1 to S4 of cAB-1c-tolane at the CAM-B3LYP/6-311G* level of theory.}
+  \caption{Detachment (red) and attachment (blue) densities at an isovalue of 0.02 for the excited singlet states S4 to S6 of cAB-1c-tolane at the CAM-B3LYP/6-311G* level of theory.}
   \label{fig:att-det:cAB-1c-tolane-crest-rot9}
   \end{figure}
 
@@ -1599,7 +1667,75 @@ One possible cause could be the that the \textit{cis}-conformation leads to a le
 %
 %
 %
-\begin{table}[b]
+% \begin{table}[b]
+%   \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-3c-tolane-tor. The subscript ``ph'' refers to orbitals centered at the phenyl group.}
+%   \label{tab:excited_states_cAB_3c_tolane}
+%   \vspace{0.1 cm}
+%   \centering
+%   \begin{tabular}{ccccc}
+%   \toprule
+%   State & Trans.&$\lambda$ (nm)  & $E$ (eV)               & $f$                 \\ 
+%   \midrule
+%   S1    & n$\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 409             & 3.032                  & 0.012               \\
+%   \textbf{S2}    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & \textbf{271}    & \textbf{4.583}         & \textbf{0.720}      \\
+%   S3    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 257             & 4.822                  & 0.019               \\
+%   \textbf{S4}    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & \textbf{250}    & \textbf{4.968}         & \textbf{0.151}      \\
+%   S5    &$\pi\mathrm{(AB)}\hspace{1 pt} \pi^{*}\mathrm{(AB)}$ & 244             & 5.077                  & 0.049               \\
+%   S6    &$\pi\mathrm{(tol)}\hspace{1 pt} \pi^{*}\mathrm{(tol)}$ & 244             & 5.083                  & 0.002               \\
+%   \bottomrule
+%   \end{tabular}
+%   \end{table}
+%
+%
+%  
+The overall shape between the UV spectra of cAB-3c-tolane-tor (figure \ref{fig:UV_spec_cAB-for-tAB-3c-tolan}) and cAB-1c-tolane (figure \ref{fig:UV_spec_cAB-for-tAB-1c-tolan}) is very similar except some minor differences. \\
+One of those differences is the huge blue shift of S1 (\SI{3.03}{\eV}) compared to cAB (\SI{2.88}{\eV}) and even cAB-1c-tolane-tor (\SI{2.90}{\eV}). 
+The attachment and detachment densities of S1 are on the AB unit of the molecule.
+S1 can be assigned to the n$\pi^*$ transition. \\
+\\
+% 
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/cAB-3c-tolan-abs_mod.eps}
+%   \caption{UV spectra of cAB-3c-tolane-tor (black) and a combination of cAB and tolane (red). The bars signify the strength energy of the individual transitions.}
+%   \label{fig:UV_spec_cAB-for-tAB-3c-tolan}
+% \end{figure}
+% 
+% The transition now occurs between the HOMO which contains the n orbitals and the LUMO+1 containing the $\pi^{*}$ orbitals of the cAB fragment. 
+% In contrast the same transition in cAB-1c-tolane-tor contained the HOMO-1 and LUMO, which indicates an appreciation in energy of those cAB centered MOs.\\
+% This could be due to the reduced distance between the benzene rings on the cAB fragment of cAB-3c-tolane-tor in comparison to cAB-1c-tolane-tor. 
+% The resulting increased interactions between those benzene rings %%%% Write what kind of interactions, Pauli interaction? %%%
+% could increase the energy of the MOs located on the cAB fragment.\\
+% Compared to the tolane centered HOMO in cAB-1c-tolane, the tolane cnetered HOMO-1 in cAB-3c-tolane decreased in energy, hinting that the less twisted geometry of the tolane leads to a MO lower in energy.
+In contrast to S1, the S2 of cAB-3c-tolan is almost identical in energy to the S2 in cAB-1c-tolane-tor, albeit with a lower oscillator strength. 
+It can be assigned to a $\pi\pi^*$ transition and the respective attachment and detachment densities are both located on the tolane substructure of the molecule.\\
+% One reason for the decreased oscillator strength could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment 
+% which could affect conjugation and lower the energy of the particular MOs. 
+%
+% It too can be assigned to the $\pi\pi^{*}$ transition that is mostly occuring between the HOMO-1 and LUMO, both which are tolane centered. 
+% Comparing these MOs to the tolane centered HOMO and LUMO+1 of cAB-1c-tolane one notices that the MOs of cAB-3c-tolane-tor are both lower in energy than those located on cAB-1c-tolane-tor. \\
+% One reason could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment which could affect conjugation and lower the energy of the particular MOs. 
+% Another contributing factor could be the reduced dihedral angle between the benzene fragments themselves ($\measuredangle(\ce{ph-C#C-ph})$ = \SI{4.72}{\degree} vs \SI{12.83}{\degree} for cAB-1c-tolane-tor). 
+% The increased flexibility of cAB-3c-tolane-tor, granted due to the longer linkers, seem to favor a decrease in energy of the MOs centered around the tolane fragment rather than those centered around the cAB substructure. \\
+\\
+The excited singlet states S3, S4 and S5 are all $\pi\pi^{*}$ transitions centered around the azobenzene substructure, quite similar to those observed in cAB-1c-tolane with no significant deviation in energy. 
+The attachment density of S3 is mostly located at the n-orbitals of the azo group while the attachment densities of S4 and S5 include one of the adjacent phenyl groups.\\
+\\
+The sixth excited singlet state (S6) can be assigned to a $\pi\pi^*$ transition with attachment and detachment densities mainly located at one of the phenyl groups of the tolane unit.
+% 
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[scale=0.75]{Figures/Conformer_UV_spectra_ink/cAB-3c-tolan-abs_mod.eps}
+%   \caption{UV spectra of cAB-3c-tolane-tor (black) and a combination of cAB and tolane (red). The bars signify the strength energy of the individual transitions.}
+%   \label{fig:UV_spec_cAB-for-tAB-3c-tolan}
+% \end{figure}
+% The main MOs involved are the HOMO and the LUMO+1 with the exception of S5 which terminates at LUMO+2, LUMO+3 and LUMO+4 which are more evenly distributed among the aromatic system of the molecule. 
+% The last transition S6 involves tolane centered MOs mainly the HOMO-1 and terminates similarly to S5 at LUMO+2 and LUMO+3.\\ 
+%
+% The reason for this is the appreciation in energy of the MOs containing the n and $\pi^{*}$ orbitals of cAB-3c-tolane in respect to cAB-1c-tolane. The HOMO-1 in cAB-1c-tolane centered around the n orbitals of the cAB fragment becomes the 
+% Looking at the difference in energy of the MOs one notices that the MO centered around the n-orbitals of the cAB fragment 
+%
+\begin{table}[H]
   \caption{Type of transition, excitation wavelength $\lambda$ in nm, vertical excitation energies $E$ in eV and their respective oscillator strength $f$ of the six energetically lowest excited states of cAB-3c-tolane-tor. The subscript ``ph'' refers to orbitals centered at the phenyl group.}
   \label{tab:excited_states_cAB_3c_tolane}
   \vspace{0.1 cm}
@@ -1617,44 +1753,6 @@ One possible cause could be the that the \textit{cis}-conformation leads to a le
   \bottomrule
   \end{tabular}
   \end{table}
-%
-%
-%  
-The overall shape between the UV spectra of cAB-3c-tolane-tor (figure \ref{fig:UV_spec_cAB-for-tAB-3c-tolan}) and cAB-1c-tolane (figure \ref{fig:UV_spec_cAB-for-tAB-1c-tolan}) is very similar except some minor differences. \\
-One of those differences is the huge blue shift of S1 (\SI{3.03}{\eV}) compared to cAB (\SI{2.88}{\eV}) and even cAB-1c-tolane-tor (\SI{2.90}{\eV}). 
-The attachment and detachment densities of S1 are on the AB unit of the molecule.
-S1 can be assigned to the n$\pi\pi^*$ transition. \\
-% 
-% 
-% The transition now occurs between the HOMO which contains the n orbitals and the LUMO+1 containing the $\pi^{*}$ orbitals of the cAB fragment. 
-% In contrast the same transition in cAB-1c-tolane-tor contained the HOMO-1 and LUMO, which indicates an appreciation in energy of those cAB centered MOs.\\
-% This could be due to the reduced distance between the benzene rings on the cAB fragment of cAB-3c-tolane-tor in comparison to cAB-1c-tolane-tor. 
-% The resulting increased interactions between those benzene rings %%%% Write what kind of interactions, Pauli interaction? %%%
-% could increase the energy of the MOs located on the cAB fragment.\\
-% Compared to the tolane centered HOMO in cAB-1c-tolane, the tolane cnetered HOMO-1 in cAB-3c-tolane decreased in energy, hinting that the less twisted geometry of the tolane leads to a MO lower in energy.
-\\
-In contrast to S1, the S2 of cAB-3c-tolan is almost identical in energy to the S2 in cAB-1c-tolane-tor, albeit with a lower oscillator strength. 
-It can be assigned to a $\pi\pi^*$ transition and the respective attachment and detachment densities are both located on the tolane substructure of the molecule.\\
-% One reason for the decreased oscillator strength could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment 
-% which could affect conjugation and lower the energy of the particular MOs. 
-%
-% It too can be assigned to the $\pi\pi^{*}$ transition that is mostly occuring between the HOMO-1 and LUMO, both which are tolane centered. 
-% Comparing these MOs to the tolane centered HOMO and LUMO+1 of cAB-1c-tolane one notices that the MOs of cAB-3c-tolane-tor are both lower in energy than those located on cAB-1c-tolane-tor. \\
-% One reason could be the reduced angle $\left(\measuredangle(\ce{C-C#C}\right)$ = \SI{2.60}{\degree} vs \SI{6.57}{\degree} for cAB-1c-tolane-tor) between the benzene and the acetelyne fragment which could affect conjugation and lower the energy of the particular MOs. 
-% Another contributing factor could be the reduced dihedral angle between the benzene fragments themselves ($\measuredangle(\ce{ph-C#C-ph})$ = \SI{4.72}{\degree} vs \SI{12.83}{\degree} for cAB-1c-tolane-tor). 
-% The increased flexibility of cAB-3c-tolane-tor, granted due to the longer linkers, seem to favor a decrease in energy of the MOs centered around the tolane fragment rather than those centered around the cAB substructure. \\
-\\
-The excited singlet states S3, S4 and S5 are all $\pi\pi^{*}$ transitions centered around the azobenzene substructure, quite similar to those observed in cAB-1c-tolane with no significant deviation in energy. 
-The attachment density of S3 is mostly located at the n-orbitlas of the azo group while the attachment densities of S4 and S5 include one of the adjacent phenyl groups.\\
-\\
-The sixth excited singlet state (S6) can be assigned to a $\pi\pi^*$ transition with attachment and detachment densities mainly located at one of the phenyl groups of the tolane unit.
-% 
-% The main MOs involved are the HOMO and the LUMO+1 with the exception of S5 which terminates at LUMO+2, LUMO+3 and LUMO+4 which are more evenly distributed among the aromatic system of the molecule. 
-% The last transition S6 involves tolane centered MOs mainly the HOMO-1 and terminates similarly to S5 at LUMO+2 and LUMO+3.\\ 
-%
-% The reason for this is the appreciation in energy of the MOs containing the n and $\pi^{*}$ orbitals of cAB-3c-tolane in respect to cAB-1c-tolane. The HOMO-1 in cAB-1c-tolane centered around the n orbitals of the cAB fragment becomes the 
-% Looking at the difference in energy of the MOs one notices that the MO centered around the n-orbitals of the cAB fragment 
-%
 %
 \begin{figure}[H]
 \centering
@@ -1856,9 +1954,10 @@ The sixth excited singlet state (S6) can be assigned to a $\pi\pi^*$ transition 
 %     \caption{test}
 %     \label{fig:Benchmark_all}
 % \end{figure}
+\newpage
 \section{Isomerisation process}
 \label{abs:iso_process}
-To gain further insight on the trans-cis isomerisation of the linked molecules, we investigated the reactive coordinate of the isomerisation (the CNNC dihedral).
+To gain further insight into the trans-cis isomerisation of the linked molecules, we investigated the reactive coordinate of the isomerisation (the CNNC dihedral).
 % the effect of torsion on the electronic states. 
 The CNNC dihedral angle was varied in steps of \SI{20}{\degree} (figure \ref{fig:tors_tAB-cAB-1c-pathway} and \ref{fig:tors_tAB-cAB-3c-pathway}) and a respective constrained optimisation of the ground state was performed. 
 The energetically lowest 20 singlet excited states were then calculated and plotted against the torsional angle. 
@@ -1888,13 +1987,14 @@ The energetically lowest 20 singlet excited states were then calculated and plot
 \end{figure}
 %
 In figure \ref{fig:tors_tAB-cAB-1c}, the relative energies of the electronic states of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor are plotted against the CNNC angle 
-and the GS energy of tAB-1c-tolane-rot9 with a CNNC dihedral angle of \SI[]{169}{\degree} is used as a reference point. 
+and the GS energy of tAB-1c-tolane-rot9 with a CNNC dihedral angle of \SI[]{169}{\degree} is used as a reference point.\\
 % The singlet excited states S1 (orange) and the S2 (red) can be assinged ot transitions which take place at the AB substructure of the linked molecules. 
 % S6 (green) is a transition which is located at the tolane unit and S3 (purple) can be assinged to a transition between the tolane and AB units.\\
 While the ground state energy (blue) reaches its energetically highest point at \SI{100}{\degree} the singlet excited state S1 (orange) reaches its lowest point of energy at the same angle.
 The resulting energy gap of \SI{0.4}{\eV} is still quite large which is mainly due to the inability to obtain constrained geometries between \SI{80}{\degree} and \SI{100}{\degree}.
 The slope of the ground state indicates that its maximum energy would be near a \SI{90}{\degree} CNNC angle, which coincides with the CNNC dihedral angle at which the conical intersection of AB is located.\cite{maximum-con-inter-AB} 
 Thus one can assume that the conical intersection of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor is still present in AB-1c-tolane, facilitating a possible switching event of the AB subsystem.\\
+\\
 The singlet excited state S2 can be assinged to a $\pi\pi^*$ transition located entirely on the AB unit, while S3 is a $\pi\pi^*$ transition from the tolane unit to the AB substructure, which is similar to a charge-transfer transition.
 S2 seems to slightly increase in energy, while S3 sligthly decreases in energy respective to an increasing CNNC dihedral angle until an angle of \SI{100}{\degree} is reached, at which both seem to decrease in energy quite similarly.
 The singlet excited state S6 can be assinged to the $\pi\pi^*$ transition at the tolane unit and its energy curve seems to mirror the groundstate albeit at a higher energy.
@@ -1947,6 +2047,7 @@ S6, the $\pi\pi^*$ transition limited to the tolane unit, increases in energy up
 %
 %
 %
+\newpage
 \subsection{CNNC torsion and MO energies}
 From the optimized structure calculations in \ref{abs:iso_process} the MO energies were extracted.
 %
@@ -1961,14 +2062,15 @@ From the optimized structure calculations in \ref{abs:iso_process} the MO energi
     \label{fig:MO_tors_1c_AB}
 \end{figure}
 %
-Figure \ref{fig:MO_tors_1c_AB} shows the LUMO+1, the LUMO, the HOMO and the HOMO-1 of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor as well as their respective energies in relation to the CNNC torsional angle. \\ 
-The energy values of both frontier orbitals which are located on tolane, $\pi^*$(tol) and $\pi$(tol), one observes, that the torsional deformation of the molecule has no effect on their energies. 
+Figure \ref{fig:MO_tors_1c_AB} shows the energies of LUMO+1, the LUMO, the HOMO and the HOMO-1 of tAB-1c-tolane-rot9 and cAB-1c-tolane-tor in relation to the CNNC torsional angle. \\ 
+The energy values of both frontier orbitals which are located on tolane, $\pi^*$(tol) and $\pi$(tol), appear to be unaffected by the change of the CNNC dihedral angle.
+% The energy values of both frontier orbitals which are located on tolane, $\pi^*$(tol) and $\pi$(tol), one observes, that the torsional deformation of the molecule has no effect on their energies. 
 This is quite remarkable, because the dihedral angle of tolane while in tAB-1c-tolane-rot9 configuration is \SI{51}{\degree} whereas in cAB-1c-tolane-tor configuration this angle amounts only to \SI{15}{\degree}, 
 implying that the dihedral angle has only a negligible influence on the energies of both tolane-localized frontier orbitals.\\
 % Another explanation could be that the increase of disadvantageous pi stacking increases energy at the cAB configuration thus negating the decrease in energy.
-For the AB centered frontier orbitals, the opposite is true. 
-The energy value for $\pi^*$ AB seems to decrease and reaches its minimum energy of \SI{2.24}{\eV} at a torsional angle of \SI{100}{\degree} while the energy of n AB increases to a maximum of \SI{6.19}{\eV} at the same angle. 
-The gap between both MOs decreases from \SI{6.69}{\eV} for the cAB-1c-tolane-tor to \SI{3.95}{\eV} at at a torsional angle of \SI{100}{\degree}. 
+For the AB centered frontier orbitals the opposite is true. 
+The energy value for $\pi^*$(AB) seems to decrease and reaches its minimum energy of \SI{2.24}{\eV} at a torsional angle of \SI{100}{\degree} while the energy of n(AB) increases to a maximum of \SI{6.19}{\eV} at the same angle. 
+The gap between both MOs decreases from \SI{6.69}{\eV} for the cAB-1c-tolane-tor to \SI{3.95}{\eV} at a torsional angle of \SI{100}{\degree}. 
 %
 %
 %
@@ -1983,8 +2085,8 @@ The gap between both MOs decreases from \SI{6.69}{\eV} for the cAB-1c-tolane-tor
 %
 Figure \ref{fig:tAB-cAB-3c-tors_1} shows LUMO+1, LUMO and the five energetically highest occupied MOs of tAB-3c-tolane-rot3 and their change in energy at varying degrees of torsion. \\
 The trend in energy of both LUMOs seems quite similar to the one observed in figure \ref{fig:MO_tors_1c_AB}. 
-$\pi^*$(tol) possesses a higher energy in the \textit{trans}-configuration than in \textit{cis}-configuration.
-One possible explanation could be the reduced overlap of the orbitals located at the tolane unit, due to an increase of the \ce{Ph-C\bond{#}C-Ph} dihedral angle of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. 
+$\pi^*$(tol) possesses a higher energy in \textit{trans}-configuration than in \textit{cis}-configuration.
+One possible explanation could be the reduced overlap of the orbitals located at the tolane unit, due to an increase of the \ce{Ph-C\bond{#}C-Ph} dihedral angle of tolane from \SI{3}{\degree} in \textit{cis}-configuration to \SI{21}{\degree} in \textit{trans}-configuration. 
 % 
 % by the increase of the dihedral angle of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. of tolane from \SI{3}{\degree} in cis configuration to \SI{21}{\degree} in trans configuration. 
 $\pi^*$(AB) decreases in energy as the CNNC dihedral angle increases until its energetical minimum at \SI{80}{\degree} is reached, at which point it increases in energy again.  \\
@@ -2002,7 +2104,8 @@ The energy of both $\pi$(tol) and $\pi$(AB\_ph+tol\_ph)\_1 seems to increase res
 \\
 To summarize a change in the CNNC dihedral angle affects the energy of the n(AB\_1) HOMO and $\pi^*$ LUMO the most, leading to a respective energetic maximum and minimum at \SI[]{80}{\degree}.
 The energy value of $\pi^*$(AB) is greater than $\pi^*$(tol) in \textit{cis}-configuration, but $\pi^*$(tol) possesses a greater energy value than $\pi^*$(AB) in \textit{trans}-configuration.
-This observation could potentially be used to target the AB unit of the molecule in \textit{cis}-configuration and the tolane unit in \textit{trans}-configuration with a nucleophilic reaction. 
+This observation could imply that $\pi^{*}$(tol) is more electropilic than $\pi^{*}$(AB) when AB-3c-tolane possesses \textit{cis}-configuration, but in \textit{trans}-configuration the reverse case occurs.
+% This observation could potentially be used to target the AB unit of the molecule in \textit{cis}-configuration and the tolane unit in \textit{trans}-configuration with a nucleophilic reaction. 
 % In the case of cAB-3c-tolane $\pi^*$(AB) is higher in energy than the $\pi^*$(tol), contrary to the \textit{trans}-isomer, in which case $\pi^*$(tol) possess a higher energy value than $\pi^*$(AB).
 % This observation could potentially be used to target the AB unit of the molecule in \textit{cis}-configuration and the tolane unit in \textit{trans}-configuration with a nucleophilic reaction. 
 % 
@@ -2101,11 +2204,12 @@ Difference bet. Mol.        & DCM     &  4.109          & 28.853  	&	-4.489			\\
 In the case of tAB-3c-tolane the solvents possessing a higher polarity lead to a lower enthalpy as well as a lower entropy, albeit the differences are relatively minor. 
 Quite the opposite trend can be observed for tAB-3c-tolane-flat in which the entropy reaches its maximum in toluene and differs about $\SI{29}{\frac{\SI{}{\joule}}{\SI{}{\mole\kelvin}}}$ from acetronitrile as well as dichloromethane. 
 The Gibbs free energy of tAB-3c-tolane is the lowest in DCM, but the difference between the other solvents is small (0.6 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
-tAB-3c-tolane-flat possesses an even lower value for the Gibbs free energy in toluene compared to tAB-3c-tolane in DCM,  the difference between the other solvents is greater (6.4 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
+tAB-3c-tolane-flat possesses an even lower value for the Gibbs free energy in toluene compared to tAB-3c-tolane in DCM and the difference between the other solvents is greater (6.4 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
 % 
 % A lower Gibbs free energy can be observed for tAB-3c-tolane-flat in toluene compared to tAB-3c-tolane, while the difference between the other solvents is greater (6.4 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$).
 % For tAB-3c-tolane-flat, the smallest value for the Gibbs free energy results from the pcm calculation with toluene,  % with a respective deviation of ~6.5 $\frac{\SI{}{\kilo\joule}}{\SI{}{\mole}}$ between the other solvents.
 % which is lower 
+\\
 One explanation for the stark contrast in entropy of tAB-3c-tolane-flat dissolved in toluene and DCM or acetronitrile could be the low polarity of toluene compared with the remaining solvents. 
 Toluene possesses a dielectric constant of 2.38 in contrast to acetonitrile (36.64) and DCM (9.08).\cite{Dieelectric-constants} 
 Due to the nature of the C-PCM solvation model non-electrostatic effects (cavitation, dispersion and repulsion) are being disregarded which leads to the assumption that solutions with low dielectric constants interact with the molecule less than those with high dielectric constants. 
