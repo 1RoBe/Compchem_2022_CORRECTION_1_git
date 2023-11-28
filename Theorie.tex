@@ -68,7 +68,8 @@ describes the classical Coulomb interaction of the charge distribution $\rho(r)$
 \begin{align}
     E_{xc}[\rho] = T[\rho] - T_{\mathrm{s}}[\rho] + V_{\mathrm{ee}}[\rho] - V_{\mathrm{c}}[\rho].
 \end{align}
-$E_{\mathrm{xc}}[\rho]$ can be interpreted as the sum of two errors, the first one arises from using a non-interacting kinetic energy and the second one from treating the electron-electron interaction classically. Using the orbitals which were defined earlier one can reformulate equations \ref{eq:KS_functional} and \ref{eq:energy_func}, thus deriving the following equation
+$E_{\mathrm{xc}}[\rho]$ can be interpreted as the sum of two errors, the first one arises from using a non-interacting kinetic energy and the second one from treating the electron-electron interaction classically. 
+Using the orbitals which were defined earlier, one can reformulate equations \ref{eq:KS_functional} and \ref{eq:energy_func}, thus deriving the following equation
 \begin{align} \label{eq:KS_SGL}
     \left(-\frac{1}{2}\nabla^{2} + v(r) + \int\frac{\rho(r')}{|r-r'|} \mathrm{d}^{3}r' + v_{\mathrm{xc}}(r)\right)\phi_i(r) = \epsilon_i \phi_i(r),
 \end{align}
@@ -190,7 +191,7 @@ Time-dependent density functional theory (TDDFT) is an extension of DFT which al
 \begin{align}
     \rho(r, t) = \int |\Psi(r_1, r_2, ..., r_N, t)|^2 \mathrm{d}r_2...\mathrm{d}r_N \mathrm{ ,}
 \end{align}
-a function of only one space variable $r$ with sufficient degree of freedom to fully describe the response of a system to the time-dependent pertubation. That thesis describes the Runge-Gross theorem\cite{Runge-Gross}, which is a extension of the DFT Hohenberg-Kohn theorem to the time-dependent case. The HK theorem is not sufficient for the study of excitation, which is the response of the system to an external pertubation such as the interaction of a molecule with an electromagnetic wave. The reason for this is that the the total external potential is now the sum of the static external potential $v(r)$ due to the nuclei and the time-dependent external perturbation $\delta v(r, t)$ 
+a function of only one space variable $r$ with sufficient degree of freedom to fully describe the response of a system to the time-dependent pertubation. That thesis describes the Runge-Gross theorem\cite{Runge-Gross}, which is an extension of the DFT Hohenberg-Kohn theorem to the time-dependent case. The HK theorem is not sufficient for the study of excitation, which is the response of the system to an external pertubation such as the interaction of a molecule with an electromagnetic wave. The reason for this is that the the total external potential is now the sum of the static external potential $v(r)$ due to the nuclei and the time-dependent external perturbation $\delta v(r, t)$ 
 \begin{align}
     v(r, t) = v(r) + \delta v(r, t)
 \end{align}
@@ -415,9 +416,14 @@ In the realm of anorganic chemistry, tolane is widely used as a ligand for metal
 %
 Another interesting application arises from long chains of tolane molecules which branch off into dendrimers. 
 Such structures can act as "photoantennas" and can trap photoexcited electron-hole pairs at its core, which initially formed at the outer edges of those molecules.\cite{tol_dendrimer}\\
-In its polymeric form, poly(phenyleneethynylenes) (PEs) can be used as "molecular wires" in which excited states created by absorption of a photon at the polymer backbone.\cite{swager1998molecular}
-Those excited states then migrate rapidly to terminal groups, e.g. anthracene groups where they are trapped.
-Combined with a terminal group that quences the excitation upon binding to a molecule, PEs can amplify the difference in intensity between the quenched and non-quenched state.\cite{swager1998molecular}
+In its polymeric form poly(phenyleneethynylenes) (PEs) can be used as sensors in the form of "molecular wires".\cite{swager1998molecular}
+Since PEs are very fluorescent in solution, combining them with binding sites for analytes capable of quenching fluorescence dimishes PE's emission.
+Their advantage arises from the fact that only a small percentage of binding sites have to be occupied to suppress PE's flourescence completely.
+This is due to conjugation in PEs, which allows excitons to migrate to the occupied binding site and thus decay radiationless.\cite{Bunz2001}
+Some PEs show electroluminiscence which could lead to potential photonic applications like LEDs. \cite{HIROHATA19971273}
+% in which excited states created by absorption of a photon at the polymer backbone.\cite{swager1998molecular}
+% Those excited states then migrate rapidly to terminal groups, e.g. anthracene groups where they are trapped.
+% Combined with a terminal group that quences the excitation upon binding to a molecule, PEs can amplify the difference in intensity between the quenched and non-quenched state.\cite{swager1998molecular}
 PEs can be synthesized through a Pd-catalyzed Heck-Cassar-Sonogashira-Hagihara reaction or alkyne metathesis.\cite{Bunz2001}
 
 
